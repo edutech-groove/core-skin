@@ -1,0 +1,116 @@
+@import "../core/config/grv.variables";
+
+$font1: "Nunito", sans-serif;
+$font2: "Plumpfull Black", sans-serif;
+
+$color01: white;
+$color02: black;
+$color03: #E60978;
+$color03d: #d3106c;
+$color04: #fea628;
+$color05: #207945;
+$color06: $color02;
+$color06d: $color02;
+$color07: $color02;
+$color07d: $color02;
+$color08: #333333;
+$color09: #999999;
+$color10: #798f9a;
+$color11: #a9bdc7;
+$color11d: #9fb4bf;
+$color12: #c4c4c4;
+$color12d: #c4c4c4;
+$color13: #f2f5f9;
+$color14: #f4f7f8;
+$color15: #8899aa;
+$color16: #e3e3e3;
+$color17: #5d7790;
+$color18: #fafafa;
+
+$color19: #9b9b9b;
+$color20: #efefef;
+$color21: #f04545;
+$color22: #FFD9ED;
+$color23: #FBFBFB;
+$color24: #FF9D00;
+$color24d: #EA9000;
+$color25: #FFF5E5;
+$color26: #F0F5FC;
+$color27: #CFD7E2;
+$color28: #8EA1BC;
+
+// Specific grv-theme colors (Use with caution for fallback)
+$grvColor01: #25304c;
+$grvColor01d: #1F2840;
+$grvColor02: #3b455e;
+$grvColor03: #ffa850;
+$grvColor04: #6760fa;
+$grvColor05: #38c976;
+$grvColor06: #0094e3;
+
+$homepage-bg-image: url('../images/banner-img-groove.png');
+
+// Others
+$fontFamily: $font1;
+
+// Font variables
+$fontPlumpfullPath: '/src/assets/fonts/Plumpfull.woff';
+$fontNunitoSansRegularPath: '/src/assets/fonts/NunitoSans-Regular.woff';
+$fontNunitoSansSemiBoldPath: '/src/assets/fonts/NunitoSans-SemiBold.woff';
+$fontNunitoSansBoldPath: '/src/assets/fonts/NunitoSans-Bold.woff';
+$fontNunitoSansExtraBoldPath: '/src/assets/fonts/NunitoSans-ExtraBold.woff';
+
+$breakMobile: 767.98px;
+$tablet: 768px;
+
+$textColor01: #333 !default;
+$textColor02: #666 !default;
+$textColor03: #999 !default;
+$textColor04: #C6CBD0 !default;
+
+$globalRadius: 4px;
+
+/* Override default Bootstrap 4 variables */
+$font-family-sans-serif: $font1;
+
+$primary: $color03;
+$secondary: $color22;
+$success: $grvColor05;
+$info: $grvColor04;
+$danger: $color21;
+$light: $color12;
+$dark: $color07;
+$warning: $grvColor03;
+
+$text-color: $textColor01;
+$link-color:            $grvColor06;
+$link-hover-color:      darken($grvColor06, 7%);
+$link-hover-decoration: none;
+
+$theme-colors: (
+  "primary": $primary,
+  "primaryYellow": $color24,
+  "secondary": $secondary,
+  "secondaryYellow": $color25,
+  "orange": $color04,
+  "danger": $danger,
+  "yellow": $color24
+);
+
+// Specific coloring
+$wrapperPreviewMenu: $grvColor01;
+$wrapperPreviewSelect: $grvColor02;
+$wrapperPreviewSelectColor: $color01;
+
+$containerWidth: 1180px;
+
+$rem-base-size: 16 !default;
+$rem-base-size-cms: 10 !default;
+@function calcRem($value-px, $cms: false) {
+  @if ($cms) {
+    @return ($value-px / $rem-base-size-cms) + 0rem;
+  }
+  @else {
+    @return ($value-px / $rem-base-size) + 0rem;
+  }
+}

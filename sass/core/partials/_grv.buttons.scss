@@ -1,0 +1,28 @@
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  color: inherit;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 100;
+  background: none;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  font: inherit;
+  letter-spacing: 0;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus {
+    &:not(:disabled) {
+      background: none;
+    }
+  }
+}

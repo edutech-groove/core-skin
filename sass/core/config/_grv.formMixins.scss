@@ -1,0 +1,374 @@
+@mixin setInputGenericCore {
+  @include useFont1;
+  @include fz(15);
+  border-radius: $globalRadius;
+  border: 1px solid $grey08;
+  box-shadow: none;
+  color: $textColor01;
+  font-style: normal;
+  line-height: 21px;
+  outline: none;
+  text-transform: none;
+  background-color: $grey08;
+  resize: none;
+  background-image: none;
+
+  &[disabled] {
+    background-color: $grey09 !important;
+    color: $textColor03 !important;
+  }
+
+  @include whenFocusOnly {
+    @include setInputGenericFocused;
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  &.error,
+  &.invalid,
+  &.paragon__is-invalid {
+    @include errorInput;
+
+    &~.invalid-message,
+    &~.error,
+    &~.error-message {
+      @include errorInputMessage;
+    }
+  }
+}
+
+@mixin setInputGeneric {
+  @include setInputGenericCore;
+  padding: 10px 15px;
+}
+
+@mixin setInputGenericSmall {
+  @include setInputGenericCore;
+  padding: 6px 15px;
+}
+
+@mixin setInputGenericFocused {
+  background-color: $color01 !important;
+  border-color: $color03 !important;
+  color: $textColor01 !important;
+  box-shadow: 0 0px 0 0.2rem rgba(230, 9, 120, 0.25) !important;
+  outline: none;
+  background-image: none;
+}
+
+@mixin errorInput {
+  background-color: #FFEEEE !important;
+  border-color: $color21 !important;
+}
+
+@mixin errorInputMessage {
+  @include captain();
+  color: $color21 !important;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+@mixin setInputHeight {
+  height: 40px;
+}
+
+@mixin setInputBackground {
+  background-image: none;
+  background-color: $grey08;
+}
+
+@mixin setSelectGeneric {}
+
+/** Mixin for Input and Button **/
+@mixin searchInputButtonHeight {
+  height: 40px;
+}
+
+@mixin searchInputStyle($large) {
+  background-color: $color01 !important;
+  border: 1px solid #D6D6D6;
+  border-radius: $globalRadius !important;
+  border-bottom-right-radius: $globalRadius2 !important;
+  border-top-right-radius: $globalRadius2 !important;
+  color: $textColor01;
+  @include fz(15);
+  height: unset;
+  line-height: 1.2;
+  box-sizing: border-box;
+
+  @if($large) {
+    height: 50px;
+    padding-right: 85px !important;
+  } 
+  @else {
+    height: 40px;
+    padding-right: 65px !important;
+  }
+}
+
+@mixin searchButtonRadiusStyle {
+  border-radius: 0 $globalRadius2 $globalRadius2 $globalRadius2 !important;
+}
+
+/* Mixin for Tab and Active tab state */
+@mixin courseTabStyle($cms: false) {
+  @include posr;
+  line-height: 2;
+  font-weight: 600;
+  color: $textColor01;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent !important;
+  padding: 0;
+  display: inline-block;
+  transition: all 0.25s ease-in-out;
+
+  @if ($cms) {
+    @include fzCMS(15);
+  }
+
+  @else {
+    @include fz(15);
+  }
+
+  >a {
+    display: block;
+    color: $textColor01 !important;
+    padding: 12px 15px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    text-decoration: none;
+  }
+
+  >a,
+  &.tab {
+    display: block;
+    color: $textColor01 !important;
+    padding: 12px 15px !important;
+    margin: 0 !important;
+  }
+
+  &:after {
+    @include _size(0);
+    @include posa(5);
+    border-color: transparent transparent transparent transparent;
+    border-style: solid;
+    border-width: 0 4px 4px 4px;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.25s ease-in-out;
+  }
+
+  &.active,
+  &.ui-tabs-active,
+  &:hover {
+    border-bottom-color: theme-color("primary") !important;
+    color: theme-color("primary") !important;
+
+    >a,
+    &.tab {
+      color: theme-color("primary") !important;
+    }
+
+    &:after {
+      border-color: transparent transparent theme-color("primary") transparent;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+@mixin courseSubTabWrapperStyle {
+  padding: 0 17px;
+  display: flex;
+  border: 0;
+  border-bottom: 1px solid $color27;
+  position: relative;
+  background-color: $color26;
+}
+
+@mixin courseSubTabStyle($cms) {
+  outline: none;
+  font-weight: 600;
+  padding: 7px 15px;
+  color: $textColor01;
+  border-radius: $globalRadius $globalRadius 0 0;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  @include posr;
+  margin-bottom: -1px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  @if ($cms) {
+    @include fzCMS(15);
+  }
+
+  @else {
+    @include fz(15);
+  }
+
+  &.active-section,
+  &.active,
+  &.is-active {
+    border-color: $color27;
+    background-color: $color01 !important;
+    color: $color24;
+  }
+
+  @include whenHover {
+    text-decoration: none !important;
+    color: $color24;
+  }
+}
+
+@mixin courseVerticalTabStyle {
+  >form {
+    margin-bottom: 0;
+    padding: 0;
+    border: 0;
+
+    .field-label {
+      display: block;
+      position: relative;
+      margin-bottom: 0;
+
+      >input {
+        display: block;
+        width: 100%;
+        padding-right: 40px;
+      }
+
+      >.icon {
+        right: 15px;
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $textColor02;
+        margin: 0;
+      }
+    }
+  }
+
+  >ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: auto;
+
+    >li {
+      padding: 12px 0;
+      @include fz(15);
+      font-weight: 400;
+      @include flexbox;
+      @include align-items(center);
+      @include paragraph2();
+      margin-bottom: 0;
+
+      .icon {
+        margin-right: 15px;
+        width: unset;
+        height: 16px;
+        float: none;
+        position: static;
+      }
+
+      .forum-nav-browse-title {
+        padding: 0;
+        border: 0;
+        @include paragraph2();
+        margin-bottom: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #DBDBDB;
+      }
+    }
+  }
+}
+
+@mixin teamMetaDetailIcon($iconCode: null) {
+  @include _size(36px);
+  background-color: $grey05;
+  border-radius: 50%;
+  color: $grey06;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+
+  @if ($iconCode) {
+    @include getIconCode($iconCode);
+  }
+}
+
+@mixin getIconCode($iconCode: null) {
+  @if ($iconCode) {
+    content: $iconCode;
+    font-family: 'FontAwesome';
+  }
+}
+
+@mixin useBreadcrumb {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-wrap(wrap);
+  @include captain;
+  font-weight: 400;
+  color: $textColor01;
+  margin-bottom: 0;
+
+  >* {
+    margin: 4px;
+    display: block;
+  }
+
+  a {
+    @include useBlueLink;
+  }
+}
+
+@mixin useSearchButtonStyle($large) {
+  @include usePrimaryButtonStyle;
+  @include searchButtonRadiusStyle;
+  @include posa(5);
+  right: 0;
+  top: 0;
+  @include fz(22);
+  padding: 0 10px;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+
+  @if($large) {
+    height: 50px;
+    width: 70px;
+  } 
+  @else {
+    height: 40px;
+    width: 50px;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+
+    path {
+      fill: $color01;
+    }
+  }
+
+  .fa {
+    @include fz(18);
+  }
+}

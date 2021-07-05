@@ -1,0 +1,17 @@
+%animate {
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
+}
+
+%formLabelTypo {
+  @include fz(15);
+  color: $textColor02;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+%usePointer {
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.table {
+  color: $color15;
+
+  th,
+  td {
+    font-size: .875rem;
+  }
+
+  thead {
+    th {
+      background-color: $color14;
+      font-weight: 600;
+      padding: 1rem .75rem;
+      border-bottom-width: 1px;
+    }
+  }
+
+  tbody {
+    tr {
+      &:first-child {
+        td {
+          border-top-color: transparent;
+        }
+      }
+    }
+  }
+}

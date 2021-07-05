@@ -1,0 +1,42 @@
+/*
+ * Section overrides Bootstrap form styling
+*/
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+  @include setInputBackground;
+}
+
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"] {
+  @include setInputGeneric;
+}
+
+.studio {
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="url"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"] {
+    @include fzCMS(15);
+  }
+}
+
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  @include setInputHeight;
+}

@@ -1,0 +1,414 @@
+.multiselect-native-select {
+    .btn-group {
+        position: relative;
+
+        button.multiselect {
+            width: 100%;
+            letter-spacing: 0;
+
+            .multiselect-selected-text {
+                white-space: nowrap;
+                display: block;
+                height: 20px;
+            }
+        }
+
+        .multiselect-container.dropdown-menu {
+            background: $color01;
+            box-shadow: 0px 0px 4px rgba(137, 137, 137, 0.161);
+            border-radius: $globalRadius;
+            border: 0;
+            padding: 14px 0;
+            margin: 5px 0;
+            min-width: 100%;
+            display: none;
+            z-index: 11;
+
+            &.show:not(:empty) {
+                display: block;
+            }
+
+            .dropdown-item {
+                padding: 8px 13px;
+                color: $textColor01;
+                border-radius: 0;
+                letter-spacing: 0;
+                display: block;
+                width: 100%;
+                border: 0;
+                background-color: transparent;
+
+                &:hover,
+                &:active,
+                &:focus,
+                &.active {
+                    color: $textColor01;
+                    border-color: $color22;
+                    background-color: $color23;
+                    box-shadow: none;
+                }
+
+                .form-check {
+                    margin: 0;
+                    padding: 0;
+
+                    .form-check-input {
+                        position: static;
+                    }
+
+                    .form-check-label {
+                        font-weight: 400 !important;
+                        padding: 0;
+
+                        .badge {
+                            @include badge;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lms {
+    .multiselect-native-select {
+        .btn-group {
+            button.multiselect {
+                @include usePrimarySelect("md", 'gray', false);
+            }
+        }
+
+        select[multiple] {
+            &+.btn-group {
+                .multiselect-container.dropdown-menu {
+                    .dropdown-item {
+                        .form-check {
+                            .form-check-input {
+                                @include usePrimaryCheckbox;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        select:not([multiple]) {
+            &+.btn-group {
+                .multiselect-container.dropdown-menu {
+                    .dropdown-item {
+                        .form-check {
+                            .form-check-input {
+                                @include useSecondaryRadio;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.studio {
+    .multiselect-native-select {
+        .btn-group {
+            button.multiselect {
+                @include usePrimarySelect("md", 'gray', true);
+            }
+        }
+
+        select[multiple] {
+            &+.btn-group {
+                .multiselect-container.dropdown-menu {
+                    .dropdown-item {
+                        .form-check {
+                            .form-check-input {
+                                @include usePrimaryCheckbox(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        select:not([multiple]) {
+            &+.btn-group {
+                .multiselect-container.dropdown-menu {
+                    .dropdown-item {
+                        .form-check {
+                            .form-check-input {
+                                @include useSecondaryRadio(true);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alert {
+    border: 1px solid transparent !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
+    @include flex-row;
+    align-items: center;
+    color: $textColor01 !important;
+    @include paragraph2;
+    margin-bottom: 0;
+    width: 100%;
+    min-width: unset;
+
+    >* {
+        width: unset;
+    }
+
+    .copy {
+        margin: 0;
+
+        .message {
+            margin-bottom: 0;
+        }
+    }
+
+    .message-content {
+        button {
+            @include useGrvSecondaryButtonStyle();
+        }
+    }
+
+    .btn.close,
+    .action-close {
+        position: static;
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+        text-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        opacity: .75;
+        padding: 0;
+        @include fz(22);
+
+        &:hover {
+            opacity: 1;
+            background-color: transparent;
+        }
+    }
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        color: $color01 !important;
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px 0 0;
+    }
+
+    &.alert-success,
+    &.announcement {
+        border-color: $grvColor05 !important;
+        background-color: lighten($grvColor05, 45%) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $grvColor05 !important;
+        }
+
+        .btn.close,
+        .action-close {
+            color: $grvColor05 !important;
+        }
+    }
+
+    &.alert-info {
+        border-color: $grvColor04 !important;
+        background-color: lighten($grvColor04, 30%) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $grvColor04 !important;
+        }
+
+        .btn.close,
+        .action-close {
+            color: $grvColor04 !important;
+        }
+    }
+
+    &.alert-warning {
+        border-color: $grvColor03 !important;
+        background-color: lighten($grvColor03, 30%) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $grvColor03 !important;
+        }
+
+        .btn.close,
+        .action-close {
+            color: $grvColor03 !important;
+        }
+    }
+
+    &.alert-danger,
+    &.alert-error {
+        border-color: $color21 !important;
+        background-color: lighten($color21, 35%) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $color21 !important;
+        }
+
+        .btn.close,
+        .action-close {
+            color: $color21 !important;
+        }
+    }
+}
+
+.lms {
+    .alert {
+        @include fz(15);
+
+        .copy,
+        .alert-message {
+            .title,
+            .alert-title {
+                @include heading3;
+                margin-bottom: 7px;
+            }
+
+            .message,
+            .alert-copy {
+                @include paragraph2;
+                margin: 0;
+            }
+        }
+    
+        .btn.close,
+        .action-close {
+            @include fz(22);
+        }
+    
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            @include fz(15);
+        }
+    }
+}
+
+.studio {
+    .alert {
+        @include fzCMS(15);
+
+        .copy,
+        .alert-message {
+            .title {
+                @include heading3(true);
+                margin-bottom: 7px;
+            }
+
+            .message,
+            .alert-message {
+                @include paragraph2(true);
+                margin-bottom: 0;
+            }
+        }
+    
+        .btn.close,
+        .action-close {
+            @include fzCMS(22);
+        }
+    
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            @include fzCMS(15);
+        }
+    }
+}
+
+.clear {
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent !important;
+
+    @include whenHover {
+        outline: none;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+@mixin coreMessage {
+	padding: 10px 15px;
+	border-radius: 1px $globalRadius $globalRadius 1px;
+	border: 0;
+	border-left: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    @include paragraph2;
+    margin-bottom: 0;
+
+    .icon {
+        margin-right: 10px;
+        @include fz(17);
+    }
+}
+
+@mixin infoMessage {
+	@include coreMessage();
+	border-color: $grvColor06;
+	background-color: lighten($grvColor06, 50%);
+
+    .icon {
+        color: $grvColor06;
+    }
+}
+
+@mixin successMessage {
+	@include coreMessage();
+	border-color: $grvColor05;
+	background-color: lighten($grvColor05, 45%);
+
+    .icon {
+        color: $grvColor05;
+    }
+}
+
+@mixin errorMessage {
+	@include coreMessage();
+	border-color: $color21;
+	background-color: lighten($color21, 35%);
+
+    .icon {
+        color: $color21;
+    }
+}
+
+@mixin wariningMessage {
+	@include coreMessage();
+	border-color: $grvColor03;
+	background-color: lighten($grvColor03, 30%);
+
+    .icon {
+        color: $grvColor03;
+    }
+}
+
+$rem-base-size: 16 !default;
+@function calcRem($value-px) {
+  @return ($value-px / $rem-base-size) + 0rem;
+}

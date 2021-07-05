@@ -1,0 +1,23 @@
+%global-transition {
+  transition-duration: 220ms;
+}
+
+%paragraph1 {
+  @include paragraph1();
+}
+
+%paragraph2 {
+  @include paragraph2();
+}
+
+%heading1 {
+  @include heading1();
+}
+
+%heading2 {
+  @include heading2();
+}
+
+%heading3 {
+  @include heading3();
+}
