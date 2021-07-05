@@ -295,7 +295,7 @@
 }
 
 body {
-  >.modal {
+  >.modal:not(.fec-modal) {
     top: 50% !important;
     bottom: unset;
     transform: translate(-50%, -50%);

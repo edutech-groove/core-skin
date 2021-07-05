@@ -813,7 +813,7 @@
   &.alert-success,
   &.announcement {
     border-color: $grvColor05;
-    background-color: rgba($grvColor05, .1);
+    background-color: lighten($grvColor05, 40%);
 
     .icon-alert,
     .alert-icon,
@@ -829,7 +829,7 @@
 
   &.alert-info {
     border-color: $grvColor04;
-    background-color: rgba($grvColor04, .1);
+    background-color: lighten($grvColor04, 27%);
 
     .icon-alert,
     .alert-icon,
@@ -845,7 +845,7 @@
 
   &.alert-warning {
     border-color: $grvColor03;
-    background-color: rgba($grvColor03, .1);
+    background-color: lighten($grvColor03, 32%);
 
     .icon-alert,
     .alert-icon,
@@ -893,5 +893,106 @@
 
   &.warning {
       background-color: $color24;
+  }
+}
+
+@mixin useMultiselect($size, $theme, $cms: false) {
+  .btn-group {
+    position: relative;
+
+    button.multiselect {
+      width: 100%;
+      letter-spacing: 0;
+      @include usePrimarySelect($size, $theme, $cms);
+
+      .multiselect-selected-text {
+        white-space: nowrap;
+        display: block;
+        height: 20px;
+      }
+    }
+
+    .multiselect-container.dropdown-menu {
+      background: $color01;
+      box-shadow: 0px 0px 4px rgba(137, 137, 137, 0.161);
+      border-radius: $globalRadius;
+      border: 0;
+      padding: 14px 0;
+      margin: 5px 0;
+      min-width: 100%;
+      display: none;
+      z-index: 11;
+
+      &.show:not(:empty) {
+        display: block;
+      }
+
+      .dropdown-item {
+        padding: 8px 13px;
+        color: $textColor01;
+        border-radius: 0;
+        letter-spacing: 0;
+        display: block;
+        width: 100%;
+        border: 0;
+        background-color: transparent;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+          color: $textColor01;
+          border-color: $color22;
+          background-color: $color23;
+          box-shadow: none;
+        }
+
+        .form-check {
+          margin: 0;
+          padding: 0;
+
+          .form-check-input {
+            position: static;
+          }
+
+          .form-check-label {
+            font-weight: 400 !important;
+            padding: 0;
+
+            .badge {
+              @include badge;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  select[multiple] {
+    &+.btn-group {
+      .multiselect-container.dropdown-menu {
+        .dropdown-item {
+          .form-check {
+            .form-check-input {
+              @include usePrimaryCheckbox($cms);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  select:not([multiple]) {
+    &+.btn-group {
+      .multiselect-container.dropdown-menu {
+        .dropdown-item {
+          .form-check {
+            .form-check-input {
+              @include useSecondaryRadio($cms);
+            }
+          }
+        }
+      }
+    }
   }
 }

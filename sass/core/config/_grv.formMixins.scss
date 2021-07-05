@@ -1,17 +1,26 @@
-@mixin setInputGenericCore {
+@mixin setInputGenericCore($theme) {
   @include useFont1;
   @include fz(15);
   border-radius: $globalRadius;
-  border: 1px solid $grey08;
+  border: 1px solid transparent;
   box-shadow: none;
-  color: $textColor01;
   font-style: normal;
   line-height: 21px;
   outline: none;
   text-transform: none;
-  background-color: $grey08;
   resize: none;
   background-image: none;
+
+  @if ($theme=='ondark') {
+    background-color: rgba($color01, .1);
+    color: $color01;
+  }
+
+  @else if ($theme=='gray') {
+    color: $textColor01;
+    border-color: $grey08;
+    background-color: $grey08;
+  }
 
   &[disabled] {
     background-color: $grey09 !important;
@@ -40,13 +49,13 @@
   }
 }
 
-@mixin setInputGeneric {
-  @include setInputGenericCore;
+@mixin setInputGeneric($theme: 'gray') {
+  @include setInputGenericCore($theme);
   padding: 10px 15px;
 }
 
-@mixin setInputGenericSmall {
-  @include setInputGenericCore;
+@mixin setInputGenericSmall($theme: 'gray') {
+  @include setInputGenericCore($theme);
   padding: 6px 15px;
 }
 
