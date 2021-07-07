@@ -3,11 +3,11 @@
 $font1: "Nunito", sans-serif;
 $font2: "Plumpfull Black", sans-serif;
 
-$color01: white;
-$color02: black;
+$color01: #FFFFFF;
+$color02: #000000;
 $color03: #E60978;
-$color03d: #d3106c;
-$color04: #fea628;
+$color03d: #D3106C;
+$color04: #FEA628;
 $color05: #207945;
 $color06: $color02;
 $color06d: $color02;
@@ -15,21 +15,21 @@ $color07: $color02;
 $color07d: $color02;
 $color08: #333333;
 $color09: #999999;
-$color10: #798f9a;
-$color11: #a9bdc7;
-$color11d: #9fb4bf;
-$color12: #c4c4c4;
-$color12d: #c4c4c4;
-$color13: #f2f5f9;
-$color14: #f4f7f8;
-$color15: #8899aa;
-$color16: #e3e3e3;
-$color17: #5d7790;
-$color18: #fafafa;
+$color10: #798F9A;
+$color11: #A9BDC7;
+$color11d: #9FB4BF;
+$color12: #C4C4C4;
+$color12d: #C4C4C4;
+$color13: #F2F5F9;
+$color14: #F4F7F8;
+$color15: #8899AA;
+$color16: #E3E3E3;
+$color17: #5D7790;
+$color18: #FAFAFA;
 
-$color19: #9b9b9b;
-$color20: #efefef;
-$color21: #f04545;
+$color19: #9B9B9B;
+$color20: #EFEFEF;
+$color21: #F04545;
 $color22: #FFD9ED;
 $color23: #FBFBFB;
 $color24: #FF9D00;
@@ -39,12 +39,60 @@ $color26: #F0F5FC;
 $color27: #CFD7E2;
 $color28: #8EA1BC;
 
+$color29: #F5F5F5;
+$color30: #E8E8E8;
+$color31: #A7A7A7;
+$color32: #E7E7E7;
+$color33: #F7F7F7;
+$color34: #D6D6D6;
+$color35: #89A4B4;
+$color36: #DBDBDB;
+$color37: #E0E0E0;
+$color38: #E4E6ED;
+$color39: #CBCBCB;
+$color40: #F2F5FA;
+$color41: #EEEEEE;
+$color42: #DEE2E5;
+$color43: #DDDDDD;
+$color44: #E9E9E9;
+$color45: #E4E4E4;
+$color46: #E4E7EA;
+$color47: #F3F3F4;
+$color48: #E9ECF2;
+$color49: #D4D4D4;
+$color50: #D8DEE7;
+$color51: #22221F;
+$color52: #4B4B4B;
+$color53: #0A0A0A;
+$color54: #D5D5D5;
+$color55: #FCFCFC;
+$color56: #EDEDED;
+$color57: #DCE6F4;
+$color58: #9EACBF;
+$color59: #F8F8F8;
+$color60: #767676;
+$color61: #D2D2D2;
+$color62: #ACACAC;
+$color63: #EDF8FF;
+$color64: #D1D9E3;
+$color65: #F2F3F5;
+$color66: #3B3B3B;
+$color67: #DEE3EB;
+$color68: #CCCCCC;
+
+// social media
+$twColor: #1DA1F2;
+$fbColor: #4065B4;
+$mailColor: #F44336;
+
+$starColor: #FFC107;
+
 // Specific grv-theme colors (Use with caution for fallback)
-$grvColor01: #25304c;
+$grvColor01: #25304C;
 $grvColor01d: #1F2840;
-$grvColor02: #3b455e;
-$grvColor03: #ffa850;
-$grvColor04: #6760fa;
+$grvColor02: #3B455E;
+$grvColor03: #FFA850;
+$grvColor04: #6760FA;
 $grvColor05: #38c976;
 $grvColor06: #0094e3;
 
@@ -63,9 +111,9 @@ $fontNunitoSansExtraBoldPath: '/src/assets/fonts/NunitoSans-ExtraBold.woff';
 $breakMobile: 767.98px;
 $tablet: 768px;
 
-$textColor01: #333 !default;
-$textColor02: #666 !default;
-$textColor03: #999 !default;
+$textColor01: #333333 !default;
+$textColor02: #666666 !default;
+$textColor03: #999999 !default;
 $textColor04: #C6CBD0 !default;
 
 $globalRadius: 4px;
@@ -114,3 +162,17 @@ $rem-base-size-cms: 10 !default;
     @return ($value-px / $rem-base-size) + 0rem;
   }
 }
+
+
+//theme-color-variable
+$primaryColor1: $color03;
+$primaryColor2: $color02;
+$secondaryColor1: $color25;
+$secondaryColor2: $color25;
+$tertiaryColor1: $grvColor06;
+$tertiaryColor2: $color24;
+$textColorBgWhite1: $color02;
+$textColorBgWhite2: $textColor01;
+$textColorBgWhite3: $textColor02;
+$textColorBgDark1: $textColor04;
+$textColorBgDark2: $color01;
