@@ -95,26 +95,26 @@
     &:disabled,
     &.disabled,
     &.is-disabled {
-        background-color: #CBCBCB !important;
-        color: $textColor02 !important;
+        background-color: $disabledBtnBackground !important;
+        color: $disabledBtnColor !important;
 
         @if ($svgColorType == 'fill') {
             svg {
-                fill: $textColor02;
+                fill: $disabledBtnColor;
                 stroke: none;
 
                 * {
-                    fill: $textColor02;
+                    fill: $disabledBtnColor;
                     stroke: none;
                 }
             }
         } @else if ($svgColorType == 'stroke') {
             svg {
-                stroke: $textColor02;
+                stroke: $disabledBtnColor;
                 fill: none;
 
                 * {
-                    stroke: $textColor02;
+                    stroke: $disabledBtnColor;
                     fill: none;
                 }
             }
@@ -123,27 +123,28 @@
 }
 
 @mixin usePrimaryButtonStyle($svgColorType:'fill') {
-    background-color: theme-color("primary") !important;
-    color: $color01;
+    background-color: $primaryDarkBtnBackground !important;
+    color: $primaryDarkBtnColor;
+    border: 1px solid $primaryDarkBtnBorder;
     @include coreButton($svgColorType);
 
     @if ($svgColorType == 'fill') {
         svg {
-            fill: $color01;
+            fill: $primaryDarkBtnColor;
             stroke: none;
 
             * {
-                fill: $color01;
+                fill: $primaryDarkBtnColor;
                 stroke: none;
             }
         }
     } @else if ($svgColorType == 'stroke') {
         svg {
-            stroke: $color01;
+            stroke: $primaryDarkBtnColor;
             fill: none;
 
             * {
-                stroke: $color01;
+                stroke: $primaryDarkBtnColor;
                 fill: none;
             }
         }
@@ -151,38 +152,39 @@
 
     &:not([disabled]):not(.disabled) {
         &:hover {
-            background-color: $color03d !important;
+            background-color: $primaryDarkBtnBackgroundHover !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: $color03d !important;
+        background-color: $primaryDarkBtnBackgroundHover !important;
     }
 }
 
 @mixin useSecondaryButtonStyle($svgColorType:'fill') {
-    background-color: $color22 !important;
-    color: theme-color("primary");
+    background-color: $primaryLightBtnBackground !important;
+    color: $primaryLightBtnColor;
+    border: 1px solid $primaryLightBtnBorder;
     @include coreButton($svgColorType);
 
     @if ($svgColorType == 'fill') {
         svg {
-            fill: theme-color("primary");
+            fill: $primaryLightBtnColor;
             stroke: none;
 
             * {
-                fill: theme-color("primary");
+                fill: $primaryLightBtnColor;
                 stroke: none;
             }
         }
     } @else if ($svgColorType == 'stroke') {
         svg {
-            stroke: theme-color("primary");
+            stroke: $primaryLightBtnColor;
             fill: none;
 
             * {
-                stroke: theme-color("primary");
+                stroke: $primaryLightBtnColor;
                 fill: none;
             }
         }
@@ -192,38 +194,39 @@
 
         &:hover,
         &.is-hovered {
-            background-color: $color03d !important;
+            background-color: $primaryLightBtnBackgroundHover !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: $color03d !important;
+        background-color: $primaryLightBtnBackgroundHover !important;
     }
 }
 
 @mixin usePrimaryYellowButtonStyle($svgColorType:'fill') {
-    background-color: $color24 !important;
-    color: $color01;
+    background-color: $secondaryDarkBtnBackground !important;
+    color: $secondaryDarkBtnColor;
+    border: 1px solid $secondaryDarkBtnBorder;
     @include coreButton($svgColorType);
 
     @if ($svgColorType == 'fill') {
         svg {
-            fill: $color01;
+            fill: $secondaryDarkBtnColor;
             stroke: none;
 
             * {
-                fill: $color01;
+                fill: $secondaryDarkBtnColor;
                 stroke: none;
             }
         }
     } @else if ($svgColorType == 'stroke') {
         svg {
-            stroke: $color01;
+            stroke: $secondaryDarkBtnColor;
             fill: none;
 
             * {
-                stroke: $color01;
+                stroke: $secondaryDarkBtnColor;
                 fill: none;
             }
         }
@@ -231,38 +234,39 @@
 
     &:not([disabled]):not(.disabled) {
         &:hover {
-            background-color: $color24d !important;
+            background-color: $secondaryDarkBtnBackgroundHover !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: $color24d !important;
+        background-color: $secondaryDarkBtnBackgroundHover !important;
     }
 }
 
 @mixin useSecondaryYellowButtonStyle($svgColorType:'fill') {
-    background-color: rgba($color24, .25) !important;
-    color: $color24;
+    background-color: $secondaryLightBtnBackground !important;
+    color: $secondaryLightBtnColor;
+    border: 1px solid $secondaryLightBtnBorder;
     @include coreButton($svgColorType);
 
     @if ($svgColorType == 'fill') {
         svg {
-            fill: $color24;
+            fill: $secondaryLightBtnColor;
             stroke: none;
 
             * {
-                fill: $color24;
+                fill: $secondaryLightBtnColor;
                 stroke: none;
             }
         }
     } @else if ($svgColorType == 'stroke') {
         svg {
-            stroke: $color24;
+            stroke: $secondaryLightBtnColor;
             fill: none;
 
             * {
-                stroke: $color24;
+                stroke: $secondaryLightBtnColor;
                 fill: none;
             }
         }
@@ -272,13 +276,13 @@
 
         &:hover,
         &.is-hovered {
-            background-color: $color24d !important;
+            background-color: $secondaryLightBtnBackgroundHover !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: $color24d !important;
+        background-color: $secondaryLightBtnBackgroundHover !important;
     }
 }
 
@@ -843,8 +847,8 @@
             width: 16px;
             height: 16px;
             min-width: 16px;
-            background-color: $color01;
-            border: 1px solid #BEBEBE;
+            background-color: $checkboxBackground;
+            border: 1px solid $checkboxBorder;
             border-radius: 4px;
         }
 
@@ -856,8 +860,8 @@
             height: 10px;
             min-width: 16px;
             top: 2px;
-            border-left: 3px solid $color01;
-            border-bottom: 3px solid $color01;
+            border-left: 3px solid $checkboxColor;
+            border-bottom: 3px solid $checkboxColor;
             opacity: 0;
         }
     }
@@ -865,13 +869,15 @@
     &:checked {
         &+* {
             &::before {
-                background-color: theme-color("primary");
-                border-color: theme-color("primary");
+                background-color: $checkedCheckboxBackground;
+                border-color: $checkedCheckboxBorder;
             }
 
             &::after {
                 transform: rotate(-45deg) scale(0.6);
                 opacity: 1;
+                border-left-color: $checkedCheckboxColor;
+                border-bottom-color: $checkedCheckboxColor;
             }
         }
     }
@@ -879,8 +885,13 @@
     &:disabled {
         &+* {
             &::before {
-                background-color: #D4D4D4;
-                border-color: #D4D4D4;
+                background-color: $disabledCheckboxBackground;
+                border-color: $disabledCheckboxBorder;
+            }
+
+            &::after {
+                border-left-color: $disabledCheckboxColor;
+                border-bottom-color: $disabledCheckboxColor;
             }
         }
     }
@@ -927,16 +938,16 @@
         }
 
         &::before {
-            background-color: $color01;
-            border: 1px solid #BEBEBE;
+            background-color: $checkboxBackground;
+            border: 1px solid $checkboxBorder;
         }
 
         &::after {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: $color01;
-            border: 1px solid $color01;
+            background-color: $checkboxColor;
+            border: 1px solid $checkboxColor;
             opacity: 0;
         }
     }
@@ -944,13 +955,18 @@
     &:checked {
         &+* {
             &::before {
-                background-color: theme-color("primary");
-                border-color: theme-color("primary");
+                background-color: $checkedCheckboxBackground;
+                border-color: $checkedCheckboxBorder;
             }
 
             &::after {
                 transform: scale(0.4);
                 opacity: 1;
+            }
+
+            &::after {
+                background-color: $checkedCheckboxColor;
+                border-color: $checkedCheckboxColor;
             }
         }
     }
@@ -958,8 +974,13 @@
     &:disabled {
         &+* {
             &::before {
-                background-color: #D4D4D4;
-                border-color: #D4D4D4;
+                background-color: $disabledCheckboxBackground;
+                border-color: $disabledCheckboxBorder;
+            }
+
+            &::after {
+                background-color: $disabledCheckboxColor;
+                border-color: $disabledCheckboxColor;
             }
         }
     }
@@ -1043,7 +1064,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background-color: $color21;
+            background-color: $dangerColor;
         }
 
         &::after {
@@ -1058,7 +1079,7 @@
     &:checked {
         &+* {
             &::before {
-                background-color: $grvColor05;
+                background-color: $successColor;
             }
 
             &::after {
@@ -1070,7 +1091,7 @@
     &:disabled {
         &+* {
             &::before {
-                background-color: #D4D4D4;
+                background-color: $disabledCheckboxBackground;
             }
         }
     }
