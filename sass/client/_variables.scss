@@ -168,7 +168,7 @@ $rem-base-size-cms: 10 !default;
 $primaryColor1: $color03;
 $primaryColor2: $color02;
 $secondaryColor1: $color25;
-$secondaryColor2: $color25;
+$secondaryColor2: $color22;
 $tertiaryColor1: $grvColor06;
 $tertiaryColor2: $color24;
 $textColorBgWhite1: $color02;
@@ -176,3 +176,61 @@ $textColorBgWhite2: $textColor01;
 $textColorBgWhite3: $textColor02;
 $textColorBgDark1: $textColor04;
 $textColorBgDark2: $color01;
+
+$dangerColor: $color21;
+$warningColor: $grvColor03;
+$successColor: $grvColor05;
+$infoColor: $grvColor04;
+
+
+$grvBorderColor1: $color30;
+$grvBorderColor2: $color27;
+$grvBgColor1: $color47;
+$grvBgColor2: $grey10;
+$grvBoxShadowColor1: rgba(137, 137, 137, 0.161);
+$grvBoxShadowColor2: rgba($color02, .15);
+
+$primaryDarkBtnBackground: $primaryColor1;
+$primaryDarkBtnBorder: transparent;
+$primaryDarkBtnColor: $color01;
+$primaryDarkBtnBackgroundHover: $color03d;
+
+$primaryLightBtnBackground: $secondaryColor2;
+$primaryLightBtnBorder: transparent;
+$primaryLightBtnColor: $primaryColor1;
+$primaryLightBtnBackgroundHover: $color03d;
+
+$secondaryDarkBtnBackground: $tertiaryColor2;
+$secondaryDarkBtnBorder: transparent;
+$secondaryDarkBtnColor: $color01;
+$secondaryDarkBtnBackgroundHover: $color24d;
+
+$secondaryLightBtnBackground: $secondaryColor1;
+$secondaryLightBtnBorder: transparent;
+$secondaryLightBtnColor: $tertiaryColor2;
+$secondaryLightBtnBackgroundHover: $color24d;
+
+$disabledBtnBackground: #CBCBCB;
+$disabledBtnColor: $textColor02;
+
+$inputBorder: transparent;
+$inputBackground: $grvBgColor1;
+$inputColor: $textColorBgWhite2;
+$disabledInputBorder: transparent;
+$disabledInputBackground: $grey09;
+$disabledInputColor: $textColor03;
+$errorInputBorder: $dangerColor;
+$errorInputBackground: #FFEEEE;
+$focusedInputBorder: $primaryColor1;
+$focusedInputBackground: $color01;
+$focusedInputColor: $textColorBgWhite2;
+
+$checkboxBorder: #BEBEBE;
+$checkboxBackground: $color01;
+$checkboxColor: $color01;
+$disabledCheckboxBorder: #D4D4D4;
+$disabledCheckboxBackground: #D4D4D4;
+$disabledCheckboxColor: $textColor03;
+$checkedCheckboxBorder: $primaryColor1;
+$checkedCheckboxBackground: $primaryColor1;
+$checkedCheckboxColor: $color01;

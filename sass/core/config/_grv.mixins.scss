@@ -273,19 +273,19 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23ffffff' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
 
     >option {
-      color: #000;
+      color: $color02;
     }
   }
 
   @else if ($theme=='white') {
     background-color: $color01;
-    border-color: #f3f3f4;
+    border-color: $grvBorderColor1;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23343a40' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   @else if ($theme=='gray') {
-    background-color: #F3F3F4;
-    border-color: #F3F3F4;
+    background-color: $grvBgColor1;
+    border-color: transparent;
     color: $textColor01;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
@@ -382,7 +382,7 @@
 }
 
 @mixin useDefaultAvatar {
-  background: #F3F3F4;
+  background: $grvBgColor1;
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
@@ -391,7 +391,7 @@
   border-radius: 20px;
 
   svg {
-    fill: #c6c6c6;
+    fill: $color39;
     width: 23px;
     height: unset;
   }
@@ -554,11 +554,11 @@
       display: block;
 
       .icon-bg {
-        fill: #3b3b3b;
+        fill: $color66;
       }
 
       .icon-content {
-        fill: #fff;
+        fill: $color01;
       }
     }
 

@@ -17,14 +17,15 @@
   }
 
   @else if ($theme=='gray') {
-    color: $textColor01;
-    border-color: $grey08;
-    background-color: $grey08;
+    color: $inputColor;
+    border-color: $inputBorder;
+    background-color: $inputBackground;
   }
 
   &[disabled] {
-    background-color: $grey09 !important;
-    color: $textColor03 !important;
+    background-color: $disabledInputBackground !important;
+    color: $disabledInputColor !important;
+    border-color: $disabledInputBorder;
   }
 
   @include whenFocusOnly {
@@ -60,17 +61,17 @@
 }
 
 @mixin setInputGenericFocused {
-  background-color: $color01 !important;
-  border-color: $color03 !important;
-  color: $textColor01 !important;
-  box-shadow: 0 0px 0 0.2rem rgba(230, 9, 120, 0.25) !important;
+  background-color: $focusedInputBackground !important;
+  border-color: $focusedInputBorder !important;
+  color: $focusedInputColor !important;
+  box-shadow: 0 0px 0 0.2rem rgba($color03, 0.25) !important;
   outline: none;
   background-image: none;
 }
 
 @mixin errorInput {
-  background-color: #FFEEEE !important;
-  border-color: $color21 !important;
+  background-color: $errorInputBackground !important;
+  border-color: $errorInputBorder !important;
 }
 
 @mixin errorInputMessage {
@@ -98,7 +99,7 @@
 
 @mixin searchInputStyle($large) {
   background-color: $color01 !important;
-  border: 1px solid #D6D6D6;
+  border: 1px solid $grvBorderColor1;
   border-radius: $globalRadius !important;
   border-bottom-right-radius: $globalRadius2 !important;
   border-top-right-radius: $globalRadius2 !important;
@@ -301,7 +302,7 @@
       }
 
       &:not(:last-child) {
-        border-bottom: 1px solid #DBDBDB;
+        border-bottom: 1px solid $grvBorderColor1;
       }
     }
   }
