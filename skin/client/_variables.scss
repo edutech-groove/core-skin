@@ -36,7 +36,9 @@ $color24: #FF9D00;
 $color24d: #EA9000;
 $color25: #FFF5E5;
 $color26: #F0F5FC;
+$color26d: #E4E7EA;
 $color27: #CFD7E2;
+$color27l: #DCE6F4;
 $color28: #8EA1BC;
 
 $color29: #22221F;
@@ -150,6 +152,7 @@ $grvBorderColor2: $color27;
 $grvBorderColor3: $color09;
 $grvBgColor1: $color26;
 $grvBgColor2: $grey10;
+$grvBgColor3: $color18;
 $grvBoxShadowColor1: rgba(137, 137, 137, 0.161);
 $grvBoxShadowColor2: rgba($color02, .15);
 
@@ -177,7 +180,7 @@ $disabledBtnBackground: #CBCBCB;
 $disabledBtnColor: $textColor02;
 
 $inputBorder: transparent;
-$inputBackground: $grvBgColor1;
+$inputBackground: $grvBgColor3;
 $inputColor: $textColorBgWhite2;
 $disabledInputBorder: transparent;
 $disabledInputBackground: $grey09;
