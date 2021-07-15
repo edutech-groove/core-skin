@@ -343,6 +343,11 @@
     display: block;
   }
 
+  svg {
+    width: 4px;
+    height: auto
+  }
+
   a {
     @include useBlueLink;
   }
