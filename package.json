@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edutech-groove/core-theme.git"
+    "url": "git+https://github.com/edutech-groove/core-skin.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edutech-groove/core-theme/issues"
+    "url": "https://github.com/edutech-groove/core-skin/issues"
   },
-  "homepage": "https://github.com/edutech-groove/core-theme#readme"
+  "homepage": "https://github.com/edutech-groove/core-skin#readme"
 }
