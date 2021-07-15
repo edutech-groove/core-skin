@@ -2,6 +2,8 @@
 
 $font1: "Nunito", sans-serif;
 $font2: "Plumpfull Black", sans-serif;
+$font3: "Helvetica", sans-serif;
+$font4: "TimesNewRoman", sans-serif;
 
 $color01: #FFFFFF;
 $color02: #000000;
@@ -68,10 +70,20 @@ $fontFamily: $font1;
 
 // Font variables
 $fontPlumpfullPath: '/src/skin/fonts/Plumpfull.woff';
-$fontNunitoSansRegularPath: '/src/skin/fonts/NunitoSans-Regular.woff';
-$fontNunitoSansSemiBoldPath: '/src/skin/fonts/NunitoSans-SemiBold.woff';
-$fontNunitoSansBoldPath: '/src/skin/fonts/NunitoSans-Bold.woff';
-$fontNunitoSansExtraBoldPath: '/src/skin/fonts/NunitoSans-ExtraBold.woff';
+$fontNunitoRegularPath: '/src/skin/fonts/Nunito-Regular.woff';
+$fontNunitoSemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
+$fontNunitoBoldPath: '/src/skin/fonts/Nunito-Bold.woff';
+$fontNunitoExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+
+$fontHelveticaNeueMediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';
+$fontHelveticaNeueBoldPath: '/src/skin/fonts/HelveticaNeue-Bold.woff';
+$fontHelveticaNeueThinPath: '/src/skin/fonts/HelveticaNeue-Thin.woff';
+$fontHelveticaNeueLightPath: '/src/skin/fonts/HelveticaNeue-Light.woff';
+$fontTimesNewRomanPath: '/src/skin/fonts/TimesNewRoman.woff';
+$fontTimesNewRomanBoldPath: '/src/skin/fonts/TimesNewRoman-Bold.woff';
+$fontTimesNewRomanBoldItalicPath: '/src/skin/fonts/TimesNewRoman-BoldItalic.woff';
+$fontTimesNewRomanItalicPath: '/src/skin/fonts/TimesNewRoman-Italic.woff';
+
 
 $breakMobile: 767.98px;
 $tablet: 768px;
@@ -80,6 +92,7 @@ $textColor01: #333333 !default;
 $textColor02: #666666 !default;
 $textColor03: #999999 !default;
 $textColor04: #C6CBD0 !default;
+$textColor05: #4A4F4D !default;
 
 $globalRadius: 4px;
 

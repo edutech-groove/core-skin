@@ -15,7 +15,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontNunitoSansRegularPath}") format('woff');
+  src: url("#{$fontNunitoRegularPath}") format('woff');
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("#{$fontNunitoSansSemiBoldPath}") format('woff');
+  src: url("#{$fontNunitoSemiBoldPath}") format('woff');
 }
 
 @font-face {
@@ -31,7 +31,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontNunitoSansBoldPath}") format('woff');
+  src: url("#{$fontNunitoBoldPath}") format('woff');
 }
 
 @font-face {
@@ -39,7 +39,71 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("#{$fontNunitoSansExtraBoldPath}") format('woff');
+  src: url("#{$fontNunitoExtraBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueMediumPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueThinPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueLightPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanItalicPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanBoldItalicPath}") format('woff');
 }
 
 
@@ -52,51 +116,51 @@ label {
   font-style: normal;
 }
 
-.h1, h1,
-.h2, h2,
-.h3, h3,
-.h4, h4,
-.h5, h5,
-.h6, h6 {
-  @include gfont;
-  color: $color07;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
+// .h1, h1,
+// .h2, h2,
+// .h3, h3,
+// .h4, h4,
+// .h5, h5,
+// .h6, h6 {
+//   @include gfont;
+//   color: $color07;
+//   font-weight: 700;
+//   margin-bottom: 16px;
+// }
 
-.h1,
-h1 {
-  @include fz(40);
-}
+// .h1,
+// h1 {
+//   @include fz(40);
+// }
 
-.h2,
-h2 {
-  @include fz(32);
-}
+// .h2,
+// h2 {
+//   @include fz(32);
+// }
 
-.h3,
-h3 {
-  @include fz(28);
-}
+// .h3,
+// h3 {
+//   @include fz(28);
+// }
 
-.h4,
-h4 {
-  @include fz(24);
-}
+// .h4,
+// h4 {
+//   @include fz(24);
+// }
 
-.h5,
-h5 {
-  @include fz(20);
-}
+// .h5,
+// h5 {
+//   @include fz(20);
+// }
 
-.h6,
-h6 {
-  @include fz(16);
-}
+// .h6,
+// h6 {
+//   @include fz(16);
+// }
 
-p {
-  line-height: 1.45;
-}
+// p {
+//   line-height: 1.45;
+// }
 
 /*
  Groove eDx Theme Heading

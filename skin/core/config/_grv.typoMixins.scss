@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontNunitoSansRegularPath}") format('woff');
+  src: url("#{$fontNunitoRegularPath}") format('woff');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("#{$fontNunitoSansSemiBoldPath}") format('woff');
+  src: url("#{$fontNunitoSemiBoldPath}") format('woff');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontNunitoSansBoldPath}") format('woff');
+  src: url("#{$fontNunitoBoldPath}") format('woff');
 }
 
 @font-face {
@@ -35,7 +35,71 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("#{$fontNunitoSansExtraBoldPath}") format('woff');
+  src: url("#{$fontNunitoExtraBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueMediumPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueThinPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueLightPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontHelveticaNeueBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanItalicPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'TimesNewRoman';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fontTimesNewRomanBoldItalicPath}") format('woff');
 }
 
 @mixin gfont {
