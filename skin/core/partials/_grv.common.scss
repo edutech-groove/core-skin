@@ -68,6 +68,11 @@
         align-items: center;
         justify-content: center;
         margin: 0 20px 0 0;
+
+        svg {
+            height: auto;
+            fill: $color01;
+        }
     }
 
     &.alert-success,
@@ -79,6 +84,10 @@
         .alert-icon,
         .feedback-symbol {
             background-color: $grvColor05 !important;
+
+            svg {
+                width: 12px;
+            }
         }
 
         .btn.close,
@@ -95,6 +104,10 @@
         .alert-icon,
         .feedback-symbol {
             background-color: $grvColor04 !important;
+
+            svg {
+                width: 12px;
+            }
         }
 
         .btn.close,
@@ -111,6 +124,10 @@
         .alert-icon,
         .feedback-symbol {
             background-color: $grvColor03 !important;
+
+            svg {
+                width: 14px;
+            }
         }
 
         .btn.close,
@@ -123,6 +140,10 @@
     &.alert-error {
         border-color: $color21 !important;
         background-color: lighten($color21, 35%) !important;
+
+        svg {
+            width: 16px;
+        }
 
         .icon-alert,
         .alert-icon,
@@ -227,6 +248,11 @@
     .icon {
         margin-right: 10px;
         @include fz(17);
+
+        svg {
+            width: 16px;
+            height: auto;
+        }
     }
 }
 
@@ -247,6 +273,10 @@
 
     .icon {
         color: $grvColor05;
+
+        svg {
+            fill: $grvColor05;
+        }
     }
 }
 
@@ -257,6 +287,10 @@
 
     .icon {
         color: $color21;
+
+        svg {
+            fill: $color21;
+        }
     }
 }
 
@@ -267,6 +301,10 @@
 
     .icon {
         color: $grvColor03;
+
+        svg {
+            fill: $grvColor03;
+        }
     }
 }
 

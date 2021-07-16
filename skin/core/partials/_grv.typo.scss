@@ -226,26 +226,28 @@ label {
   }
 }
 
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.weight-regular {
-    font-weight: 400;
-}
-
-.weight-semi-bold {
-    font-weight: 600;
-}
-
-.weight-bold {
-    font-weight: 700;
-}
-
-.text-primary {
-  color: theme-color("primary");
-}
-
-.text-blue {
-  color: $grvColor06;
+body {
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .weight-regular {
+      font-weight: 400;
+  }
+  
+  .weight-semi-bold {
+      font-weight: 600;
+  }
+  
+  .weight-bold {
+      font-weight: 700;
+  }
+  
+  .text-primary {
+    color: theme-color("primary") !important;
+  }
+  
+  .text-blue {
+    color: $grvColor06;
+  }
 }

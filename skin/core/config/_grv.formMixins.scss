@@ -267,6 +267,10 @@
         transform: translateY(-50%);
         color: $textColor02;
         margin: 0;
+
+        svg {
+          fill: $textColor02;
+        }
       }
     }
   }
@@ -341,6 +345,11 @@
   >* {
     margin: 4px;
     display: block;
+  }
+
+  svg {
+    width: 4px;
+    height: auto
   }
 
   a {
