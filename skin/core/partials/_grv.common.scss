@@ -245,6 +245,10 @@
     @include paragraph2;
     margin-bottom: 0;
 
+    .title {
+        @include heading3;
+    }
+
     .icon {
         margin-right: 10px;
         @include fz(17);

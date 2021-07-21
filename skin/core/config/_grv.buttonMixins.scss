@@ -630,6 +630,7 @@
   text-shadow: none;
   text-transform: uppercase;
   width: 100%;
+  outline: none;
 
   .icon {
     bottom: auto;
@@ -643,6 +644,7 @@
     background-color: $color01;
     border-color: theme-color("primary");
     color: $textColor01;
+    box-shadow: none;
 
     .icon {
       color: $color01;
