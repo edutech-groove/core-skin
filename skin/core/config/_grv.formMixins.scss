@@ -339,12 +339,12 @@
   @include flex-wrap(wrap);
   @include captain;
   font-weight: 400;
-  color: $textColor01;
   margin-bottom: 0;
 
   >* {
     margin: 4px;
     display: block;
+    color: $textColor01;
   }
 
   svg {
