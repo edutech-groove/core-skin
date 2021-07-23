@@ -1,9 +1,9 @@
 @import "../core/config/grv.variables";
 
-$font1: "Nunito", sans-serif;
-$font2: "Plumpfull Black", sans-serif;
-$font3: "Helvetica", sans-serif;
-$font4: "TimesNewRoman", sans-serif;
+$font1: "Font1", sans-serif;
+$font2: "Font2", sans-serif;
+$font3: "Font3", sans-serif;
+$font4: "Font4", sans-serif;
 
 $color01: #FFFFFF;
 $color02: #000000;
@@ -69,20 +69,20 @@ $homepage-bg-image: url('../images/banner-img.png');
 $fontFamily: $font1;
 
 // Font variables
-$fontPlumpfullPath: '/src/skin/fonts/Plumpfull.woff';
-$fontNunitoRegularPath: '/src/skin/fonts/Nunito-Regular.woff';
-$fontNunitoSemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
-$fontNunitoBoldPath: '/src/skin/fonts/Nunito-Bold.woff';
-$fontNunitoExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+$font1RegularPath: '/src/skin/fonts/Nunito-Regular.woff';
+$font1SemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
+$font1BoldPath: '/src/skin/fonts/Nunito-Bold.woff';
+$font1ExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+$font2RegularPath: '/src/skin/fonts/Plumpfull.woff';
 
-$fontHelveticaNeueMediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';
-$fontHelveticaNeueBoldPath: '/src/skin/fonts/HelveticaNeue-Bold.woff';
-$fontHelveticaNeueThinPath: '/src/skin/fonts/HelveticaNeue-Thin.woff';
-$fontHelveticaNeueLightPath: '/src/skin/fonts/HelveticaNeue-Light.woff';
-$fontTimesNewRomanPath: '/src/skin/fonts/TimesNewRoman.woff';
-$fontTimesNewRomanBoldPath: '/src/skin/fonts/TimesNewRoman-Bold.woff';
-$fontTimesNewRomanBoldItalicPath: '/src/skin/fonts/TimesNewRoman-BoldItalic.woff';
-$fontTimesNewRomanItalicPath: '/src/skin/fonts/TimesNewRoman-Italic.woff';
+$font3MediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';
+$font3BoldPath: '/src/skin/fonts/HelveticaNeue-Bold.woff';
+$font3ThinPath: '/src/skin/fonts/HelveticaNeue-Thin.woff';
+$font3LightPath: '/src/skin/fonts/HelveticaNeue-Light.woff';
+$font4Path: '/src/skin/fonts/TimesNewRoman.woff';
+$font4BoldPath: '/src/skin/fonts/TimesNewRoman-Bold.woff';
+$font4BoldItalicPath: '/src/skin/fonts/TimesNewRoman-BoldItalic.woff';
+$font4ItalicPath: '/src/skin/fonts/TimesNewRoman-Italic.woff';
 
 
 $breakMobile: 767.98px;
@@ -192,6 +192,11 @@ $secondaryLightBtnBackgroundHover: $color24d;
 $disabledBtnBackground: #CBCBCB;
 $disabledBtnColor: $textColor02;
 
+$buttonRadiiTL: $globalRadius1;
+$buttonRadiiTR: $globalRadius1;
+$buttonRadiiBR: $globalRadius1;
+$buttonRadiiBL: $globalRadius1;
+
 $inputBorder: transparent;
 $inputBackground: $grey08;
 $inputColor: $textColorBgWhite2;
@@ -203,6 +208,12 @@ $errorInputBackground: #FFEEEE;
 $focusedInputBorder: $primaryColor1;
 $focusedInputBackground: $color01;
 $focusedInputColor: $textColorBgWhite2;
+$focusedInputShadow: 0 0px 0 0.2rem rgba($color03, 0.25);
+
+$inputRadiiTL: $globalRadius;
+$inputRadiiTR: $globalRadius;
+$inputRadiiBR: $globalRadius;
+$inputRadiiBL: $globalRadius;
 
 $checkboxBorder: #BEBEBE;
 $checkboxBackground: $color01;
@@ -213,3 +224,61 @@ $disabledCheckboxColor: $textColor03;
 $checkedCheckboxBorder: $primaryColor1;
 $checkedCheckboxBackground: $primaryColor1;
 $checkedCheckboxColor: $color01;
+
+$heading0Font: $font2;
+$heading0Size: 32px;
+$heading0Weight: 100;
+$heading0LineHeight: 1.2;
+$heading0Color: $color02;
+$heading0MarginBottom: 15px;
+$heading0Transform: uppercase;
+
+$heading1Font: $font2;
+$heading1Size: 28px;
+$heading1Weight: 100;
+$heading1LineHeight: 1.2;
+$heading1Color: $color02;
+$heading1MarginBottom: 15px;
+$heading1Transform: uppercase;
+
+$heading2Font: $font1;
+$heading2Size: 24px;
+$heading2Weight: 700;
+$heading2LineHeight: 1.4;
+$heading2Color: $color02;
+$heading2MarginBottom: 10px;
+
+$heading3Font: $font1;
+$heading3Size: 17px;
+$heading3Weight: 700;
+$heading3LineHeight: 1.4;
+$heading3Color: $color02;
+$heading3MarginBottom: 10px;
+
+$paragraph1Font: $font1;
+$paragraph1Size: 15px;
+$paragraph1Weight: 700;
+$paragraph1LineHeight: 1.4;
+$paragraph1Color: $textColor01;
+$paragraph1MarginBottom: 10px;
+
+$paragraph2Font: $font1;
+$paragraph2Size: 15px;
+$paragraph2Weight: 400;
+$paragraph2LineHeight: 1.4;
+$paragraph2Color: $textColor01;
+$paragraph2MarginBottom: 10px;
+
+$captainFont: $font1;
+$captainSize: 13px;
+$captainWeight: 400;
+$captainLineHeight: 1.4;
+$captainColor: $textColor02;
+$captainMarginBottom: 7px;
+
+$textLabelFont: $font1;
+$textLabelSize: 15px;
+$textLabelWeight: 400;
+$textLabelLineHeight: 1.4;
+$textLabelColor: $textColor02;
+$textLabelMarginBottom: 7px;

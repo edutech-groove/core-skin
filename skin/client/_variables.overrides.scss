@@ -4,17 +4,17 @@
 // It is used for theme styling in LMS/CMS
 
 // Override font variables by getting from FEC
-$fontPlumpfullPath: '/static/fec/fonts/Plumpfull.woff';
-$fontNunitoRegularPath: '/static/fec/fonts/Nunito-Regular.woff';
-$fontNunitoSemiBoldPath: '/static/fec/fonts/Nunito-SemiBold.woff';
-$fontNunitoBoldPath: '/static/fec/fonts/Nunito-Bold.woff';
-$fontNunitoExtraBoldPath: '/static/fec/fonts/Nunito-ExtraBold.woff';
+$font1RegularPath: '/static/fec/fonts/Nunito-Regular.woff';
+$font1SemiBoldPath: '/static/fec/fonts/Nunito-SemiBold.woff';
+$font1BoldPath: '/static/fec/fonts/Nunito-Bold.woff';
+$font1ExtraBoldPath: '/static/fec/fonts/Nunito-ExtraBold.woff';
+$font2RegularPath: '/static/fec/fonts/Plumpfull.woff';
 
-$fontHelveticaNeueMediumPath: '/static/fec/fonts/HelveticaNeue-Medium.woff';
-$fontHelveticaNeueBoldPath: '/static/fec/fonts/HelveticaNeue-Bold.woff';
-$fontHelveticaNeueThinPath: '/static/fec/fonts/HelveticaNeue-Thin.woff';
-$fontHelveticaNeueLightPath: '/static/fec/fonts/HelveticaNeue-Light.woff';
-$fontTimesNewRomanPath: '/static/fec/fonts/TimesNewRoman.woff';
-$fontTimesNewRomanBoldPath: '/static/fec/fonts/TimesNewRoman-Bold.woff';
-$fontTimesNewRomanBoldItalicPath: '/static/fec/fonts/TimesNewRoman-BoldItalic.woff';
-$fontTimesNewRomanItalicPath: '/static/fec/fonts/TimesNewRoman-Italic.woff';
+$font3MediumPath: '/static/fec/fonts/HelveticaNeue-Medium.woff';
+$font3BoldPath: '/static/fec/fonts/HelveticaNeue-Bold.woff';
+$font3ThinPath: '/static/fec/fonts/HelveticaNeue-Thin.woff';
+$font3LightPath: '/static/fec/fonts/HelveticaNeue-Light.woff';
+$font4Path: '/static/fec/fonts/TimesNewRoman.woff';
+$font4BoldPath: '/static/fec/fonts/TimesNewRoman-Bold.woff';
+$font4BoldItalicPath: '/static/fec/fonts/TimesNewRoman-BoldItalic.woff';
+$font4ItalicPath: '/static/fec/fonts/TimesNewRoman-Italic.woff';

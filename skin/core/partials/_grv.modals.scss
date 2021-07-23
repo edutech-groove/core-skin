@@ -1,7 +1,7 @@
 @mixin usePrimaryModalStyle {
   border: 0 !important;
   background-color: $color01 !important;
-  border-radius: 8px !important;
+  border-radius: $globalRadius*2 !important;
   padding: 30px 20px !important;
   position: relative;
   top: 0 !important;

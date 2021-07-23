@@ -1,7 +1,7 @@
 @mixin setInputGenericCore($theme) {
   @include useFont1;
   @include fz(15);
-  border-radius: $globalRadius;
+  border-radius: $inputRadiiTL $inputRadiiTR $inputRadiiBR $inputRadiiBL;
   border: 1px solid transparent;
   box-shadow: none;
   font-style: normal;
@@ -14,6 +14,12 @@
   @if ($theme=='ondark') {
     background-color: rgba($color01, .1);
     color: $color01;
+  }
+
+  @else if ($theme=='white') {
+    color: $inputColor;
+    background-color: $color01;
+    border-color: $grvBorderColor1;
   }
 
   @else if ($theme=='gray') {
@@ -64,7 +70,7 @@
   background-color: $focusedInputBackground !important;
   border-color: $focusedInputBorder !important;
   color: $focusedInputColor !important;
-  box-shadow: 0 0px 0 0.2rem rgba($color03, 0.25) !important;
+  box-shadow: $focusedInputShadow !important;
   outline: none;
   background-image: none;
 }

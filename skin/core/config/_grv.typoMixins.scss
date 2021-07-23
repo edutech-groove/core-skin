@@ -1,105 +1,105 @@
 @font-face {
-  font-family: 'Plumpfull Black';
+  font-family: 'Font2';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("#{$fontPlumpfullPath}") format("woff");
+  src: url("#{$font2RegularPath}") format("woff");
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontNunitoRegularPath}") format('woff');
+  src: url("#{$font1RegularPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("#{$fontNunitoSemiBoldPath}") format('woff');
+  src: url("#{$font1SemiBoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontNunitoBoldPath}") format('woff');
+  src: url("#{$font1BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("#{$fontNunitoExtraBoldPath}") format('woff');
+  src: url("#{$font1ExtraBoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueMediumPath}") format('woff');
+  src: url("#{$font3MediumPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueThinPath}") format('woff');
+  src: url("#{$font3ThinPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueLightPath}") format('woff');
+  src: url("#{$font3LightPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueBoldPath}") format('woff');
+  src: url("#{$font3BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanPath}") format('woff');
+  src: url("#{$font4Path}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanItalicPath}") format('woff');
+  src: url("#{$font4ItalicPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanBoldPath}") format('woff');
+  src: url("#{$font4BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanBoldItalicPath}") format('woff');
+  src: url("#{$font4BoldItalicPath}") format('woff');
 }
 
 @mixin gfont {
@@ -152,177 +152,108 @@
   @include setOnlyFontSize($fontsize, 10);
 }
 
-@mixin heading0 {
-  font-size: 28px;
-  @include useFont2;
-  font-weight: 100;
-  line-height: 1.2;
-  color: $color02;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-@mixin heading1($cms:false) {
-  @if ($cms) {
-    @include fzCMS(28);
-  }
-  @else {
-    @include fz(28);
-  }
-  @include useFont2;
-  font-weight: 100;
-  line-height: 1.2 !important;
-  color: $color02;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-@mixin heading2($cms:false) {
-  @if ($cms) {
-    @include fzCMS(24);
-  }
-  @else {
-    @include fz(24);
-  }
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4 !important;
-  color: $color02;
-  margin-bottom: 10px;
-}
-
-@mixin heading3($cms:false) {
-  @if ($cms) {
-    @include fzCMS(17);
-  }
-  @else {
-    @include fz(17);
-  }
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4 !important;
-  color: $color02;
-  margin-bottom: 10px;
-}
-
-@mixin paragraph1($cms:false) {
-  @if ($cms) {
-    @include fzCMS(15);
-  }
-  @else {
-    @include fz(15);
-  }
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4 !important;
-  color: $textColor01;
-  margin-bottom: 10px;
-}
-
-@mixin paragraph2($cms:false) {
-  @if ($cms) {
-    @include fzCMS(15);
-  }
-  @else {
-    @include fz(15);
-  }
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4 !important;
-  color: $textColor01;
-  margin-bottom: 10px;
-}
-
-@mixin captain($cms:false) {
-  @if ($cms) {
-    @include fzCMS(13);
-  }
-  @else {
-    @include fz(13);
-  }
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4 !important;
-  color: $textColor02;
-  margin-bottom: 7px;
-}
-
-@mixin textLabel($cms:false) {
-  @if ($cms) {
-    @include fzCMS(15);
-  }
-  @else {
-    @include fz(15);
-  }
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4 !important;
-  color: $textColor02;
-  margin-bottom: 7px;
-}
-
-@mixin paragraph1Style {
-  font-size: 15px;
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4;
-  color: $textColor01;
-}
-
-@mixin paragraph2Style {
-  font-size: 15px;
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4;
-  color: $textColor01;
-}
-
-@mixin captainStyle {
-  font-size: 13px;
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4;
-  color: $textColor02;
-}
-
-@mixin textLabelStyle {
-  font-size: 15px;
-  @include useFont1;
-  font-weight: 400;
-  line-height: 1.4;
-  color: $textColor02;
-}
-
 @mixin heading0Style {
-  font-size: 32px;
-  @include useFont2;
-  font-weight: 100;
-  line-height: 1.2;
-  color: $color02;
-  text-transform: uppercase;
+  font-size: $heading0Size;
+  font-family: $heading0Font;
+  font-weight: $heading0Weight;
+  line-height: $heading0LineHeight;
+  color: $heading0Color;
+  text-transform: $heading0Transform;
 }
 
 @mixin heading1Style {
-  font-size: 28px;
-  @include useFont2;
-  font-weight: 100;
-  line-height: 1.2;
-  color: $color02;
-  text-transform: uppercase;
+  font-size: $heading1Size;
+  font-family: $heading1Font;
+  font-weight: $heading1Weight;
+  line-height: $heading1LineHeight;
+  color: $heading1Color;
+  text-transform: $heading1Transform;
 }
 
 @mixin heading2Style {
-  font-size: 24px;
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4;
-  color: $color02;
+  font-size: $heading2Size;
+  font-family: $heading2Font;
+  font-weight: $heading2Weight;
+  line-height: $heading2LineHeight;
+  color: $heading2Color;
 }
 
 @mixin heading3Style {
-  font-size: 17px;
-  @include useFont1;
-  font-weight: 700;
-  line-height: 1.4;
-  color: $color02;
+  font-size: $heading3Size;
+  font-family: $heading3Font;
+  font-weight: $heading3Weight;
+  line-height: $heading3LineHeight;
+  color: $heading3Color;
+}
+
+@mixin paragraph1Style {
+  font-size: $paragraph1Size;
+  font-family: $paragraph1Font;
+  font-weight: $paragraph1Weight;
+  line-height: $paragraph1LineHeight;
+  color: $paragraph1Color;
+}
+
+@mixin paragraph2Style {
+  font-size: $paragraph2Size;
+  font-family: $paragraph2Font;
+  font-weight: $paragraph2Weight;
+  line-height: $paragraph2LineHeight;
+  color: $paragraph2Color;
+}
+
+@mixin captainStyle {
+  font-size: $captainSize;
+  font-family: $captainFont;
+  font-weight: $captainWeight;
+  line-height: $captainLineHeight;
+  color: $captainColor;
+}
+
+@mixin textLabelStyle {
+  font-size: $textLabelSize;
+  font-family: $textLabelFont;
+  font-weight: $textLabelWeight;
+  line-height: $textLabelLineHeight;
+  color: $textLabelColor;
+}
+
+@mixin heading0 {
+  @include heading0Style();
+  margin-bottom: $heading0MarginBottom;
+}
+
+@mixin heading1($cms:false) {
+  @include heading1Style();
+  margin-bottom: $heading1MarginBottom;
+}
+
+@mixin heading2($cms:false) {
+  @include heading2Style();
+  margin-bottom: $heading2MarginBottom;
+}
+
+@mixin heading3($cms:false) {
+  @include heading3Style();
+  margin-bottom: $heading3MarginBottom;
+}
+
+@mixin paragraph1($cms:false) {
+  @include paragraph1Style();
+  margin-bottom: $paragraph1MarginBottom;
+}
+
+@mixin paragraph2($cms:false) {
+  @include paragraph2Style();
+  margin-bottom: $paragraph2MarginBottom;
+}
+
+@mixin captain($cms:false) {
+  @include captainStyle();
+  margin-bottom: $captainMarginBottom;
+}
+
+@mixin textLabel($cms:false) {
+  @include textLabelStyle();
+  margin-bottom: $textLabelMarginBottom;
 }

@@ -242,7 +242,7 @@
   background-position: right 15px center;
   background-size: 10px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: $globalRadius;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -269,8 +269,7 @@
   }
 
   @if ($theme=='ondark') {
-    background-color: rgba($color01, .1);
-    color: $color01;
+    @include setInputGeneric('ondark');
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23ffffff' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
 
     >option {
@@ -279,33 +278,27 @@
   }
 
   @else if ($theme=='white') {
-    background-color: $color01;
-    border-color: $grvBorderColor1;
+    @include setInputGeneric('white');
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23343a40' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   @else if ($theme=='gray') {
-    background-color: $inputBackground;
-    border-color: transparent;
-    color: $textColor01;
+    @include setInputGeneric;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   &:focus {
     opacity: 1 !important;
     outline: none;
-    border-color: theme-color("primary");
-    box-shadow: 0 0 0 3px rgba(theme-color("primary"), .25);
-    background-color: $color01;
-    color: $textColor01;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
+    @include setInputGenericFocused;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e") !important;
   }
 }
 
 @mixin usePopover {
   border-color: transparent;
   position: relative;
-  border-radius: 8px;
+  border-radius: $globalRadius*2;
   padding: 20px 0;
   margin: 0;
   list-style: none;
@@ -389,7 +382,7 @@
   @include justify-content(center);
   width: 64px;
   height: 64px;
-  border-radius: 20px;
+  border-radius: $globalRadius1;
 
   svg {
     fill: $color12;
@@ -400,7 +393,7 @@
   &.lg {
     width: 128px;
     height: 128px;
-    border-radius: 40px;
+    border-radius: $globalRadius2;
 
     svg {
       width: 45px;
@@ -410,7 +403,7 @@
   &.sm {
     width: 32px;
     height: 32px;
-    border-radius: 10px;
+    border-radius: $globalRadius*2;
 
     svg {
       width: 11px;
@@ -543,7 +536,7 @@
 
 @mixin footerBrandLogo {
   background: $color02;
-  border-radius: 4px;
+  border-radius: $globalRadius;
   @include flexbox;
   @include align-items(center);
 
@@ -691,7 +684,7 @@
 @mixin badge {
   @include captain;
   background-color: $textColor01;
-  border-radius: 20px;
+  border-radius: $globalRadius1;
   color: $color01;
   text-shadow: none;
   padding: 3px 8px 1px;
@@ -797,7 +790,7 @@
   .feedback-symbol {
     width: 30px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: $globalRadius;
     color: $color01;
     @include flexbox;
     @include align-items(center);
@@ -814,7 +807,7 @@
   &.alert-success,
   &.announcement {
     border-color: $grvColor05;
-    background-color: lighten($grvColor05, 40%);
+    background-color: rgba($grvColor05, .1);
 
     .icon-alert,
     .alert-icon,
@@ -830,7 +823,7 @@
 
   &.alert-info {
     border-color: $grvColor04;
-    background-color: lighten($grvColor04, 27%);
+    background-color: rgba($grvColor04, .1);
 
     .icon-alert,
     .alert-icon,
@@ -846,7 +839,7 @@
 
   &.alert-warning {
     border-color: $grvColor03;
-    background-color: lighten($grvColor03, 32%);
+    background-color: rgba($grvColor03, .1);
 
     .icon-alert,
     .alert-icon,
