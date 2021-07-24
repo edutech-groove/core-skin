@@ -359,10 +359,10 @@
     @include whenHover {
       background-color: $color23;
       box-shadow: none;
-      color: theme-color("primary");
+      color: $primaryColor1;
 
       svg {
-        fill: theme-color("primary");
+        fill: $primaryColor1;
       }
     }
   }
@@ -413,7 +413,7 @@
 }
 
 @mixin usePlaceholderAvatar {
-  background: theme-color("primary");
+  background: $primaryColor1;
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
@@ -522,13 +522,13 @@
 
   &:hover,
   &.active {
-    background: $color22;
-    color: theme-color("primary");
+    background: $secondaryColor2;
+    color: $primaryColor1;
 
     .chip-container {
       .clear {
         svg {
-          fill: theme-color("primary");
+          fill: $primaryColor1;
         }
       }
     }
@@ -564,7 +564,7 @@
     &:hover {
       svg {
         .icon-content {
-          fill: theme-color("primary");
+          fill: $primaryColor1;
         }
       }
     }
@@ -722,7 +722,7 @@
       margin: 0;
 
       @include whenHover {
-        color: theme-color("primary");
+        color: $primaryColor1;
       }
     }
   }
@@ -807,67 +807,67 @@
 
   &.alert-success,
   &.announcement {
-    border-color: $grvColor05;
-    background-color: rgba($grvColor05, .1);
+    border-color: $successColor;
+    background-color: rgba($successColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor05;
+      background-color: $successColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor05;
+      color: $successColor;
     }
   }
 
   &.alert-info {
-    border-color: $grvColor04;
-    background-color: rgba($grvColor04, .1);
+    border-color: $infoColor;
+    background-color: rgba($infoColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor04;
+      background-color: $infoColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor04;
+      color: $infoColor;
     }
   }
 
   &.alert-warning {
-    border-color: $grvColor03;
-    background-color: rgba($grvColor03, .1);
+    border-color: $warningColor;
+    background-color: rgba($warningColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor03;
+      background-color: $warningColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor03;
+      color: $warningColor;
     }
   }
 
   &.alert-danger,
   &.alert-error {
-    border-color: $color21;
-    background-color: rgba($color21, .1);
+    border-color: $dangerColor;
+    background-color: rgba($dangerColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $color21;
+      background-color: $dangerColor;
     }
 
     .btn.close,
     .action-close {
-      color: $color21;
+      color: $dangerColor;
     }
   }
 }
@@ -883,11 +883,11 @@
   display: inline-block;
 
   &.success {
-      background-color: $grvColor05;
+      background-color: $successColor;
   }
 
   &.warning {
-      background-color: $color24;
+      background-color: $tertiaryColor2;
   }
 }
 
@@ -939,7 +939,7 @@
         &:focus,
         &.active {
           color: $textColor01;
-          border-color: $color22;
+          border-color: $secondaryColor2;
           background-color: $color23;
           box-shadow: none;
         }

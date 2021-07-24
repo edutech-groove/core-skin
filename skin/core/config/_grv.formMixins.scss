@@ -82,7 +82,7 @@
 
 @mixin errorInputMessage {
   @include captain();
-  color: $color21 !important;
+  color: $dangerColor !important;
   margin-top: 6px;
   margin-bottom: 0;
 }
@@ -185,16 +185,16 @@
   &.active,
   &.ui-tabs-active,
   &:hover {
-    border-bottom-color: theme-color("primary") !important;
-    color: theme-color("primary") !important;
+    border-bottom-color: $primaryColor1 !important;
+    color: $primaryColor1 !important;
 
     >a,
     &.tab {
-      color: theme-color("primary") !important;
+      color: $primaryColor1 !important;
     }
 
     &:after {
-      border-color: transparent transparent theme-color("primary") transparent;
+      border-color: transparent transparent $primaryColor1 transparent;
     }
   }
 
@@ -239,12 +239,12 @@
   &.is-active {
     border-color: $color27;
     background-color: $color01 !important;
-    color: $color24;
+    color: $tertiaryColor2;
   }
 
   @include whenHover {
     text-decoration: none !important;
-    color: $color24;
+    color: $tertiaryColor2;
   }
 }
 

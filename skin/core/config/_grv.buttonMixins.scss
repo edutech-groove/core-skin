@@ -288,7 +288,7 @@
 }
 
 @mixin useDangerButtonStyle($svgColorType:'fill') {
-    background-color: $color21 !important;
+    background-color: $dangerColor !important;
     color: $color01;
     @include coreButton($svgColorType);
 
@@ -318,38 +318,38 @@
 
         &:hover,
         &.is-hovered {
-            background-color: darken($color21, 10%) !important;
+            background-color: darken($dangerColor, 10%) !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: darken($color21, 10%) !important;
+        background-color: darken($dangerColor, 10%) !important;
     }
 }
 
 @mixin useDangerTransparentButtonStyle($svgColorType:'fill') {
     background-color: transparent !important;
-    color: $color21;
+    color: $dangerColor;
     @include coreButton($svgColorType);
 
     @if ($svgColorType == 'fill') {
         svg {
-            fill: $color21;
+            fill: $dangerColor;
             stroke: none;
 
             * {
-                fill: $color21;
+                fill: $dangerColor;
                 stroke: none;
             }
         }
     } @else if ($svgColorType == 'stroke') {
         svg {
-            stroke: $color21;
+            stroke: $dangerColor;
             fill: none;
 
             * {
-                stroke: $color21;
+                stroke: $dangerColor;
                 fill: none;
             }
         }
@@ -360,25 +360,25 @@
         &:focus,
         &:hover,
         &.is-hovered {
-            color: darken($color21, 10%) !important;
+            color: darken($dangerColor, 10%) !important;
 
             @if ($svgColorType == 'fill') {
                 svg {
-                    fill: darken($color21, 10%) !important;
+                    fill: darken($dangerColor, 10%) !important;
                     stroke: none;
 
                     * {
-                        fill: darken($color21, 10%) !important;
+                        fill: darken($dangerColor, 10%) !important;
                         stroke: none;
                     }
                 }
             } @else if ($svgColorType == 'stroke') {
                 svg {
-                    stroke: darken($color21, 10%) !important;
+                    stroke: darken($dangerColor, 10%) !important;
                     fill: none;
 
                     * {
-                        stroke: darken($color21, 10%) !important;
+                        stroke: darken($dangerColor, 10%) !important;
                         fill: none;
                     }
                 }
@@ -403,8 +403,8 @@
     &.disabled,
     &.is-disabled,
     &:disabled {
-      background-color: theme-color("primary") !important;
-      border-color: theme-color("primary") !important;
+      background-color: $primaryColor1 !important;
+      border-color: $primaryColor1 !important;
       opacity: 0.7;
     }
   }
@@ -418,7 +418,7 @@
     &.is-disabled,
     &:disabled {
       background-color: $color01 !important;
-      border-color: theme-color("primary") !important;
+      border-color: $primaryColor1 !important;
       opacity: 0.7;
     }
   }
@@ -642,7 +642,7 @@
 
   @include whenHover {
     background-color: $color01;
-    border-color: theme-color("primary");
+    border-color: $primaryColor1;
     color: $textColor01;
     box-shadow: none;
 
@@ -667,9 +667,9 @@
 }
 
 @mixin useLightPinkButton {
-  background-color: $color22;
-  border-color: $color22;
-  color: theme-color("primary");
+  background-color: $secondaryColor2;
+  border-color: $secondaryColor2;
+  color: $primaryColor1;
   border-radius: $globalRadius2;
 
   @include whenHover {
@@ -679,43 +679,43 @@
 }
 
 @mixin useYellowButton {
-  border: 1px solid $color25;
-  background-color: $color25;
+  border: 1px solid $secondaryColor1;
+  background-color: $secondaryColor1;
   border-radius: $globalRadius2;
-  color: $color24;
+  color: $tertiaryColor2;
   display: inline-block;
   text-decoration: none;
 
   @include whenHover {
-    background-color: $color24;
-    border-color: $color24;
+    background-color: $tertiaryColor2;
+    border-color: $tertiaryColor2;
     color: $color01;
   }
 }
 
 @mixin useYellowButton2 {
-  border: 1px solid $color24;
+  border: 1px solid $tertiaryColor2;
   border-radius: $globalRadius2;
-  background-color: $color24;
+  background-color: $tertiaryColor2;
   color: $color01;
   display: inline-block;
   text-decoration: none;
 
   @include whenHover {
-    border-color: $color25;
-    background-color: $color25;
-    color: $color24;
+    border-color: $secondaryColor1;
+    background-color: $secondaryColor1;
+    color: $tertiaryColor2;
   }
 }
 
 @mixin useDangerButton {
   background-color: $color01;
-  color: theme-color("danger");
-  border-color: theme-color("danger");
+  color: dangerColor;
+  border-color: dangerColor;
   border-radius: $globalRadius2;
 
   @include whenHover {
-    background-color: theme-color("danger");
+    background-color: dangerColor;
     color: $color01;
   }
 }
@@ -729,14 +729,14 @@
     background-color: transparent;
 
     @include whenHover {
-        color: theme-color("primary") !important;
+        color: $primaryColor1 !important;
         box-shadow: none;
     }
 
 }
 
 @mixin usePrimaryLink {
-    color: theme-color("primary") !important;
+    color: $primaryColor1 !important;
     text-decoration: none;
     box-shadow: none;
     border: 0;
@@ -744,7 +744,7 @@
     background-color: transparent;
 
     svg {
-      fill: theme-color("primary");
+      fill: $primaryColor1;
     }
     
     @include whenHover {
@@ -755,7 +755,7 @@
 }
 
 @mixin useBlueLink($svgColorType: 'fill') {
-    color: $grvColor06 !important;
+    color: $linkColor !important;
     text-decoration: none;
     background-color: transparent !important;
     box-shadow: none !important;
@@ -783,26 +783,26 @@
         height: 12px;
         
         @if ($svgColorType == 'fill') {
-            fill: $grvColor06;
+            fill: $linkColor;
             stroke: none;
 
             * {
-                fill: $grvColor06;
+                fill: $linkColor;
                 stroke: none;
             }
         } @else if ($svgColorType == 'stroke') {
-            stroke: $grvColor06;
+            stroke: $linkColor;
             fill: none;
 
             * {
-                stroke: $grvColor06;
+                stroke: $linkColor;
                 fill: none;
             }
         }
     }
 
     @include whenHover {
-        color: $grvColor06;
+        color: $linkColor;
         text-decoration: underline !important;
         box-shadow: none !important;
         font-weight: 300 !important;
@@ -1024,8 +1024,8 @@
             max-width: unset;
             width: 18px;
             height: 11px;
-            border-left: 3px solid theme-color("primary");
-            border-bottom: 3px solid theme-color("primary");
+            border-left: 3px solid $primaryColor1;
+            border-bottom: 3px solid $primaryColor1;
             opacity: 0;
         }
     }

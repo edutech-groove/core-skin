@@ -51,12 +51,12 @@
     @include whenHoverOnly {
       svg {
         line {
-          stroke: theme-color("primary");
+          stroke: $primaryColor1;
         }
       }
 
       .icon {
-        color: theme-color("primary");
+        color: $primaryColor1;
       }
     }
   }
@@ -257,7 +257,7 @@
     }
 
     @include whenHoverOnly {
-      color: theme-color("primary");
+      color: $primaryColor1;
     }
   }
 

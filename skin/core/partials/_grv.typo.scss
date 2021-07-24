@@ -3,107 +3,107 @@
 // }
 
 @font-face {
-  font-family: 'Plumpfull Black';
+  font-family: 'Font2';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("#{$fontPlumpfullPath}") format("woff");
+  src: url("#{$font2RegularPath}") format("woff");
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontNunitoRegularPath}") format('woff');
+  src: url("#{$font1RegularPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("#{$fontNunitoSemiBoldPath}") format('woff');
+  src: url("#{$font1SemiBoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontNunitoBoldPath}") format('woff');
+  src: url("#{$font1BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Font1';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("#{$fontNunitoExtraBoldPath}") format('woff');
+  src: url("#{$font1ExtraBoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueMediumPath}") format('woff');
+  src: url("#{$font3MediumPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueThinPath}") format('woff');
+  src: url("#{$font3ThinPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueLightPath}") format('woff');
+  src: url("#{$font3LightPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'Helvetica';
+  font-family: 'Font3';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontHelveticaNeueBoldPath}") format('woff');
+  src: url("#{$font3BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanPath}") format('woff');
+  src: url("#{$font4Path}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanItalicPath}") format('woff');
+  src: url("#{$font4ItalicPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanBoldPath}") format('woff');
+  src: url("#{$font4BoldPath}") format('woff');
 }
 
 @font-face {
-  font-family: 'TimesNewRoman';
+  font-family: 'Font4';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("#{$fontTimesNewRomanBoldItalicPath}") format('woff');
+  src: url("#{$font4BoldItalicPath}") format('woff');
 }
 
 
@@ -244,10 +244,10 @@ body {
   }
   
   .text-primary {
-    color: theme-color("primary") !important;
+    color: $primaryColor1 !important;
   }
   
   .text-blue {
-    color: $grvColor06;
+    color: $linkColor;
   }
 }

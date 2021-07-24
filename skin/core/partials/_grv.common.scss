@@ -10,7 +10,7 @@
 
 .alert {
     border: 1px solid transparent !important;
-    border-radius: $globalRadius !important;
+    border-radius: 4px !important;
     padding: 10px !important;
     @include flex-row;
     align-items: center;
@@ -62,7 +62,7 @@
     .feedback-symbol {
         width: 30px;
         height: 30px;
-        border-radius: $globalRadius;
+        border-radius: 4px;
         color: $color01 !important;
         @include flex-row;
         align-items: center;
@@ -77,13 +77,13 @@
 
     &.alert-success,
     &.announcement {
-        border-color: $grvColor05 !important;
-        background-color: rgba($grvColor05, .1) !important;
+        border-color: $successColor !important;
+        background-color: rgba($successColor, .1) !important;
 
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            background-color: $grvColor05 !important;
+            background-color: $successColor !important;
 
             svg {
                 width: 12px;
@@ -92,18 +92,18 @@
 
         .btn.close,
         .action-close {
-            color: $grvColor05 !important;
+            color: $successColor !important;
         }
     }
 
     &.alert-info {
-        border-color: $grvColor04 !important;
-        background-color: rgba($grvColor04, .1) !important;
+        border-color: $infoColor !important;
+        background-color: rgba($infoColor, .1) !important;
 
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            background-color: $grvColor04 !important;
+            background-color: $infoColor !important;
 
             svg {
                 width: 12px;
@@ -112,18 +112,18 @@
 
         .btn.close,
         .action-close {
-            color: $grvColor04 !important;
+            color: $infoColor !important;
         }
     }
 
     &.alert-warning {
-        border-color: $grvColor03 !important;
-        background-color: rgba($grvColor03, .1) !important;
+        border-color: $warningColor !important;
+        background-color: rgba($warningColor, .1) !important;
 
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            background-color: $grvColor03 !important;
+            background-color: $warningColor !important;
 
             svg {
                 width: 14px;
@@ -132,14 +132,14 @@
 
         .btn.close,
         .action-close {
-            color: $grvColor03 !important;
+            color: $warningColor !important;
         }
     }
 
     &.alert-danger,
     &.alert-error {
-        border-color: $color21 !important;
-        background-color: rgba($color21, .1) !important;
+        border-color: $dangerColor !important;
+        background-color: rgba($dangerColor, .1) !important;
 
         svg {
             width: 16px;
@@ -148,12 +148,12 @@
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            background-color: $color21 !important;
+            background-color: $dangerColor !important;
         }
 
         .btn.close,
         .action-close {
-            color: $color21 !important;
+            color: $dangerColor !important;
         }
     }
 }
@@ -262,52 +262,52 @@
 
 @mixin infoMessage {
 	@include coreMessage();
-	border-color: $grvColor06;
-	background-color: rgba($grvColor06, .1);
+	border-color: $infoColor;
+	background-color: rgba($infoColor, .1);
 
     .icon {
-        color: $grvColor06;
+        color: $infoColor;
     }
 }
 
 @mixin successMessage {
 	@include coreMessage();
-	border-color: $grvColor05;
-	background-color: rgba($grvColor05, .1);
+	border-color: $successColor;
+	background-color: rgba($successColor, .1);
 
     .icon {
-        color: $grvColor05;
+        color: $successColor;
 
         svg {
-            fill: $grvColor05;
+            fill: $successColor;
         }
     }
 }
 
 @mixin errorMessage {
 	@include coreMessage();
-	border-color: $color21;
-	background-color: rgba($color21, .1);
+	border-color: $dangerColor;
+	background-color: rgba($dangerColor, .1);
 
     .icon {
-        color: $color21;
+        color: $dangerColor;
 
         svg {
-            fill: $color21;
+            fill: $dangerColor;
         }
     }
 }
 
 @mixin wariningMessage {
 	@include coreMessage();
-	border-color: $grvColor03;
-	background-color: rgba($grvColor03, .1);
+	border-color: $warningColor;
+	background-color: rgba($warningColor, .1);
 
     .icon {
-        color: $grvColor03;
+        color: $warningColor;
 
         svg {
-            fill: $grvColor03;
+            fill: $warningColor;
         }
     }
 }
