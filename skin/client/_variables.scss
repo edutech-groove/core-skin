@@ -94,8 +94,6 @@ $textColor03: #999999 !default;
 $textColor04: #C6CBD0 !default;
 $textColor05: #4A4F4D !default;
 
-$globalRadius: 4px;
-
 /* Override default Bootstrap 4 variables */
 $font-family-sans-serif: $font1;
 
@@ -143,6 +141,7 @@ $rem-base-size-cms: 10 !default;
 
 
 //theme-color-variable
+
 $primaryColor1: $color03;
 $primaryColor2: $color02;
 $secondaryColor1: $color25;
@@ -284,5 +283,11 @@ $textLabelLineHeight: 1.4;
 $textLabelColor: $textColor02;
 $textLabelMarginBottom: 7px;
 
+$subTabItemActiveColor: $color24;
+
 $popoverBgColor: $color26;
 $popoverShadow: none;
+
+$globalRadius: 4px;
+$globalRadius1: 20px;
+$globalRadius2: 40px;
