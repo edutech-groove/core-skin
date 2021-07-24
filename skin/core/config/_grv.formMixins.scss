@@ -239,12 +239,12 @@
   &.is-active {
     border-color: $color27;
     background-color: $color01 !important;
-    color: $tertiaryColor2;
+    color: $subTabItemActiveColor;
   }
 
   @include whenHover {
     text-decoration: none !important;
-    color: $tertiaryColor2;
+    color: $subTabItemActiveColor;
   }
 }
 

@@ -10,7 +10,7 @@
 
 .alert {
     border: 1px solid transparent !important;
-    border-radius: 4px !important;
+    border-radius: $globalRadius !important;
     padding: 10px !important;
     @include flex-row;
     align-items: center;
@@ -62,7 +62,7 @@
     .feedback-symbol {
         width: 30px;
         height: 30px;
-        border-radius: 4px;
+        border-radius: $globalRadius;
         color: $color01 !important;
         @include flex-row;
         align-items: center;
