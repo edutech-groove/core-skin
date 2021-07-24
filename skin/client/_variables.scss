@@ -142,7 +142,12 @@ $rem-base-size-cms: 10 !default;
 
 //theme-color-variable
 
+$globalRadius: 4px;
+$globalRadius1: 20px;
+$globalRadius2: 40px;
+
 $primaryColor1: $color03;
+$primaryColor1Light: $color22;
 $primaryColor2: $color02;
 $secondaryColor1: $color25;
 $secondaryColor2: $color22;
@@ -287,7 +292,3 @@ $subTabItemActiveColor: $color24;
 
 $popoverBgColor: $color26;
 $popoverShadow: none;
-
-$globalRadius: 4px;
-$globalRadius1: 20px;
-$globalRadius2: 40px;
