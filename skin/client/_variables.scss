@@ -69,11 +69,11 @@ $homepage-bg-image: url('../images/banner-img.png');
 $fontFamily: $font1;
 
 // Font variables
-$font1RegularPath: '/src/skin/fonts/Nunito-Regular.woff';
-$font1SemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
-$font1BoldPath: '/src/skin/fonts/Nunito-Bold.woff';
-$font1ExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
-$font2RegularPath: '/src/skin/fonts/Plumpfull.woff';
+$font1RegularPath: '/src/skin/fonts/Tahoma-Regular.woff';
+// $font1SemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
+$font1BoldPath: '/src/skin/fonts/Tahoma-Bold.woff';
+// $font1ExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+$font2RegularPath: '/src/skin/fonts/Tahoma-Bold.woff';
 
 $font3MediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';
 $font3BoldPath: '/src/skin/fonts/HelveticaNeue-Bold.woff';
@@ -91,7 +91,7 @@ $tablet: 768px;
 $textColor01: #333333 !default;
 $textColor02: #666666 !default;
 $textColor03: #999999 !default;
-$textColor04: #C6CBD0 !default;
+$textColor04: #DEE4E8 !default;
 $textColor05: #4A4F4D !default;
 
 /* Override default Bootstrap 4 variables */
@@ -142,33 +142,33 @@ $rem-base-size-cms: 10 !default;
 
 //theme-color-variable
 
-$globalRadius: 4px;
-$globalRadius1: 20px;
-$globalRadius2: 40px;
+$globalRadius: 0;
+$globalRadius1: 0;
+$globalRadius2: 0;
 
-$primaryColor1: $color03;
-$primaryColor1Light: $color22;
-$primaryColor2: $color02;
-$secondaryColor1: $color25;
-$secondaryColor2: $color22;
-$tertiaryColor1: $grvColor06;
-$tertiaryColor2: $color24;
-$textColorBgWhite1: $color02;
-$textColorBgWhite2: $textColor01;
-$textColorBgWhite3: $textColor02;
+$primaryColor1: #F47920;
+$primaryColor1Light: #FFE9D9;
+$primaryColor2: #353135;
+$secondaryColor1: #636063;
+$secondaryColor2: #DEE4E8;
+$tertiaryColor1: #F47920;
+$tertiaryColor2: #353135;
+$textColorBgWhite1: $textColor01;
+$textColorBgWhite2: $textColor02;
+$textColorBgWhite3: $textColor03;
 $textColorBgDark1: $textColor04;
 $textColorBgDark2: $color01;
 
-$dangerColor: $color21;
-$warningColor: $grvColor03;
-$successColor: $grvColor05;
-$infoColor: $grvColor04;
+$dangerColor: #F04545;
+$warningColor: #FFA850;
+$successColor: #38C976;
+$infoColor: #1B8DD5;
 $linkColor: $grvColor06;
 
 $grvBorderColor1: $color16;
 $grvBorderColor2: $color27;
 $grvBorderColor3: $color09;
-$grvBgColor1: $color26;
+$grvBgColor1: #F3F3F4;
 $grvBgColor2: $grey10;
 $grvBgColor3: $color18;
 $grvBoxShadowColor1: rgba(137, 137, 137, 0.161);
@@ -177,45 +177,45 @@ $grvBoxShadowColor2: rgba($color02, .15);
 $primaryDarkBtnBackground: $primaryColor1;
 $primaryDarkBtnBorder: transparent;
 $primaryDarkBtnColor: $color01;
-$primaryDarkBtnBackgroundHover: $color03d;
+$primaryDarkBtnBackgroundHover: $primaryColor2;
 
-$primaryLightBtnBackground: $secondaryColor2;
+$primaryLightBtnBackground: $primaryColor1Light;
 $primaryLightBtnBorder: transparent;
 $primaryLightBtnColor: $primaryColor1;
-$primaryLightBtnBackgroundHover: $color03d;
+$primaryLightBtnBackgroundHover: $primaryColor2;
 
-$secondaryDarkBtnBackground: $tertiaryColor2;
+$secondaryDarkBtnBackground: $primaryColor1;
 $secondaryDarkBtnBorder: transparent;
 $secondaryDarkBtnColor: $color01;
-$secondaryDarkBtnBackgroundHover: $color24d;
+$secondaryDarkBtnBackgroundHover: $primaryColor2;
 
-$secondaryLightBtnBackground: $secondaryColor1;
+$secondaryLightBtnBackground: $primaryColor1Light;
 $secondaryLightBtnBorder: transparent;
-$secondaryLightBtnColor: $tertiaryColor2;
-$secondaryLightBtnBackgroundHover: $color24d;
+$secondaryLightBtnColor: $primaryColor1;
+$secondaryLightBtnBackgroundHover: $primaryColor2;
 
-$disabledBtnBackground: #CBCBCB;
-$disabledBtnColor: $textColor02;
+$disabledBtnBackground: #D4D4D4;
+$disabledBtnColor: $color01;
 
-$btnFontSize: 15px;
+$btnFontSize: 14px;
 
 $buttonRadiiTL: $globalRadius1;
 $buttonRadiiTR: $globalRadius1;
 $buttonRadiiBR: $globalRadius1;
 $buttonRadiiBL: $globalRadius1;
 
-$inputBorder: transparent;
-$inputBackground: $grey08;
+$inputBorder: #DBDBDB;
+$inputBackground: $color01;
 $inputColor: $textColorBgWhite2;
-$disabledInputBorder: transparent;
-$disabledInputBackground: $grey09;
+$disabledInputBorder: #E6E6E6;
+$disabledInputBackground: #E6E6E6;
 $disabledInputColor: $textColor03;
 $errorInputBorder: $dangerColor;
 $errorInputBackground: #FFEEEE;
 $focusedInputBorder: $primaryColor1;
 $focusedInputBackground: $color01;
 $focusedInputColor: $textColorBgWhite2;
-$focusedInputShadow: 0 0px 0 0.2rem rgba($color03, 0.25);
+$focusedInputShadow: none;
 
 $inputRadiiTL: $globalRadius;
 $inputRadiiTR: $globalRadius;
@@ -234,7 +234,7 @@ $checkedCheckboxColor: $color01;
 
 $heading0Font: $font2;
 $heading0Size: 32px;
-$heading0Weight: 100;
+$heading0Weight: 700;
 $heading0LineHeight: 1.2;
 $heading0Color: $color02;
 $heading0MarginBottom: 15px;
@@ -242,7 +242,7 @@ $heading0Transform: uppercase;
 
 $heading1Font: $font2;
 $heading1Size: 28px;
-$heading1Weight: 100;
+$heading1Weight: 700;
 $heading1LineHeight: 1.2;
 $heading1Color: $color02;
 $heading1MarginBottom: 15px;
@@ -256,43 +256,43 @@ $heading2Color: $color02;
 $heading2MarginBottom: 10px;
 
 $heading3Font: $font1;
-$heading3Size: 17px;
+$heading3Size: 18px;
 $heading3Weight: 700;
 $heading3LineHeight: 1.4;
 $heading3Color: $color02;
 $heading3MarginBottom: 10px;
 
 $paragraph1Font: $font1;
-$paragraph1Size: 15px;
+$paragraph1Size: 14px;
 $paragraph1Weight: 700;
 $paragraph1LineHeight: 1.4;
 $paragraph1Color: $textColor01;
 $paragraph1MarginBottom: 10px;
 
 $paragraph2Font: $font1;
-$paragraph2Size: 15px;
+$paragraph2Size: 14px;
 $paragraph2Weight: 400;
 $paragraph2LineHeight: 1.4;
 $paragraph2Color: $textColor01;
 $paragraph2MarginBottom: 10px;
 
 $captainFont: $font1;
-$captainSize: 13px;
+$captainSize: 12px;
 $captainWeight: 400;
 $captainLineHeight: 1.4;
 $captainColor: $textColor02;
 $captainMarginBottom: 7px;
 
 $textLabelFont: $font1;
-$textLabelSize: 15px;
+$textLabelSize: 14px;
 $textLabelWeight: 400;
 $textLabelLineHeight: 1.4;
 $textLabelColor: $textColor02;
 $textLabelMarginBottom: 7px;
 
-$subTabItemActiveColor: $color24;
+$subTabItemActiveColor: $primaryColor1;
 
-$popoverBgColor: $color26;
-$popoverShadow: none;
+$popoverBgColor: $color01;
+$popoverShadow: 2px 2px 4px $grvBoxShadowColor1;
 
-$placeholderAvatarsBorderRadius: 50%;
+$placeholderAvatarsBorderRadius: 0;
