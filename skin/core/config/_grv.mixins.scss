@@ -32,6 +32,7 @@
     @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
   }
 }
+
 @mixin flex-row {
   display: flex;
   flex-flow: row nowrap;
@@ -883,11 +884,11 @@
   display: inline-block;
 
   &.success {
-      background-color: $successColor;
+    background-color: $successColor;
   }
 
   &.warning {
-      background-color: $tertiaryColor2;
+    background-color: $tertiaryColor2;
   }
 }
 
