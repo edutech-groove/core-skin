@@ -34,7 +34,7 @@
 
     .message-content {
         button {
-            @include useGrvSecondaryButtonStyle();
+            @include useGrvPrimaryLightButtonStyle();
         }
     }
 

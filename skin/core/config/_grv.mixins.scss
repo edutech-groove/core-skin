@@ -419,7 +419,7 @@
   @include justify-content(center);
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: $placeholderAvatarsBorderRadius;
   color: $color01;
   text-transform: uppercase;
   font-family: $font2;
@@ -763,7 +763,7 @@
 
   .message-content {
     button {
-      @include useGrvSecondaryButtonStyle();
+      @include useGrvPrimaryLightButtonStyle();
     }
   }
 

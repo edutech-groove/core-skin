@@ -132,13 +132,13 @@
             }
 
             .action-primary {
-              @include useGrvPrimaryButtonStyleLarge(true);
+              @include useGrvPrimaryDarkButtonStyleLarge(true);
               min-width: 140px !important;
             }
 
             .action-secondary,
             .action-cancel {
-              @include useGrvSecondaryButtonStyleLarge(true);
+              @include useGrvPrimaryLightButtonStyleLarge(true);
               min-width: 140px !important;
             }
           }
@@ -195,12 +195,12 @@
               }
 
               .action-primary {
-                @include useGrvPrimaryButtonStyleLarge(true);
+                @include useGrvPrimaryDarkButtonStyleLarge(true);
                 min-width: 120px !important;
               }
 
               .action-secondary {
-                @include useGrvSecondaryButtonStyleLarge(true);
+                @include useGrvPrimaryLightButtonStyleLarge(true);
                 min-width: 120px !important;
               }
             }
@@ -323,7 +323,7 @@ body {
         }
 
         &~.btn.dismiss {
-          @include useGrvPrimaryButtonStyleLarge;
+          @include useGrvPrimaryDarkButtonStyleLarge;
           min-width: 140px !important;
         }
       }

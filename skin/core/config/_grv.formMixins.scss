@@ -5,7 +5,7 @@
   border: 1px solid transparent;
   box-shadow: none;
   font-style: normal;
-  line-height: 21px;
+  line-height: 1.2;
   outline: none;
   text-transform: none;
   resize: none;
@@ -123,6 +123,10 @@
     height: 40px;
     padding-right: 65px !important;
   }
+
+  @include whenFocusOnly {
+    @include setInputGenericFocused;
+  }
 }
 
 @mixin searchButtonRadiusStyle {
@@ -132,9 +136,8 @@
 /* Mixin for Tab and Active tab state */
 @mixin courseTabStyle($cms: false) {
   @include posr;
+  @include paragraph2Style;
   line-height: 2;
-  font-weight: 600;
-  color: $textColor01;
   background-color: transparent;
   box-shadow: none;
   outline: none;
@@ -143,14 +146,6 @@
   padding: 0;
   display: inline-block;
   transition: all 0.25s ease-in-out;
-
-  @if ($cms) {
-    @include fzCMS(15);
-  }
-
-  @else {
-    @include fz(15);
-  }
 
   >a {
     display: block;
@@ -207,32 +202,21 @@
   padding: 0 17px;
   display: flex;
   border: 0;
-  border-bottom: 1px solid $color27;
+  border-bottom: 1px solid $grvBorderColor2;
   position: relative;
-  background-color: $color26;
+  background-color: $grvBgColor1;
 }
 
 @mixin courseSubTabStyle($cms) {
   outline: none;
-  font-weight: 600;
   padding: 7px 15px;
-  color: $textColor01;
   border-radius: $globalRadius $globalRadius 0 0;
   border: 1px solid transparent;
   border-bottom: 0;
   cursor: pointer;
   @include posr;
   margin-bottom: -1px;
-  line-height: 1.2;
-  font-weight: 400;
-
-  @if ($cms) {
-    @include fzCMS(15);
-  }
-
-  @else {
-    @include fz(15);
-  }
+  @include paragraph2Style;
 
   &.active-section,
   &.active,
@@ -364,7 +348,7 @@
 }
 
 @mixin useSearchButtonStyle($large) {
-  @include usePrimaryButtonStyle;
+  @include usePrimaryDarkButtonStyle;
   @include searchButtonRadiusStyle;
   @include posa(5);
   right: 0;
