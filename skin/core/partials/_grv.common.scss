@@ -1,0 +1,318 @@
+.multiselect-native-select {
+    @include useMultiselect('md', 'gray');
+}
+
+.studio {
+    .multiselect-native-select {
+        @include useMultiselect('md', 'gray', true);
+    }
+}
+
+.alert {
+    border: 1px solid transparent !important;
+    border-radius: $globalRadius !important;
+    padding: 10px !important;
+    @include flex-row;
+    align-items: center;
+    color: $textColor01 !important;
+    @include paragraph2;
+    margin-bottom: 0;
+    width: 100%;
+    min-width: unset;
+
+    >* {
+        width: unset;
+    }
+
+    .copy {
+        margin: 0;
+
+        .message {
+            margin-bottom: 0;
+        }
+    }
+
+    .message-content {
+        button {
+            @include useGrvPrimaryLightButtonStyle();
+        }
+    }
+
+    .btn.close,
+    .action-close {
+        position: static;
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+        text-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        opacity: .75;
+        padding: 0;
+        @include fz(22);
+
+        &:hover {
+            opacity: 1;
+            background-color: transparent;
+        }
+    }
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+        width: 30px;
+        height: 30px;
+        border-radius: $globalRadius;
+        color: $color01 !important;
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 20px 0 0;
+
+        svg {
+            height: auto;
+            fill: $color01;
+        }
+    }
+
+    &.alert-success,
+    &.announcement {
+        border-color: $successColor !important;
+        background-color: rgba($successColor, .1) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $successColor !important;
+
+            svg {
+                width: 12px;
+            }
+        }
+
+        .btn.close,
+        .action-close {
+            color: $successColor !important;
+        }
+    }
+
+    &.alert-info {
+        border-color: $infoColor !important;
+        background-color: rgba($infoColor, .1) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $infoColor !important;
+
+            svg {
+                width: 12px;
+            }
+        }
+
+        .btn.close,
+        .action-close {
+            color: $infoColor !important;
+        }
+    }
+
+    &.alert-warning {
+        border-color: $warningColor !important;
+        background-color: rgba($warningColor, .1) !important;
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $warningColor !important;
+
+            svg {
+                width: 14px;
+            }
+        }
+
+        .btn.close,
+        .action-close {
+            color: $warningColor !important;
+        }
+    }
+
+    &.alert-danger,
+    &.alert-error {
+        border-color: $dangerColor !important;
+        background-color: rgba($dangerColor, .1) !important;
+
+        svg {
+            width: 16px;
+        }
+
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            background-color: $dangerColor !important;
+        }
+
+        .btn.close,
+        .action-close {
+            color: $dangerColor !important;
+        }
+    }
+}
+
+.lms {
+    .alert {
+        @include fz(15);
+
+        .copy,
+        .alert-message {
+            .title,
+            .alert-title {
+                @include heading3;
+                margin-bottom: 7px;
+            }
+
+            .message,
+            .alert-copy {
+                @include paragraph2;
+                margin: 0;
+            }
+        }
+    
+        .btn.close,
+        .action-close {
+            @include fz(22);
+        }
+    
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            @include fz(15);
+        }
+    }
+}
+
+.studio {
+    .alert {
+        @include fzCMS(15);
+
+        .copy,
+        .alert-message {
+            .title {
+                @include heading3(true);
+                margin-bottom: 7px;
+            }
+
+            .message,
+            .alert-message {
+                @include paragraph2(true);
+                margin-bottom: 0;
+            }
+        }
+    
+        .btn.close,
+        .action-close {
+            @include fzCMS(22);
+        }
+    
+        .icon-alert,
+        .alert-icon,
+        .feedback-symbol {
+            @include fzCMS(15);
+        }
+    }
+}
+
+.clear {
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent !important;
+
+    @include whenHover {
+        outline: none;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+@mixin coreMessage {
+	padding: 10px 15px;
+	border-radius: 1px $globalRadius $globalRadius 1px;
+	border: 0;
+	border-left: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    @include paragraph2;
+    margin-bottom: 0;
+
+    .title {
+        @include heading3;
+    }
+
+    .icon {
+        margin-right: 10px;
+        @include fz(17);
+
+        svg {
+            width: 16px;
+            height: auto;
+        }
+    }
+}
+
+@mixin infoMessage {
+	@include coreMessage();
+	border-color: $infoColor;
+	background-color: rgba($infoColor, .1);
+
+    .icon {
+        color: $infoColor;
+    }
+}
+
+@mixin successMessage {
+	@include coreMessage();
+	border-color: $successColor;
+	background-color: rgba($successColor, .1);
+
+    .icon {
+        color: $successColor;
+
+        svg {
+            fill: $successColor;
+        }
+    }
+}
+
+@mixin errorMessage {
+	@include coreMessage();
+	border-color: $dangerColor;
+	background-color: rgba($dangerColor, .1);
+
+    .icon {
+        color: $dangerColor;
+
+        svg {
+            fill: $dangerColor;
+        }
+    }
+}
+
+@mixin wariningMessage {
+	@include coreMessage();
+	border-color: $warningColor;
+	background-color: rgba($warningColor, .1);
+
+    .icon {
+        color: $warningColor;
+
+        svg {
+            fill: $warningColor;
+        }
+    }
+}
+
+$rem-base-size: 16 !default;
+@function calcRem($value-px) {
+  @return ($value-px / $rem-base-size) + 0rem;
+}

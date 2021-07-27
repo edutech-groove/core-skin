@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Font2';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$font2RegularPath}") format("woff");
+}
+
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$font1RegularPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("#{$font1SemiBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$font1BoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("#{$font1ExtraBoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font3';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$font3MediumPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font3';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("#{$font3ThinPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font3';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$font3LightPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font3';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$font3BoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$font4Path}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$font4ItalicPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font4';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$font4BoldPath}") format('woff');
+}
+
+@font-face {
+  font-family: 'Font4';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$font4BoldItalicPath}") format('woff');
+}
+
+@mixin gfont {
+  font-family: $fontFamily;
+}
+
+@mixin font1() {
+  @include gfont;
+}
+
+@mixin font2() {
+  font-weight: 600;
+}
+
+@mixin font3() {
+  font-weight: 400;
+}
+
+@mixin font4() {
+  font-weight: 400;
+}
+
+@mixin useFont1() {
+  font-family: $font1;
+}
+
+@mixin useFont2() {
+  font-family: $font2;
+  font-weight: 400;
+}
+
+// Groove edx theme Heading defines
+
+
+@mixin setOnlyFontSize($fontsize, $baseFont: 16) {
+  font-size: ($fontsize) + px !important;
+  font-size: ($fontsize / $baseFont) + rem !important;
+
+  // @media screen and (min-width: 1366px) and (max-width: 1919px) {
+  //   font-size: ($fontsize) + px;
+  //   font-size: ($fontsize / $baseFont) + rem;
+  // }
+}
+
+@mixin fz($fontsize) {
+  @include setOnlyFontSize($fontsize);
+}
+
+@mixin fzCMS($fontsize) {
+  @include setOnlyFontSize($fontsize, 10);
+}
+
+@mixin heading0Style {
+  font-size: $heading0Size;
+  font-family: $heading0Font;
+  font-weight: $heading0Weight;
+  line-height: $heading0LineHeight;
+  color: $heading0Color;
+  text-transform: $heading0Transform;
+}
+
+@mixin heading1Style {
+  font-size: $heading1Size;
+  font-family: $heading1Font;
+  font-weight: $heading1Weight;
+  line-height: $heading1LineHeight;
+  color: $heading1Color;
+  text-transform: $heading1Transform;
+}
+
+@mixin heading2Style {
+  font-size: $heading2Size;
+  font-family: $heading2Font;
+  font-weight: $heading2Weight;
+  line-height: $heading2LineHeight;
+  color: $heading2Color;
+}
+
+@mixin heading3Style {
+  font-size: $heading3Size;
+  font-family: $heading3Font;
+  font-weight: $heading3Weight;
+  line-height: $heading3LineHeight;
+  color: $heading3Color;
+}
+
+@mixin paragraph1Style {
+  font-size: $paragraph1Size;
+  font-family: $paragraph1Font;
+  font-weight: $paragraph1Weight;
+  line-height: $paragraph1LineHeight;
+  color: $paragraph1Color;
+}
+
+@mixin paragraph2Style {
+  font-size: $paragraph2Size;
+  font-family: $paragraph2Font;
+  font-weight: $paragraph2Weight;
+  line-height: $paragraph2LineHeight;
+  color: $paragraph2Color;
+}
+
+@mixin captainStyle {
+  font-size: $captainSize;
+  font-family: $captainFont;
+  font-weight: $captainWeight;
+  line-height: $captainLineHeight;
+  color: $captainColor;
+}
+
+@mixin textLabelStyle {
+  font-size: $textLabelSize;
+  font-family: $textLabelFont;
+  font-weight: $textLabelWeight;
+  line-height: $textLabelLineHeight;
+  color: $textLabelColor;
+}
+
+@mixin heading0 {
+  @include heading0Style();
+  margin-bottom: $heading0MarginBottom;
+}
+
+@mixin heading1($cms:false) {
+  @include heading1Style();
+  margin-bottom: $heading1MarginBottom;
+}
+
+@mixin heading2($cms:false) {
+  @include heading2Style();
+  margin-bottom: $heading2MarginBottom;
+}
+
+@mixin heading3($cms:false) {
+  @include heading3Style();
+  margin-bottom: $heading3MarginBottom;
+}
+
+@mixin paragraph1($cms:false) {
+  @include paragraph1Style();
+  margin-bottom: $paragraph1MarginBottom;
+}
+
+@mixin paragraph2($cms:false) {
+  @include paragraph2Style();
+  margin-bottom: $paragraph2MarginBottom;
+}
+
+@mixin captain($cms:false) {
+  @include captainStyle();
+  margin-bottom: $captainMarginBottom;
+}
+
+@mixin textLabel($cms:false) {
+  @include textLabelStyle();
+  margin-bottom: $textLabelMarginBottom;
+}

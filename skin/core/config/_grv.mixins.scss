@@ -1,0 +1,996 @@
+@import "./grv.formMixins";
+@import "./grv.buttonMixins";
+@import "./grv.typoMixins";
+@import "./grv.flexboxMixins";
+@import "./grv.transformMixins";
+@import "./grv.extends";
+
+
+/* Sizing shortcuts */
+/*--------------------------------------*/
+@mixin _size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value)>1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  }
+
+  @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  }
+
+  @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin flex-row-reverse {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+@mixin flex-col-reverse {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+@mixin posr($index: 1) {
+  position: relative;
+  z-index: $index;
+}
+
+@mixin posa($index: 10) {
+  position: absolute;
+  z-index: $index;
+}
+
+@mixin query-mobile {
+  @media screen and (max-width: $breakMobile) {
+    @content;
+  }
+}
+
+@mixin query-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin query-min-576 {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin query-min-992 {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin query-max-991 {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin query-max-992 {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin query-min-1024 {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin query-min-1025 {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin query-max-1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin query-min-1200 {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin query-min-1640 {
+  @media screen and (min-width: 1641px) {
+    @content;
+  }
+}
+
+@mixin desktop-mid {
+  @media screen and (min-width: 1025px) and (max-width: 1359px) {
+    @content;
+  }
+}
+
+@mixin global-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.025),
+    0 2px 2px rgba(0, 0, 0, 0.05),
+    0 4px 4px rgba(0, 0, 0, 0.05),
+    0 8px 8px rgba(0, 0, 0, 0.075);
+}
+
+@mixin global-shadow-2 {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.0125),
+    0 2px 2px rgba(0, 0, 0, 0.025),
+    0 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+@mixin global-shadow-3 {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 2px 2px rgba(0, 0, 0, 0.075);
+}
+
+@mixin global-shadow-4 {
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.05), 0 0 12px rgba(0, 0, 0, 0.125);
+}
+
+@mixin global-shadow-5 {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.0125), 0 2px 2px rgba(0, 0, 0, 0.025);
+}
+
+@mixin global-shadow-6 {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.0125),
+    0 3px 3px rgba(0, 0, 0, 0.025),
+    0 6px 6px rgba(0, 0, 0, 0.035);
+}
+
+@mixin global-shadow-7 {
+  box-shadow: 0px 0px 16px rgba(137, 137, 137, 0.161);
+}
+
+/* Clearfix */
+/*--------------------------------------*/
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Hover, Focus mixin
+
+@mixin whenHover {
+
+  &:hover,
+  &:focus {
+    &:not(:disabled) {
+      @content;
+    }
+  }
+}
+
+@mixin whenHoverOnly {
+  &:hover {
+    &:not(:disabled) {
+      @content;
+    }
+  }
+}
+
+@mixin whenFocusOnly {
+  &:focus {
+    &:not(:disabled) {
+      @content;
+    }
+  }
+}
+
+// Use same light grey background
+@mixin useLightGreyBg {
+  // background-color: $color13;
+  background-color: $grey04;
+}
+
+@mixin usePrimarySelect($size, $theme, $cms) {
+  display: inline-block;
+  padding: 10px 40px 10px 15px;
+  outline: none;
+  @include useFont1;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10px;
+  border: 1px solid transparent;
+  border-radius: $globalRadius;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: 1.3;
+  height: unset;
+  font-weight: 400;
+  text-align: left;
+  box-shadow: none;
+
+  @if ($size=='md') {
+    padding: 10px 40px 10px 15px;
+  }
+
+  @else {
+    padding: 6px 40px 6px 15px;
+  }
+
+  @if ($cms) {
+    @include fzCMS(15);
+  }
+
+  @else {
+    @include fz(15);
+  }
+
+  @if ($theme=='ondark') {
+    @include setInputGeneric('ondark');
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23ffffff' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
+
+    >option {
+      color: $color02;
+    }
+  }
+
+  @else if ($theme=='white') {
+    @include setInputGeneric('white');
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23343a40' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
+  }
+
+  @else if ($theme=='gray') {
+    @include setInputGeneric;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
+  }
+
+  &:focus {
+    opacity: 1 !important;
+    outline: none;
+    @include setInputGenericFocused;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e") !important;
+  }
+}
+
+@mixin usePopover {
+  border-color: transparent;
+  position: relative;
+  border-radius: $globalRadius*2;
+  padding: 20px 0;
+  margin: 0;
+  list-style: none;
+  background-color: $color01;
+  box-shadow: $popoverShadow;
+
+  &:after {
+    @include posa;
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+  }
+}
+
+@mixin useDropdownMenu {
+  @include usePopover;
+  @include global-shadow-7;
+  border-radius: $globalRadius;
+
+  &:after {
+    border-color: transparent transparent $color01 transparent;
+    border-width: 0 6px 8px 6px;
+    right: 20px;
+    top: -7px;
+  }
+
+  &:before {
+    content: none;
+  }
+}
+
+@mixin useDropdownMenuItem {
+  padding: 0;
+
+  >* {
+    @include paragraph2();
+    @include flexbox;
+    @include align-items(center);
+    color: $textColor02;
+    padding: 12px 18px;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
+    text-decoration: none;
+
+    svg {
+      fill: $textColor02;
+      margin: 0 22px 0 0;
+      min-width: 15px;
+      max-width: 15px;
+      min-height: 15px;
+      max-height: 15px;
+    }
+
+    @include whenHover {
+      background-color: $color23;
+      box-shadow: none;
+      color: $primaryColor1;
+
+      svg {
+        fill: $primaryColor1;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom-color: transparent;
+  }
+
+  @include whenHover {
+    background-color: transparent;
+  }
+}
+
+@mixin useDefaultAvatar {
+  background: $grvBgColor3;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  width: 64px;
+  height: 64px;
+  border-radius: $globalRadius1;
+
+  svg {
+    fill: $color12;
+    width: 23px;
+    height: unset;
+  }
+
+  &.lg {
+    width: 128px;
+    height: 128px;
+    border-radius: $globalRadius2;
+
+    svg {
+      width: 45px;
+    }
+  }
+
+  &.sm {
+    width: 32px;
+    height: 32px;
+    border-radius: $globalRadius*2;
+
+    svg {
+      width: 11px;
+    }
+  }
+}
+
+@mixin usePlaceholderAvatar {
+  background: $primaryColor1;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  width: 64px;
+  height: 64px;
+  border-radius: $placeholderAvatarsBorderRadius;
+  color: $color01;
+  text-transform: uppercase;
+  font-family: $font2;
+  @include fz(18);
+
+  &.lg {
+    width: 128px;
+    height: 128px;
+    @include fz(24);
+  }
+
+  &.sm {
+    width: 48px;
+    height: 48px;
+    @include fz(15);
+  }
+}
+
+@mixin usePopoverBottom {
+  @include usePopover;
+  background-color: $popoverBgColor;
+
+  &:after {
+    border-color: transparent transparent $popoverBgColor transparent;
+    border-width: 0 6px 8px 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -7px;
+  }
+}
+
+@mixin usePopoverTop {
+  @include usePopover;
+  background-color: $popoverBgColor;
+
+  &:after {
+    border-color: $popoverBgColor transparent transparent transparent;
+    border-width: 8px 6px 0 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -7px;
+  }
+}
+
+@mixin usePopoverLeft {
+  @include usePopover;
+  background-color: $popoverBgColor;
+
+  &:after {
+    border-color: transparent transparent transparent $popoverBgColor;
+    border-width: 6px 0 6px 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -7px;
+  }
+}
+
+@mixin usePopoverRight {
+  @include usePopover;
+  background-color: $popoverBgColor;
+
+  &:after {
+    border-color: transparent $popoverBgColor transparent transparent;
+    border-width: 6px 8px 6px 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -7px;
+  }
+}
+
+@mixin useChip {
+  border-radius: $globalRadius2;
+  padding: 5px 5px 5px 10px;
+  @include fz(15);
+  background: $grey04;
+  color: $textColor02;
+  display: inline-block;
+  line-height: 1;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  letter-spacing: 0;
+
+  .chip-container {
+    @include flexbox;
+    @include align-items(center);
+    letter-spacing: 0;
+
+    .clear {
+      margin: 0 0 0 10px;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        fill: $textColor02;
+        display: block;
+      }
+    }
+  }
+
+  &:hover,
+  &.active {
+    background: $primaryColor1Light;
+    color: $primaryColor1;
+
+    .chip-container {
+      .clear {
+        svg {
+          fill: $primaryColor1;
+        }
+      }
+    }
+  }
+}
+
+@mixin footerBrandLogo {
+  background: $color02;
+  border-radius: $globalRadius;
+  @include flexbox;
+  @include align-items(center);
+
+  a.item {
+
+    svg {
+      height: 36px;
+      width: unset;
+      display: block;
+
+      .icon-bg {
+        fill: $color08;
+      }
+
+      .icon-content {
+        fill: $color01;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      svg {
+        .icon-content {
+          fill: $primaryColor1;
+        }
+      }
+    }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin usePrimaryTableStyle($borderAll: false) {
+  min-width: 100%;
+  width: auto;
+  border: 1px solid $color27;
+  box-shadow: none;
+  background: none;
+  outline: none;
+
+  tbody {
+    box-shadow: none;
+    border: 0;
+  }
+
+  tr {
+
+    th,
+    td {
+      border: 0;
+      border-top: 1px solid $color27;
+      border-bottom: 1px solid $color27;
+      padding: 12px 15px;
+      margin-bottom: 0;
+
+      @if($borderAll) {
+        border-left: 1px solid $color27;
+        border-right: 1px solid $color27;
+      }
+    }
+
+    th {
+      background-color: $color26;
+      @include captain();
+      text-transform: uppercase;
+      width: unset !important;
+    }
+
+    td {
+      background-color: $color01;
+      @include paragraph2();
+      white-space: normal;
+    }
+  }
+}
+
+@mixin useSecondaryTableStyle() {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      th {
+        padding: 12px 15px;
+        border: 0;
+        @include captainStyle;
+        text-transform: uppercase;
+        background-color: $color26;
+
+        button {
+          @include captainStyle;
+          padding: 0;
+          background: none;
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          text-decoration: none;
+          box-shadow: none;
+          letter-spacing: 0;
+
+          .fa,
+          svg {
+            margin-left: 7px;
+          }
+        }
+
+        &:first-child {
+          border-radius: $globalRadius 0 0 $globalRadius;
+        }
+
+        &:last-child {
+          border-radius: 0 $globalRadius $globalRadius 0;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+
+      td,
+      th {
+        padding: 15px;
+        border-top: 0;
+        border-bottom: 1px dashed $grey03;
+        @include paragraph2;
+        margin-bottom: 0;
+        background-color: $color01 !important;
+      }
+    }
+  }
+}
+
+@mixin badge {
+  @include captain;
+  background-color: $textColor01;
+  border-radius: $globalRadius1;
+  color: $color01;
+  text-shadow: none;
+  padding: 3px 8px 1px;
+  line-height: 1;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+@mixin usePrimaryModalStyle {
+  border: 0;
+  background-color: $color01;
+  border-radius: $globalRadius*2;
+  padding: 30px 20px;
+  position: relative;
+
+  .modal-header {
+    display: block;
+
+    .modal-title {
+      text-align: center;
+      @include heading3;
+    }
+
+    button {
+      position: absolute;
+      padding: 0;
+      font-weight: 100;
+      color: $textColor01;
+      text-shadow: none;
+      opacity: 1;
+      font-size: 30px;
+      top: 5px;
+      right: 10px;
+      margin: 0;
+
+      @include whenHover {
+        color: $primaryColor1;
+      }
+    }
+  }
+
+  .modal-footer {
+    margin-top: 10px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 0;
+    border: 0;
+  }
+}
+
+@mixin useAlert {
+  border: 1px solid transparent;
+  border-radius: $globalRadius;
+  padding: 10px;
+  @include flexbox;
+  @include align-items(center);
+  @include paragraph2Style;
+  width: 100%;
+  min-width: unset;
+
+  >* {
+    width: unset;
+  }
+
+  .copy {
+    margin: 0;
+
+    .message {
+      margin-bottom: 0;
+    }
+  }
+
+  .message-content {
+    button {
+      @include useGrvPrimaryLightButtonStyle();
+    }
+  }
+
+  .btn.close,
+  .action-close {
+    position: static;
+    order: 2;
+    margin-left: auto;
+    margin-right: 0;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    opacity: .75;
+    padding: 0;
+    font-size: 22px;
+
+    &:hover {
+      opacity: 1;
+      background-color: transparent;
+    }
+  }
+
+  .icon-alert,
+  .alert-icon,
+  .feedback-symbol {
+    width: 30px;
+    height: 30px;
+    border-radius: $globalRadius;
+    color: $color01;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    margin: 0 20px 0 0;
+
+    svg {
+      width: 12px;
+      height: auto;
+      fill: $color01;
+    }
+  }
+
+  &.alert-success,
+  &.announcement {
+    border-color: $successColor;
+    background-color: rgba($successColor, .1);
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+      background-color: $successColor;
+    }
+
+    .btn.close,
+    .action-close {
+      color: $successColor;
+    }
+  }
+
+  &.alert-info {
+    border-color: $infoColor;
+    background-color: rgba($infoColor, .1);
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+      background-color: $infoColor;
+    }
+
+    .btn.close,
+    .action-close {
+      color: $infoColor;
+    }
+  }
+
+  &.alert-warning {
+    border-color: $warningColor;
+    background-color: rgba($warningColor, .1);
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+      background-color: $warningColor;
+    }
+
+    .btn.close,
+    .action-close {
+      color: $warningColor;
+    }
+  }
+
+  &.alert-danger,
+  &.alert-error {
+    border-color: $dangerColor;
+    background-color: rgba($dangerColor, .1);
+
+    .icon-alert,
+    .alert-icon,
+    .feedback-symbol {
+      background-color: $dangerColor;
+    }
+
+    .btn.close,
+    .action-close {
+      color: $dangerColor;
+    }
+  }
+}
+
+@mixin statusBadge {
+  padding: 4px 12px;
+  @include paragraph2Style;
+  font-weight: 500;
+  border-radius: $globalRadius;
+  color: $color01;
+  background-color: $grey10;
+  text-align: center;
+  display: inline-block;
+
+  &.success {
+    background-color: $successColor;
+  }
+
+  &.warning {
+    background-color: $tertiaryColor2;
+  }
+}
+
+@mixin useMultiselect($size, $theme, $cms: false) {
+  .btn-group {
+    position: relative;
+
+    button.multiselect {
+      width: 100%;
+      letter-spacing: 0;
+      @include usePrimarySelect($size, $theme, $cms);
+
+      .multiselect-selected-text {
+        white-space: nowrap;
+        display: block;
+        height: 20px;
+      }
+    }
+
+    .multiselect-container.dropdown-menu {
+      background: $color01;
+      box-shadow: 0px 0px 4px rgba(137, 137, 137, 0.161);
+      border-radius: $globalRadius;
+      border: 0;
+      padding: 14px 0;
+      margin: 5px 0;
+      min-width: 100%;
+      display: none;
+      z-index: 11;
+
+      &.show:not(:empty) {
+        display: block;
+      }
+
+      .dropdown-item {
+        padding: 8px 13px;
+        color: $textColor01;
+        border-radius: 0;
+        letter-spacing: 0;
+        display: block;
+        width: 100%;
+        border: 0;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: none;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+          color: $textColor01;
+          border-color: $secondaryColor2;
+          background-color: $color23;
+          box-shadow: none;
+        }
+
+        .form-check {
+          margin: 0;
+          padding: 0;
+
+          .form-check-input {
+            position: static;
+          }
+
+          .form-check-label {
+            font-weight: 400 !important;
+            padding: 0;
+
+            .badge {
+              @include badge;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  select[multiple] {
+    &+.btn-group {
+      .multiselect-container.dropdown-menu {
+        .dropdown-item {
+          .form-check {
+            .form-check-input {
+              @include usePrimaryCheckbox($cms);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  select:not([multiple]) {
+    &+.btn-group {
+      .multiselect-container.dropdown-menu {
+        .dropdown-item {
+          .form-check {
+            .form-check-input {
+              @include useSecondaryRadio($cms);
+            }
+          }
+        }
+      }
+    }
+  }
+}

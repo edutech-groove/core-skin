@@ -1,0 +1,10 @@
+.iconSVG {
+  width: 16px;
+  height: 16px;
+  margin: .25rem;
+
+  @include whenHover {
+    cursor: pointer;
+    fill: $primaryColor1;
+  }
+}

@@ -1,0 +1,20 @@
+@import "./variables";
+
+// Please DO NOT delete this file. 
+// It is used for theme styling in LMS/CMS
+
+// Override font variables by getting from FEC
+$font1RegularPath: '/static/fec/fonts/Nunito-Regular.woff';
+$font1SemiBoldPath: '/static/fec/fonts/Nunito-SemiBold.woff';
+$font1BoldPath: '/static/fec/fonts/Nunito-Bold.woff';
+$font1ExtraBoldPath: '/static/fec/fonts/Nunito-ExtraBold.woff';
+$font2RegularPath: '/static/fec/fonts/Plumpfull.woff';
+
+$font3MediumPath: '/static/fec/fonts/HelveticaNeue-Medium.woff';
+$font3BoldPath: '/static/fec/fonts/HelveticaNeue-Bold.woff';
+$font3ThinPath: '/static/fec/fonts/HelveticaNeue-Thin.woff';
+$font3LightPath: '/static/fec/fonts/HelveticaNeue-Light.woff';
+$font4Path: '/static/fec/fonts/TimesNewRoman.woff';
+$font4BoldPath: '/static/fec/fonts/TimesNewRoman-Bold.woff';
+$font4BoldItalicPath: '/static/fec/fonts/TimesNewRoman-BoldItalic.woff';
+$font4ItalicPath: '/static/fec/fonts/TimesNewRoman-Italic.woff';
