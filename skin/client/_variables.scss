@@ -70,9 +70,9 @@ $fontFamily: $font1;
 
 // Font variables
 $font1RegularPath: '/src/skin/fonts/Tahoma-Regular.woff';
-// $font1SemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
+$font1SemiBoldPath: $font1RegularPath;
 $font1BoldPath: '/src/skin/fonts/Tahoma-Bold.woff';
-// $font1ExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+$font1ExtraBoldPath: $font1BoldPath;
 $font2RegularPath: '/src/skin/fonts/Tahoma-Bold.woff';
 
 $font3MediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';

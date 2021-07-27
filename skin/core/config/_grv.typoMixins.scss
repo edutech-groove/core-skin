@@ -14,13 +14,13 @@
   src: url("#{$font1RegularPath}") format('woff');
 }
 
-// @font-face {
-//   font-family: 'Font1';
-//   font-style: normal;
-//   font-weight: 600;
-//   font-display: swap;
-//   src: url("#{$font1SemiBoldPath}") format('woff');
-// }
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("#{$font1SemiBoldPath}") format('woff');
+}
 
 @font-face {
   font-family: 'Font1';
@@ -30,13 +30,13 @@
   src: url("#{$font1BoldPath}") format('woff');
 }
 
-// @font-face {
-//   font-family: 'Font1';
-//   font-style: normal;
-//   font-weight: 900;
-//   font-display: swap;
-//   src: url("#{$font1ExtraBoldPath}") format('woff');
-// }
+@font-face {
+  font-family: 'Font1';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("#{$font1ExtraBoldPath}") format('woff');
+}
 
 @font-face {
   font-family: 'Font3';
