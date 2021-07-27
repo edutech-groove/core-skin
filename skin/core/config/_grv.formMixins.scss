@@ -257,10 +257,10 @@
         transform: translateY(-50%);
         color: $textColor02;
         margin: 0;
+      }
 
-        svg {
-          fill: $textColor02;
-        }
+      >svg.icon {
+        fill: $textColor02;
       }
     }
   }
