@@ -1,7 +1,7 @@
 @mixin usePrimaryModalStyle {
   border: 0 !important;
   background-color: $color01 !important;
-  border-radius: 8px !important;
+  border-radius: $globalRadius*2 !important;
   padding: 30px 20px !important;
   position: relative;
   top: 0 !important;
@@ -51,12 +51,12 @@
     @include whenHoverOnly {
       svg {
         line {
-          stroke: theme-color("primary");
+          stroke: $primaryColor1;
         }
       }
 
       .icon {
-        color: theme-color("primary");
+        color: $primaryColor1;
       }
     }
   }
@@ -132,13 +132,13 @@
             }
 
             .action-primary {
-              @include useGrvPrimaryButtonStyleLarge(true);
+              @include useGrvPrimaryDarkButtonStyleLarge(true);
               min-width: 140px !important;
             }
 
             .action-secondary,
             .action-cancel {
-              @include useGrvSecondaryButtonStyleLarge(true);
+              @include useGrvPrimaryLightButtonStyleLarge(true);
               min-width: 140px !important;
             }
           }
@@ -195,12 +195,12 @@
               }
 
               .action-primary {
-                @include useGrvPrimaryButtonStyleLarge(true);
+                @include useGrvPrimaryDarkButtonStyleLarge(true);
                 min-width: 120px !important;
               }
 
               .action-secondary {
-                @include useGrvSecondaryButtonStyleLarge(true);
+                @include useGrvPrimaryLightButtonStyleLarge(true);
                 min-width: 120px !important;
               }
             }
@@ -257,7 +257,7 @@
     }
 
     @include whenHoverOnly {
-      color: theme-color("primary");
+      color: $primaryColor1;
     }
   }
 
@@ -323,7 +323,7 @@ body {
         }
 
         &~.btn.dismiss {
-          @include useGrvPrimaryButtonStyleLarge;
+          @include useGrvPrimaryDarkButtonStyleLarge;
           min-width: 140px !important;
         }
       }

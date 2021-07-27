@@ -32,6 +32,7 @@
     @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
   }
 }
+
 @mixin flex-row {
   display: flex;
   flex-flow: row nowrap;
@@ -242,7 +243,7 @@
   background-position: right 15px center;
   background-size: 10px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: $globalRadius;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -269,8 +270,7 @@
   }
 
   @if ($theme=='ondark') {
-    background-color: rgba($color01, .1);
-    color: $color01;
+    @include setInputGeneric('ondark');
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23ffffff' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
 
     >option {
@@ -279,25 +279,19 @@
   }
 
   @else if ($theme=='white') {
-    background-color: $color01;
-    border-color: $grvBorderColor1;
+    @include setInputGeneric('white');
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23343a40' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   @else if ($theme=='gray') {
-    background-color: $inputBackground;
-    border-color: transparent;
-    color: $textColor01;
+    @include setInputGeneric;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   &:focus {
     opacity: 1 !important;
     outline: none;
-    border-color: theme-color("primary") !important;
-    box-shadow: 0 0 0 3px rgba(theme-color("primary"), .25) !important;
-    background-color: $color01 !important;
-    color: $textColor01;
+    @include setInputGenericFocused;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e") !important;
   }
 }
@@ -305,11 +299,12 @@
 @mixin usePopover {
   border-color: transparent;
   position: relative;
-  border-radius: 8px;
+  border-radius: $globalRadius*2;
   padding: 20px 0;
   margin: 0;
   list-style: none;
   background-color: $color01;
+  box-shadow: $popoverShadow;
 
   &:after {
     @include posa;
@@ -365,10 +360,10 @@
     @include whenHover {
       background-color: $color23;
       box-shadow: none;
-      color: theme-color("primary");
+      color: $primaryColor1;
 
       svg {
-        fill: theme-color("primary");
+        fill: $primaryColor1;
       }
     }
   }
@@ -389,7 +384,7 @@
   @include justify-content(center);
   width: 64px;
   height: 64px;
-  border-radius: 20px;
+  border-radius: $globalRadius1;
 
   svg {
     fill: $color12;
@@ -400,7 +395,7 @@
   &.lg {
     width: 128px;
     height: 128px;
-    border-radius: 40px;
+    border-radius: $globalRadius2;
 
     svg {
       width: 45px;
@@ -410,7 +405,7 @@
   &.sm {
     width: 32px;
     height: 32px;
-    border-radius: 10px;
+    border-radius: $globalRadius*2;
 
     svg {
       width: 11px;
@@ -419,13 +414,13 @@
 }
 
 @mixin usePlaceholderAvatar {
-  background: theme-color("primary");
+  background: $primaryColor1;
   @include flexbox;
   @include align-items(center);
   @include justify-content(center);
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: $placeholderAvatarsBorderRadius;
   color: $color01;
   text-transform: uppercase;
   font-family: $font2;
@@ -446,10 +441,10 @@
 
 @mixin usePopoverBottom {
   @include usePopover;
-  background-color: $color26;
+  background-color: $popoverBgColor;
 
   &:after {
-    border-color: transparent transparent $color26 transparent;
+    border-color: transparent transparent $popoverBgColor transparent;
     border-width: 0 6px 8px 6px;
     left: 50%;
     transform: translateX(-50%);
@@ -459,10 +454,10 @@
 
 @mixin usePopoverTop {
   @include usePopover;
-  background-color: $color26;
+  background-color: $popoverBgColor;
 
   &:after {
-    border-color: $color26 transparent transparent transparent;
+    border-color: $popoverBgColor transparent transparent transparent;
     border-width: 8px 6px 0 6px;
     left: 50%;
     transform: translateX(-50%);
@@ -472,10 +467,10 @@
 
 @mixin usePopoverLeft {
   @include usePopover;
-  background-color: $color26;
+  background-color: $popoverBgColor;
 
   &:after {
-    border-color: transparent transparent transparent $color26;
+    border-color: transparent transparent transparent $popoverBgColor;
     border-width: 6px 0 6px 8px;
     top: 50%;
     transform: translateY(-50%);
@@ -485,10 +480,10 @@
 
 @mixin usePopoverRight {
   @include usePopover;
-  background-color: $color26;
+  background-color: $popoverBgColor;
 
   &:after {
-    border-color: transparent $color26 transparent transparent;
+    border-color: transparent $popoverBgColor transparent transparent;
     border-width: 6px 8px 6px 0;
     top: 50%;
     transform: translateY(-50%);
@@ -528,13 +523,13 @@
 
   &:hover,
   &.active {
-    background: $color22;
-    color: theme-color("primary");
+    background: $primaryColor1Light;
+    color: $primaryColor1;
 
     .chip-container {
       .clear {
         svg {
-          fill: theme-color("primary");
+          fill: $primaryColor1;
         }
       }
     }
@@ -543,7 +538,7 @@
 
 @mixin footerBrandLogo {
   background: $color02;
-  border-radius: 4px;
+  border-radius: $globalRadius;
   @include flexbox;
   @include align-items(center);
 
@@ -570,7 +565,7 @@
     &:hover {
       svg {
         .icon-content {
-          fill: theme-color("primary");
+          fill: $primaryColor1;
         }
       }
     }
@@ -691,7 +686,7 @@
 @mixin badge {
   @include captain;
   background-color: $textColor01;
-  border-radius: 20px;
+  border-radius: $globalRadius1;
   color: $color01;
   text-shadow: none;
   padding: 3px 8px 1px;
@@ -728,7 +723,7 @@
       margin: 0;
 
       @include whenHover {
-        color: theme-color("primary");
+        color: $primaryColor1;
       }
     }
   }
@@ -769,7 +764,7 @@
 
   .message-content {
     button {
-      @include useGrvSecondaryButtonStyle();
+      @include useGrvPrimaryLightButtonStyle();
     }
   }
 
@@ -797,7 +792,7 @@
   .feedback-symbol {
     width: 30px;
     height: 30px;
-    border-radius: 4px;
+    border-radius: $globalRadius;
     color: $color01;
     @include flexbox;
     @include align-items(center);
@@ -813,67 +808,67 @@
 
   &.alert-success,
   &.announcement {
-    border-color: $grvColor05;
-    background-color: lighten($grvColor05, 40%);
+    border-color: $successColor;
+    background-color: rgba($successColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor05;
+      background-color: $successColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor05;
+      color: $successColor;
     }
   }
 
   &.alert-info {
-    border-color: $grvColor04;
-    background-color: lighten($grvColor04, 27%);
+    border-color: $infoColor;
+    background-color: rgba($infoColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor04;
+      background-color: $infoColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor04;
+      color: $infoColor;
     }
   }
 
   &.alert-warning {
-    border-color: $grvColor03;
-    background-color: lighten($grvColor03, 32%);
+    border-color: $warningColor;
+    background-color: rgba($warningColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $grvColor03;
+      background-color: $warningColor;
     }
 
     .btn.close,
     .action-close {
-      color: $grvColor03;
+      color: $warningColor;
     }
   }
 
   &.alert-danger,
   &.alert-error {
-    border-color: $color21;
-    background-color: rgba($color21, .1);
+    border-color: $dangerColor;
+    background-color: rgba($dangerColor, .1);
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $color21;
+      background-color: $dangerColor;
     }
 
     .btn.close,
     .action-close {
-      color: $color21;
+      color: $dangerColor;
     }
   }
 }
@@ -889,11 +884,11 @@
   display: inline-block;
 
   &.success {
-      background-color: $grvColor05;
+    background-color: $successColor;
   }
 
   &.warning {
-      background-color: $color24;
+    background-color: $tertiaryColor2;
   }
 }
 
@@ -945,7 +940,7 @@
         &:focus,
         &.active {
           color: $textColor01;
-          border-color: $color22;
+          border-color: $secondaryColor2;
           background-color: $color23;
           box-shadow: none;
         }

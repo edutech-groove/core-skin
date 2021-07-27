@@ -4,7 +4,7 @@
     background-image: none;
     border: 0;
     box-shadow: none !important;
-    border-radius: $globalRadius1;
+    border-radius: $buttonRadiiTL $buttonRadiiTR $buttonRadiiBR $buttonRadiiBL;
     line-height: 1.4;
     text-shadow: none;
     font-weight: 400;
@@ -40,7 +40,7 @@
             background-image: none !important;
             color: $color01 !important;
 
-            @if ($svgColorType == 'fill') {
+            @if ($svgColorType=='fill') {
                 svg {
                     fill: $color01;
                     stroke: none;
@@ -50,7 +50,9 @@
                         stroke: none;
                     }
                 }
-            } @else if ($svgColorType == 'stroke') {
+            }
+
+            @else if ($svgColorType=='stroke') {
                 svg {
                     stroke: $color01;
                     fill: none;
@@ -70,7 +72,7 @@
         color: $color01;
         outline: none;
 
-        @if ($svgColorType == 'fill') {
+        @if ($svgColorType=='fill') {
             svg {
                 fill: $color01;
                 stroke: none;
@@ -80,7 +82,9 @@
                     stroke: none;
                 }
             }
-        } @else if ($svgColorType == 'stroke') {
+        }
+
+        @else if ($svgColorType=='stroke') {
             svg {
                 stroke: $color01;
                 fill: none;
@@ -99,7 +103,7 @@
         background-color: $disabledBtnBackground !important;
         color: $disabledBtnColor !important;
 
-        @if ($svgColorType == 'fill') {
+        @if ($svgColorType=='fill') {
             svg {
                 fill: $disabledBtnColor;
                 stroke: none;
@@ -109,7 +113,9 @@
                     stroke: none;
                 }
             }
-        } @else if ($svgColorType == 'stroke') {
+        }
+
+        @else if ($svgColorType=='stroke') {
             svg {
                 stroke: $disabledBtnColor;
                 fill: none;
@@ -123,13 +129,13 @@
     }
 }
 
-@mixin usePrimaryButtonStyle($svgColorType:'fill') {
+@mixin usePrimaryDarkButtonStyle($svgColorType:'fill') {
     background-color: $primaryDarkBtnBackground !important;
     color: $primaryDarkBtnColor;
     border: 1px solid $primaryDarkBtnBorder;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
             fill: $primaryDarkBtnColor;
             stroke: none;
@@ -139,7 +145,9 @@
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
             stroke: $primaryDarkBtnColor;
             fill: none;
@@ -163,13 +171,13 @@
     }
 }
 
-@mixin useSecondaryButtonStyle($svgColorType:'fill') {
+@mixin usePrimaryLightButtonStyle($svgColorType:'fill') {
     background-color: $primaryLightBtnBackground !important;
     color: $primaryLightBtnColor;
     border: 1px solid $primaryLightBtnBorder;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
             fill: $primaryLightBtnColor;
             stroke: none;
@@ -179,7 +187,9 @@
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
             stroke: $primaryLightBtnColor;
             fill: none;
@@ -205,13 +215,13 @@
     }
 }
 
-@mixin usePrimaryYellowButtonStyle($svgColorType:'fill') {
+@mixin useSecondaryDarkButtonStyle($svgColorType:'fill') {
     background-color: $secondaryDarkBtnBackground !important;
     color: $secondaryDarkBtnColor;
     border: 1px solid $secondaryDarkBtnBorder;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
             fill: $secondaryDarkBtnColor;
             stroke: none;
@@ -221,7 +231,9 @@
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
             stroke: $secondaryDarkBtnColor;
             fill: none;
@@ -245,13 +257,13 @@
     }
 }
 
-@mixin useSecondaryYellowButtonStyle($svgColorType:'fill') {
+@mixin useSecondaryLightButtonStyle($svgColorType:'fill') {
     background-color: $secondaryLightBtnBackground !important;
     color: $secondaryLightBtnColor;
     border: 1px solid $secondaryLightBtnBorder;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
             fill: $secondaryLightBtnColor;
             stroke: none;
@@ -261,7 +273,9 @@
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
             stroke: $secondaryLightBtnColor;
             fill: none;
@@ -288,11 +302,11 @@
 }
 
 @mixin useDangerButtonStyle($svgColorType:'fill') {
-    background-color: $color21 !important;
+    background-color: $dangerColor !important;
     color: $color01;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
             fill: $color01;
             stroke: none;
@@ -302,7 +316,9 @@
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
             stroke: $color01;
             fill: none;
@@ -318,67 +334,72 @@
 
         &:hover,
         &.is-hovered {
-            background-color: darken($color21, 10%) !important;
+            background-color: darken($dangerColor, 10%) !important;
         }
     }
 
     &:active,
     &:focus {
-        background-color: darken($color21, 10%) !important;
+        background-color: darken($dangerColor, 10%) !important;
     }
 }
 
 @mixin useDangerTransparentButtonStyle($svgColorType:'fill') {
     background-color: transparent !important;
-    color: $color21;
+    color: $dangerColor;
     @include coreButton($svgColorType);
 
-    @if ($svgColorType == 'fill') {
+    @if ($svgColorType=='fill') {
         svg {
-            fill: $color21;
+            fill: $dangerColor;
             stroke: none;
 
             * {
-                fill: $color21;
+                fill: $dangerColor;
                 stroke: none;
             }
         }
-    } @else if ($svgColorType == 'stroke') {
+    }
+
+    @else if ($svgColorType=='stroke') {
         svg {
-            stroke: $color21;
+            stroke: $dangerColor;
             fill: none;
 
             * {
-                stroke: $color21;
+                stroke: $dangerColor;
                 fill: none;
             }
         }
     }
 
     &:not([disabled]):not(.disabled) {
+
         &:active,
         &:focus,
         &:hover,
         &.is-hovered {
-            color: darken($color21, 10%) !important;
+            color: darken($dangerColor, 10%) !important;
 
-            @if ($svgColorType == 'fill') {
+            @if ($svgColorType=='fill') {
                 svg {
-                    fill: darken($color21, 10%) !important;
+                    fill: darken($dangerColor, 10%) !important;
                     stroke: none;
 
                     * {
-                        fill: darken($color21, 10%) !important;
+                        fill: darken($dangerColor, 10%) !important;
                         stroke: none;
                     }
                 }
-            } @else if ($svgColorType == 'stroke') {
+            }
+
+            @else if ($svgColorType=='stroke') {
                 svg {
-                    stroke: darken($color21, 10%) !important;
+                    stroke: darken($dangerColor, 10%) !important;
                     fill: none;
 
                     * {
-                        stroke: darken($color21, 10%) !important;
+                        stroke: darken($dangerColor, 10%) !important;
                         fill: none;
                     }
                 }
@@ -393,331 +414,270 @@
     height: 38px;
     line-height: 36px;
     padding: 0 1rem;
-  }
-  
-  @mixin useCMSPrimaryStyle {
-    @include usePrimaryButtonStyle('fill');
+}
+
+@mixin useCMSPrimaryStyle {
+    @include usePrimaryDarkButtonStyle('fill');
     @include fzCMS(15);
     padding: 8px 20px !important;
-  
+
     &.disabled,
     &.is-disabled,
     &:disabled {
-      background-color: theme-color("primary") !important;
-      border-color: theme-color("primary") !important;
-      opacity: 0.7;
+        background-color: $primaryColor1 !important;
+        border-color: $primaryColor1 !important;
+        opacity: 0.7;
     }
-  }
-  
-  @mixin useCMSSecondaryStyle {
-    @include useSecondaryButtonStyle('fill');
+}
+
+@mixin useCMSSecondaryStyle {
+    @include usePrimaryLightButtonStyle('fill');
     @include fzCMS(15);
     padding: 8px 20px !important;
-  
+
     &.disabled,
     &.is-disabled,
     &:disabled {
-      background-color: $color01 !important;
-      border-color: theme-color("primary") !important;
-      opacity: 0.7;
-    }
-  }
-
-@mixin useGrvPrimaryButtonStyle($cms: false, $svgColorType: 'fill') {
-    @include usePrimaryButtonStyle($svgColorType);
-    padding: 8px 20px !important;
-    @if ($cms) {
-        @include fzCMS(15);
-      } @else {
-        @include fz(15);
-      }
-}
-
-@mixin useGrvSecondaryButtonStyle($cms: false, $svgColorType: 'fill') {
-    @include useSecondaryButtonStyle($svgColorType);
-    padding: 8px 20px !important;
-    @if ($cms) {
-      @include fzCMS(15);
-    } @else {
-      @include fz(15);
+        background-color: $color01 !important;
+        border-color: $primaryColor1 !important;
+        opacity: 0.7;
     }
 }
 
-@mixin useGrvPrimaryButtonStyleLarge($cms: false, $svgColorType: 'fill') {
-  @include usePrimaryButtonStyle($svgColorType);
-  padding: 10px 27px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+
+// primary
+
+@mixin useGrvPrimaryDarkButtonStyle($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryDarkButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvSecondaryButtonStyleLarge($cms: false, $svgColorType: 'fill') {
-    @include useSecondaryButtonStyle($svgColorType);
+@mixin useGrvPrimaryLightButtonStyle($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryLightButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
+}
+
+@mixin useGrvPrimaryDarkButtonStyleLarge($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryDarkButtonStyle($svgColorType);
     padding: 10px 27px !important;
-    @if ($cms) {
-      @include fzCMS(15);
-    } @else {
-      @include fz(15);
-    }
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvPrimaryButtonStyleSmall($cms: false, $svgColorType: 'fill') {
-  @include usePrimaryButtonStyle($svgColorType);
-  padding: 5px 7px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvPrimaryLightButtonStyleLarge($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryLightButtonStyle($svgColorType);
+    padding: 10px 27px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvSecondaryButtonStyleSmall($cms: false, $svgColorType: 'fill') {
-  @include useSecondaryButtonStyle($svgColorType);
-  padding: 5px 7px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvPrimaryDarkButtonStyleSmall($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryDarkButtonStyle($svgColorType);
+    padding: 5px 7px !important;
+    font-size: $btnFontSize;
 }
 
-/// yellow
-
-@mixin useGrvPrimaryYellowButtonStyle($cms: false, $svgColorType: 'fill') {
-  @include usePrimaryYellowButtonStyle($svgColorType);
-  padding: 8px 20px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvPrimaryLightButtonStyleSmall($cms: false, $svgColorType: 'fill') {
+    @include usePrimaryLightButtonStyle($svgColorType);
+    padding: 5px 7px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvSecondaryYellowButtonStyle($cms: false, $svgColorType: 'fill') {
-  @include useSecondaryYellowButtonStyle($svgColorType);
-  padding: 8px 20px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+/// secondary
+
+@mixin useGrvSecondaryDarkButtonStyle($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryDarkButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvPrimaryYellowButtonStyleLarge($cms: false, $svgColorType: 'fill') {
-  @include usePrimaryYellowButtonStyle($svgColorType);
-  padding: 10px 27px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvSecondaryLightButtonStyle($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryLightButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvSecondaryYellowButtonStyleLarge($cms: false, $svgColorType: 'fill') {
-  @include useSecondaryYellowButtonStyle($svgColorType);
-  padding: 10px 27px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvSecondaryDarkButtonStyleLarge($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryDarkButtonStyle($svgColorType);
+    padding: 10px 27px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvPrimaryYellowButtonStyleSmall($cms: false, $svgColorType: 'fill') {
-  @include usePrimaryYellowButtonStyle($svgColorType);
-  padding: 5px 7px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvSecondaryLightButtonStyleLarge($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryLightButtonStyle($svgColorType);
+    padding: 10px 27px !important;
+    font-size: $btnFontSize;
 }
 
-@mixin useGrvSecondaryYellowButtonStyleSmall($cms: false, $svgColorType: 'fill') {
-  @include useSecondaryYellowButtonStyle($svgColorType);
-  padding: 5px 7px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+@mixin useGrvSecondaryDarkButtonStyleSmall($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryDarkButtonStyle($svgColorType);
+    padding: 5px 7px !important;
+    font-size: $btnFontSize;
+}
+
+@mixin useGrvSecondaryLightButtonStyleSmall($cms: false, $svgColorType: 'fill') {
+    @include useSecondaryLightButtonStyle($svgColorType);
+    padding: 5px 7px !important;
+    font-size: $btnFontSize;
 }
 
 /// danger
 
 @mixin useGrvDangerButtonStyle($cms: false, $svgColorType: 'fill') {
-  @include useDangerButtonStyle($svgColorType);
-  padding: 8px 20px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+    @include useDangerButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
 }
 
 @mixin useGrvDangerButtonStyleLarge($cms: false, $svgColorType: 'fill') {
-  @include useDangerButtonStyle($svgColorType);
-  padding: 10px 27px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+    @include useDangerButtonStyle($svgColorType);
+    padding: 10px 27px !important;
+    font-size: $btnFontSize;
 }
 
 @mixin useGrvDangerButtonStyleSmall($cms: false, $svgColorType: 'fill') {
-  @include useDangerButtonStyle($svgColorType);
-  padding: 5px 7px !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+    @include useDangerButtonStyle($svgColorType);
+    padding: 5px 7px !important;
+    font-size: $btnFontSize;
 }
 
 @mixin useGrvDangerTransparentButtonStyle($cms: false, $svgColorType: 'fill') {
-  @include useDangerTransparentButtonStyle($svgColorType);
-  padding: 0 !important;
-  @if ($cms) {
-    @include fzCMS(15);
-  } @else {
-    @include fz(15);
-  }
+    @include useDangerTransparentButtonStyle($svgColorType);
+    padding: 0 !important;
+    font-size: $btnFontSize;
 }
 
 %with-primary-button-style {
-  @include usePrimaryButtonStyle;
+    @include usePrimaryDarkButtonStyle;
 }
 
 %with-primary-outline-button-style {
-  @include useSecondaryButtonStyle;
+    @include usePrimaryLightButtonStyle;
 }
 
 // Custom mixin for Course buttons / Register
 @mixin useCourseButton {
-  @include usePrimaryButtonStyle;
-  @include fz(16);
-  background-image: none;
-  display: inline-flex;
-  height: 50px;
-  justify-content: center;
-  line-height: 48px;
-  padding: 0 30px;
-  text-shadow: none;
-  width: auto;
-
-  @include whenHover {
+    @include usePrimaryDarkButtonStyle;
+    @include fz(16);
     background-image: none;
-  }
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    line-height: 48px;
+    padding: 0 30px;
+    text-shadow: none;
+    width: auto;
+
+    @include whenHover {
+        background-image: none;
+    }
 }
 
 @mixin useOauthPrimaryButton {
-  @include fz(14);
-  background-color: $color01;
-  border-color: $grey07;
-  border-radius: $globalRadius2;
-  color: $textColor01;
-  font-weight: 600;
-  height: auto;
-  letter-spacing: 0;
-  line-height: 1;
-  min-height: 40px;
-  min-width: 200px;
-  padding: 2px 0;
-  text-align: center;
-  text-shadow: none;
-  text-transform: uppercase;
-  width: 100%;
-  outline: none;
-
-  .icon {
-    bottom: auto;
-    color: $textColor01;
-    position: relative;
-    top: 0;
-    width: 24px;
-  }
-
-  @include whenHover {
+    @include fz(14);
     background-color: $color01;
-    border-color: theme-color("primary");
+    border-color: $grey07;
+    border-radius: $globalRadius2;
     color: $textColor01;
-    box-shadow: none;
+    font-weight: 600;
+    height: auto;
+    letter-spacing: 0;
+    line-height: 1;
+    min-height: 40px;
+    min-width: 200px;
+    padding: 2px 0;
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+    width: 100%;
+    outline: none;
 
     .icon {
-      color: $color01;
-    }
-  }
-
-  @include tablet-up {
-    width: 49%;
-
-    &.button-oa2-google-oauth2 {
-      margin-right: 1%;
-      margin-left: 0;
+        bottom: auto;
+        color: $textColor01;
+        position: relative;
+        top: 0;
+        width: 24px;
     }
 
-    &.button-oa2-azuread-oauth2 {
-      margin-left: 1%;
-      margin-right: 0;
+    @include whenHover {
+        background-color: $color01;
+        border-color: $primaryColor1;
+        color: $textColor01;
+        box-shadow: none;
+
+        .icon {
+            color: $color01;
+        }
     }
-  }
+
+    @include tablet-up {
+        width: 49%;
+
+        &.button-oa2-google-oauth2 {
+            margin-right: 1%;
+            margin-left: 0;
+        }
+
+        &.button-oa2-azuread-oauth2 {
+            margin-left: 1%;
+            margin-right: 0;
+        }
+    }
 }
 
 @mixin useLightPinkButton {
-  background-color: $color22;
-  border-color: $color22;
-  color: theme-color("primary");
-  border-radius: $globalRadius2;
+    background-color: $secondaryColor2;
+    border-color: $secondaryColor2;
+    color: $primaryColor1;
+    border-radius: $globalRadius2;
 
-  @include whenHover {
-    background-color: $color03d;
-    color: $color01;
-  }
+    @include whenHover {
+        background-color: $color03d;
+        color: $color01;
+    }
 }
 
 @mixin useYellowButton {
-  border: 1px solid $color25;
-  background-color: $color25;
-  border-radius: $globalRadius2;
-  color: $color24;
-  display: inline-block;
-  text-decoration: none;
+    border: 1px solid $secondaryColor1;
+    background-color: $secondaryColor1;
+    border-radius: $globalRadius2;
+    color: $tertiaryColor2;
+    display: inline-block;
+    text-decoration: none;
 
-  @include whenHover {
-    background-color: $color24;
-    border-color: $color24;
-    color: $color01;
-  }
+    @include whenHover {
+        background-color: $tertiaryColor2;
+        border-color: $tertiaryColor2;
+        color: $color01;
+    }
 }
 
 @mixin useYellowButton2 {
-  border: 1px solid $color24;
-  border-radius: $globalRadius2;
-  background-color: $color24;
-  color: $color01;
-  display: inline-block;
-  text-decoration: none;
+    border: 1px solid $tertiaryColor2;
+    border-radius: $globalRadius2;
+    background-color: $tertiaryColor2;
+    color: $color01;
+    display: inline-block;
+    text-decoration: none;
 
-  @include whenHover {
-    border-color: $color25;
-    background-color: $color25;
-    color: $color24;
-  }
+    @include whenHover {
+        border-color: $secondaryColor1;
+        background-color: $secondaryColor1;
+        color: $tertiaryColor2;
+    }
 }
 
 @mixin useDangerButton {
-  background-color: $color01;
-  color: theme-color("danger");
-  border-color: theme-color("danger");
-  border-radius: $globalRadius2;
+    background-color: $color01;
+    color: dangerColor;
+    border-color: dangerColor;
+    border-radius: $globalRadius2;
 
-  @include whenHover {
-    background-color: theme-color("danger");
-    color: $color01;
-  }
+    @include whenHover {
+        background-color: dangerColor;
+        color: $color01;
+    }
 }
 
 @mixin useSecondaryLink {
@@ -729,14 +689,14 @@
     background-color: transparent;
 
     @include whenHover {
-        color: theme-color("primary") !important;
+        color: $primaryColor1 !important;
         box-shadow: none;
     }
 
 }
 
 @mixin usePrimaryLink {
-    color: theme-color("primary") !important;
+    color: $primaryColor1 !important;
     text-decoration: none;
     box-shadow: none;
     border: 0;
@@ -744,9 +704,9 @@
     background-color: transparent;
 
     svg {
-      fill: theme-color("primary");
+        fill: $primaryColor1;
     }
-    
+
     @include whenHover {
         text-decoration: underline;
         box-shadow: none;
@@ -755,7 +715,7 @@
 }
 
 @mixin useBlueLink($svgColorType: 'fill') {
-    color: $grvColor06 !important;
+    color: $linkColor !important;
     text-decoration: none;
     background-color: transparent !important;
     box-shadow: none !important;
@@ -781,28 +741,30 @@
         margin-left: 5px;
         width: auto;
         height: 12px;
-        
-        @if ($svgColorType == 'fill') {
-            fill: $grvColor06;
+
+        @if ($svgColorType=='fill') {
+            fill: $linkColor;
             stroke: none;
 
             * {
-                fill: $grvColor06;
+                fill: $linkColor;
                 stroke: none;
             }
-        } @else if ($svgColorType == 'stroke') {
-            stroke: $grvColor06;
+        }
+
+        @else if ($svgColorType=='stroke') {
+            stroke: $linkColor;
             fill: none;
 
             * {
-                stroke: $grvColor06;
+                stroke: $linkColor;
                 fill: none;
             }
         }
     }
 
     @include whenHover {
-        color: $grvColor06;
+        color: $linkColor;
         text-decoration: underline !important;
         box-shadow: none !important;
         font-weight: 300 !important;
@@ -823,10 +785,13 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
+
         @if ($cms) {
-          @include fzCMS(15);
-        } @else {
-          @include fz(15);
+            @include fzCMS(15);
+        }
+
+        @else {
+            @include fz(15);
         }
 
         &:not(:empty) {
@@ -852,7 +817,7 @@
             min-width: 16px;
             background-color: $checkboxBackground;
             border: 1px solid $checkboxBorder;
-            border-radius: 4px;
+            border-radius: $globalRadius;
         }
 
         &::after {
@@ -913,10 +878,13 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
+
         @if ($cms) {
-          @include fzCMS(15);
-        } @else {
-          @include fz(15);
+            @include fzCMS(15);
+        }
+
+        @else {
+            @include fz(15);
         }
 
         &:not(:empty) {
@@ -932,7 +900,7 @@
             width: 16px;
             height: 16px;
             min-width: 16px;
-            border-radius: $globalRadius2;
+            border-radius: 50%;
             transition: all .2s ease-in-out;
             min-height: unset;
             max-height: unset;
@@ -1002,10 +970,13 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
+
         @if ($cms) {
-          @include fzCMS(15);
-        } @else {
-          @include fz(15);
+            @include fzCMS(15);
+        }
+
+        @else {
+            @include fz(15);
         }
 
         &:not(:empty) {
@@ -1024,8 +995,8 @@
             max-width: unset;
             width: 18px;
             height: 11px;
-            border-left: 3px solid theme-color("primary");
-            border-bottom: 3px solid theme-color("primary");
+            border-left: 3px solid $primaryColor1;
+            border-bottom: 3px solid $primaryColor1;
             opacity: 0;
         }
     }
@@ -1054,7 +1025,7 @@
         &::after {
             content: '';
             position: absolute;
-            border-radius: $globalRadius2;
+            border-radius: 999px;
             transition: all .2s ease-in-out;
             min-height: unset;
             max-height: unset;
