@@ -4,7 +4,7 @@
     background-image: none;
     border: 0;
     box-shadow: none !important;
-    border-radius: $buttonRadiiTL $buttonRadiiTR $buttonRadiiBR $buttonRadiiBL;
+    border-radius: $buttonRadiiTL $buttonRadiiTR $buttonRadiiBR $buttonRadiiBL !important;
     line-height: 1.4;
     text-shadow: none;
     font-weight: 400;
@@ -34,7 +34,7 @@
         width: unset;
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
         &:hover {
             box-shadow: none !important;
             background-image: none !important;
@@ -159,7 +159,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
         &:hover {
             background-color: $primaryDarkBtnBackgroundHover !important;
         }
@@ -201,7 +201,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
         &.is-hovered {
@@ -245,7 +245,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
         &:hover {
             background-color: $secondaryDarkBtnBackgroundHover !important;
         }
@@ -287,7 +287,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
         &.is-hovered {
@@ -330,7 +330,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
         &.is-hovered {
@@ -373,7 +373,7 @@
         }
     }
 
-    &:not([disabled]):not(.disabled) {
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:active,
         &:focus,
@@ -409,7 +409,7 @@
 }
 
 @mixin useButtonSmall() {
-    @include fz(13);
+    font-size: 13px !important;
     box-shadow: none;
     height: 38px;
     line-height: 36px;
@@ -418,7 +418,7 @@
 
 @mixin useCMSPrimaryStyle {
     @include usePrimaryDarkButtonStyle('fill');
-    @include fzCMS(15);
+    font-size: 15px !important;
     padding: 8px 20px !important;
 
     &.disabled,
@@ -432,7 +432,7 @@
 
 @mixin useCMSSecondaryStyle {
     @include usePrimaryLightButtonStyle('fill');
-    @include fzCMS(15);
+    font-size: 15px !important;
     padding: 8px 20px !important;
 
     &.disabled,
@@ -558,7 +558,7 @@
 // Custom mixin for Course buttons / Register
 @mixin useCourseButton {
     @include usePrimaryDarkButtonStyle;
-    @include fz(16);
+    font-size: 16px !important;
     background-image: none;
     display: inline-flex;
     height: 50px;
@@ -574,7 +574,7 @@
 }
 
 @mixin useOauthPrimaryButton {
-    @include fz(14);
+    font-size: 14px !important;
     background-color: $color01;
     border-color: $grey07;
     border-radius: $globalRadius2;
@@ -763,13 +763,52 @@
         }
     }
 
-    @include whenHover {
-        color: $linkColor;
-        text-decoration: underline !important;
-        box-shadow: none !important;
-        font-weight: 300 !important;
+
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
+        &:hover,
+        &.is-hovered {
+            color: $linkColor;
+            text-decoration: underline !important;
+            box-shadow: none !important;
+            font-weight: 300 !important;
+        }
+
+        @include whenHover {
+            color: $linkColor;
+            text-decoration: underline !important;
+            box-shadow: none !important;
+            font-weight: 300 !important;
+        }
     }
 
+    &.disabled,
+    &.is-disabled {
+        color: $disabledBtnColor !important;
+
+        @if ($svgColorType=='fill') {
+            svg {
+                fill: $disabledBtnColor;
+                stroke: none;
+
+                * {
+                    fill: $disabledBtnColor;
+                    stroke: none;
+                }
+            }
+        }
+
+        @else if ($svgColorType=='stroke') {
+            svg {
+                stroke: $disabledBtnColor;
+                fill: none;
+
+                * {
+                    stroke: $disabledBtnColor;
+                    fill: none;
+                }
+            }
+        }
+    }
 }
 
 @mixin usePrimaryCheckbox($cms: false) {
@@ -785,14 +824,7 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
-
-        @if ($cms) {
-            @include fzCMS(15);
-        }
-
-        @else {
-            @include fz(15);
-        }
+        font-size: 15px !important;
 
         &:not(:empty) {
             &::before {
@@ -878,14 +910,7 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
-
-        @if ($cms) {
-            @include fzCMS(15);
-        }
-
-        @else {
-            @include fz(15);
-        }
+        font-size: 15px !important;
 
         &:not(:empty) {
             &::before {
@@ -970,14 +995,7 @@
         color: $textColor01;
         cursor: pointer;
         display: flex !important;
-
-        @if ($cms) {
-            @include fzCMS(15);
-        }
-
-        @else {
-            @include fz(15);
-        }
+        font-size: 15px !important;
 
         &:not(:empty) {
             &::before {

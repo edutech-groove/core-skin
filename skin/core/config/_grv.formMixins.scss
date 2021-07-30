@@ -1,6 +1,6 @@
 @mixin setInputGenericCore($theme) {
   @include useFont1;
-  @include fz(15);
+  font-size: 15px !important;
   border-radius: $inputRadiiTL $inputRadiiTR $inputRadiiBR $inputRadiiBL;
   border: 1px solid transparent;
   box-shadow: none;
@@ -110,7 +110,7 @@
   border-bottom-right-radius: $globalRadius2 !important;
   border-top-right-radius: $globalRadius2 !important;
   color: $textColor01;
-  @include fz(15);
+  font-size: 15px !important;
   height: unset;
   line-height: 1.2;
   box-sizing: border-box;
@@ -149,6 +149,7 @@
 
   >a {
     display: block;
+    @include paragraph2Style;
     color: $textColor01 !important;
     padding: 12px 15px !important;
     margin: 0 !important;
@@ -273,7 +274,7 @@
 
     >li {
       padding: 12px 0;
-      @include fz(15);
+      font-size: 15px !important;
       font-weight: 400;
       @include flexbox;
       @include align-items(center);
@@ -353,7 +354,7 @@
   @include posa(5);
   right: 0;
   top: 0;
-  @include fz(22);
+  font-size: 22px !important;
   padding: 0 10px;
   @include flexbox;
   @include align-items(center);
@@ -378,6 +379,6 @@
   }
 
   .fa {
-    @include fz(18);
+    font-size: 18px !important;
   }
 }

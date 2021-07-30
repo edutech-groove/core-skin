@@ -28,7 +28,7 @@ input[type="number"] {
   input[type="password"],
   input[type="tel"],
   input[type="number"] {
-    @include fzCMS(15);
+    font-size: 15px !important;
   }
 }
 
