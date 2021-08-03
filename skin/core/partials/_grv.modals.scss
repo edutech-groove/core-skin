@@ -120,9 +120,9 @@
         text-align: center;
 
         ul {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flexbox;
+          @include align-items(center);
+          @include justify-content(center);
 
           .action-item {
             margin: 0;
@@ -132,13 +132,13 @@
             }
 
             .action-primary {
-              @include useGrvPrimaryDarkButtonStyleLarge(true);
+              @include useGrvPrimaryDarkButtonStyleLarge;
               min-width: 140px !important;
             }
 
             .action-secondary,
             .action-cancel {
-              @include useGrvPrimaryLightButtonStyleLarge(true);
+              @include useGrvPrimaryLightButtonStyleLarge;
               min-width: 140px !important;
             }
           }

@@ -49,7 +49,7 @@
         background-color: transparent;
         opacity: .75;
         padding: 0;
-        @include fz(22);
+        font-size: 22px !important;
 
         &:hover {
             opacity: 1;
@@ -160,7 +160,7 @@
 
 .lms {
     .alert {
-        @include fz(15);
+        font-size: 15px !important;
 
         .copy,
         .alert-message {
@@ -179,20 +179,20 @@
     
         .btn.close,
         .action-close {
-            @include fz(22);
+            font-size: 22px !important;
         }
     
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            @include fz(15);
+            font-size: 15px !important;
         }
     }
 }
 
 .studio {
     .alert {
-        @include fzCMS(15);
+        font-size: 15px !important;
 
         .copy,
         .alert-message {
@@ -210,13 +210,13 @@
     
         .btn.close,
         .action-close {
-            @include fzCMS(22);
+            font-size: 22px !important;
         }
     
         .icon-alert,
         .alert-icon,
         .feedback-symbol {
-            @include fzCMS(15);
+            font-size: 15px !important;
         }
     }
 }
@@ -251,7 +251,7 @@
 
     .icon {
         margin-right: 10px;
-        @include fz(17);
+        font-size: 17px !important;
 
         svg {
             width: 16px;
