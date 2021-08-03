@@ -102,6 +102,7 @@
     &.is-disabled {
         background-color: $disabledBtnBackground !important;
         color: $disabledBtnColor !important;
+        border-color: transparent !important;
 
         @if ($svgColorType=='fill') {
             svg {
