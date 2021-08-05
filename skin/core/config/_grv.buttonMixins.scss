@@ -25,7 +25,7 @@
         @include justify-content(center);
 
         svg {
-            margin-right: 5px;
+            margin-right: 10px;
         }
     }
 
@@ -778,7 +778,7 @@
             color: $linkColor;
             text-decoration: underline !important;
             box-shadow: none !important;
-            font-weight: 300 !important;
+            font-weight: 300;
         }
     }
 
