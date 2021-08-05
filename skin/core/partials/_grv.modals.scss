@@ -26,6 +26,10 @@
     svg {
       width: 100%;
       height: auto;
+      stroke: $textColor01;
+      fill: none;
+      stroke-linecap: round;
+      stroke-width: 2px;
 
       line {
         stroke: $textColor01;
@@ -173,11 +177,13 @@
           h2.title {
             @include heading3(true);
             color: $textColor01 !important;
+            text-align: center;
           }
 
           p.message {
             @include paragraph2(true);
             margin-bottom: 0;
+            text-align: center;
           }
         }
 
