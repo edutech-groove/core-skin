@@ -1,0 +1,140 @@
+@import "../core/config/grv.variables";
+
+$font1: "Font1", sans-serif;
+$font2: "Font2", sans-serif;
+$font3: "Font3", sans-serif;
+$font4: "Font4", sans-serif;
+
+$color01: #FFFFFF;
+$color02: #000000;
+$color03: #E60978;
+$color03d: #D3106C;
+$color04: #FEA628;
+$color05: #207945;
+$color06: $color02;
+$color06d: $color02;
+$color07: $color02;
+$color07d: $color02;
+$color08: #333333;
+$color09: #999999;
+$color10: #798F9A;
+$color11: #A9BDC7;
+$color11d: #9FB4BF;
+$color12: #C4C4C4;
+$color12d: #C4C4C4;
+$color13: #F2F5F9;
+$color14: #F4F7F8;
+$color15: #8899AA;
+$color16: #E3E3E3;
+$color17: #5D7790;
+$color18: #FAFAFA;
+
+$color19: #9B9B9B;
+$color20: #EFEFEF;
+$color21: #F04545;
+$color22: #FFD9ED;
+$color23: #FBFBFB;
+$color24: #FF9D00;
+$color24d: #EA9000;
+$color25: #FFF5E5;
+$color26: #F0F5FC;
+$color26d: #E4E7EA;
+$color27: #CFD7E2;
+$color27l: #DCE6F4;
+$color28: #8EA1BC;
+
+$color29: #22221F;
+$color30: #4B4B4B;
+$color31: #0A0A0A;
+
+// social media
+$twColor: #1DA1F2;
+$fbColor: #4065B4;
+$mailColor: #F44336;
+
+$starColor: #FFC107;
+
+// Specific grv-theme colors (Use with caution for fallback)
+$grvColor01: #25304C;
+$grvColor01d: #1F2840;
+$grvColor02: #3B455E;
+$grvColor03: #FFA850;
+$grvColor04: #6760FA;
+$grvColor05: #38c976;
+$grvColor06: #0094e3;
+
+$homepage-bg-image: url('../images/banner-img.png');
+
+// Others
+$fontFamily: $font1;
+
+// Font variables
+$font1RegularPath: '/src/skin/fonts/Nunito-Regular.woff';
+$font1SemiBoldPath: '/src/skin/fonts/Nunito-SemiBold.woff';
+$font1BoldPath: '/src/skin/fonts/Nunito-Bold.woff';
+$font1ExtraBoldPath: '/src/skin/fonts/Nunito-ExtraBold.woff';
+$font2RegularPath: '/src/skin/fonts/Plumpfull.woff';
+
+$font3MediumPath: '/src/skin/fonts/HelveticaNeue-Medium.woff';
+$font3BoldPath: '/src/skin/fonts/HelveticaNeue-Bold.woff';
+$font3ThinPath: '/src/skin/fonts/HelveticaNeue-Thin.woff';
+$font3LightPath: '/src/skin/fonts/HelveticaNeue-Light.woff';
+$font4Path: '/src/skin/fonts/TimesNewRoman.woff';
+$font4BoldPath: '/src/skin/fonts/TimesNewRoman-Bold.woff';
+$font4BoldItalicPath: '/src/skin/fonts/TimesNewRoman-BoldItalic.woff';
+$font4ItalicPath: '/src/skin/fonts/TimesNewRoman-Italic.woff';
+
+
+$breakMobile: 767.98px;
+$tablet: 768px;
+
+$textColor01: #333333 !default;
+$textColor02: #666666 !default;
+$textColor03: #999999 !default;
+$textColor04: #C6CBD0 !default;
+$textColor05: #4A4F4D !default;
+
+/* Override default Bootstrap 4 variables */
+$font-family-sans-serif: $font1;
+
+$primary: $color03;
+$secondary: $color22;
+$success: $grvColor05;
+$info: $grvColor04;
+$danger: $color21;
+$light: $color12;
+$dark: $color07;
+$warning: $grvColor03;
+
+$text-color: $textColor01;
+$link-color:            $grvColor06;
+$link-hover-color:      darken($grvColor06, 7%);
+$link-hover-decoration: none;
+
+$theme-colors: (
+  "primary": $primary,
+  "primaryYellow": $color24,
+  "secondary": $secondary,
+  "secondaryYellow": $color25,
+  "orange": $color04,
+  "danger": $danger,
+  "yellow": $color24
+);
+
+// Specific coloring
+$wrapperPreviewMenu: $grvColor01;
+$wrapperPreviewSelect: $grvColor02;
+$wrapperPreviewSelectColor: $color01;
+
+$containerWidth: 1180px;
+
+$rem-base-size: 16 !default;
+$rem-base-size-cms: 10 !default;
+@function calcRem($value-px, $cms: false) {
+  @if ($cms) {
+    @return ($value-px / $rem-base-size-cms) + 0rem;
+  }
+  @else {
+    @return ($value-px / $rem-base-size) + 0rem;
+  }
+}
