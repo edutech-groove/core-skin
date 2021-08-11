@@ -640,6 +640,12 @@
           svg {
             margin-left: 7px;
           }
+
+          svg {
+            width: auto;
+            height: 13px;
+            fill: $textColor02;
+          }
         }
 
         &:first-child {
