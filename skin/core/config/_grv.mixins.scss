@@ -761,7 +761,8 @@
   }
 
   .btn.close,
-  .action-close {
+  .action-close,
+  .dismiss-button {
     position: static;
     order: 2;
     margin-left: auto;
@@ -772,6 +773,8 @@
     opacity: .75;
     padding: 0;
     font-size: 22px;
+    border: 0;
+    line-height: 1;
 
     &:hover {
       opacity: 1;
@@ -783,6 +786,7 @@
   .alert-icon,
   .feedback-symbol {
     width: 30px;
+    min-width: 30px;
     height: 30px;
     border-radius: $globalRadius;
     color: $color01;
@@ -810,7 +814,8 @@
     }
 
     .btn.close,
-    .action-close {
+    .action-close,
+    .dismiss-button {
       color: $successColor;
     }
   }
@@ -826,7 +831,8 @@
     }
 
     .btn.close,
-    .action-close {
+    .action-close,
+    .dismiss-button {
       color: $infoColor;
     }
   }
@@ -842,7 +848,8 @@
     }
 
     .btn.close,
-    .action-close {
+    .action-close,
+    .dismiss-button {
       color: $warningColor;
     }
   }
@@ -859,7 +866,8 @@
     }
 
     .btn.close,
-    .action-close {
+    .action-close,
+    .dismiss-button {
       color: $dangerColor;
     }
   }
