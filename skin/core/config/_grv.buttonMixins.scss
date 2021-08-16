@@ -161,14 +161,11 @@
     }
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $primaryDarkBtnBackgroundHover !important;
         }
-    }
-
-    &:active,
-    &:focus {
-        background-color: $primaryDarkBtnBackgroundHover !important;
     }
 }
 
@@ -205,14 +202,11 @@
     &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
-        &.is-hovered {
+        &.is-hovered,
+        &:active,
+        &:focus {
             background-color: $primaryLightBtnBackgroundHover !important;
         }
-    }
-
-    &:active,
-    &:focus {
-        background-color: $primaryLightBtnBackgroundHover !important;
     }
 }
 
@@ -247,14 +241,11 @@
     }
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $secondaryDarkBtnBackgroundHover !important;
         }
-    }
-
-    &:active,
-    &:focus {
-        background-color: $secondaryDarkBtnBackgroundHover !important;
     }
 }
 
@@ -291,14 +282,11 @@
     &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
-        &.is-hovered {
+        &.is-hovered,
+        &:active,
+        &:focus {
             background-color: $secondaryLightBtnBackgroundHover !important;
         }
-    }
-
-    &:active,
-    &:focus {
-        background-color: $secondaryLightBtnBackgroundHover !important;
     }
 }
 
@@ -334,14 +322,11 @@
     &:not([disabled]):not(.disabled):not(.is-disabled) {
 
         &:hover,
-        &.is-hovered {
+        &.is-hovered,
+        &:active,
+        &:focus {
             background-color: darken($dangerColor, 10%) !important;
         }
-    }
-
-    &:active,
-    &:focus {
-        background-color: darken($dangerColor, 10%) !important;
     }
 }
 
