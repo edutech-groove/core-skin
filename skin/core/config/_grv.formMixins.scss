@@ -75,6 +75,12 @@
   background-image: none;
 }
 
+@mixin setInputGenericDisabled {
+  background-color: $disabledInputBackground !important;
+  color: $disabledInputColor !important;
+  border-color: $disabledInputBorder;
+}
+
 @mixin errorInput {
   background-color: $errorInputBackground !important;
   border-color: $errorInputBorder !important;
