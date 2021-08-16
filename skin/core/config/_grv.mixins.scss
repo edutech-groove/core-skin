@@ -754,6 +754,21 @@
     }
   }
 
+  .copy,
+  .alert-message {
+      .title,
+      .alert-title {
+          @include heading3Style;
+          margin: 0 0 7px;
+      }
+
+      .message,
+      .alert-copy {
+          @include paragraph2Style;
+          margin: 0;
+      }
+  }
+
   .message-content {
     button {
       @include useGrvPrimaryLightButtonStyle();
@@ -790,6 +805,7 @@
     @include align-items(center);
     @include justify-content(center);
     margin: 0 20px 0 0;
+    font-size: 15px;
 
     svg {
       width: 12px;
