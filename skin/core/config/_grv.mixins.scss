@@ -631,6 +631,8 @@
 
         * {
           text-transform: uppercase;
+          display: inline;
+          white-space: nowrap;
         }
 
         button {
@@ -764,17 +766,17 @@
 
   .copy,
   .alert-message {
-      .title,
-      .alert-title {
-          @include heading3Style;
-          margin: 0 0 7px;
-      }
+    .title,
+    .alert-title {
+      @include heading3Style;
+      margin: 0 0 7px;
+    }
 
-      .message,
-      .alert-copy {
-          @include paragraph2Style;
-          margin: 0;
-      }
+    .message,
+    .alert-copy {
+      @include paragraph2Style;
+      margin: 0;
+    }
   }
 
   .message-content {
@@ -1020,9 +1022,19 @@
 }
 
 @mixin usePlaceholder {
-  &::-webkit-input-placeholder,
-  &:-ms-input-placeholder,
-  &::placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
     @content;
   }
 }
