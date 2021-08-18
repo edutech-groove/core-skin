@@ -121,6 +121,7 @@
   height: unset;
   line-height: 1.2;
   box-sizing: border-box;
+  padding: 10px 15px;
 
   @if($large) {
     height: 50px;
