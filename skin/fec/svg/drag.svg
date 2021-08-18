@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 22" id="drag">
+    <g transform="translate(-936 -537)">
+        <rect width="2" height="2" transform="translate(936 537)"></rect>
+        <rect width="2" height="2" transform="translate(936 542)"></rect>
+        <rect width="2" height="2" transform="translate(936 547)"></rect>
+        <rect width="2" height="2" transform="translate(936 552)"></rect>
+        <rect width="2" height="2" transform="translate(936 557)"></rect>
+        <rect width="2" height="2" transform="translate(941 537)"></rect>
+        <rect width="2" height="2" transform="translate(941 542)"></rect>
+        <rect width="2" height="2" transform="translate(941 547)"></rect>
+        <rect width="2" height="2" transform="translate(941 552)"></rect>
+        <rect width="2" height="2" transform="translate(941 557)"></rect>
+    </g>
+</svg>

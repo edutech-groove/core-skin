@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="user-rect-icon">
+    <g transform="translate(-394.5 -538.5)">
+        <rect width="32" height="32" rx="10.667" transform="translate(394.5 538.5)" fill="#e6e6e6"></rect>
+        <circle cx="3.429" cy="3.429" r="3.429" transform="translate(407.071 546.5)"></circle>
+        <path d="M406.371 555.643h8.249a3.3 3.3 0 013.3 3.3v2.557a1 1 0 01-1 1h-12.849a1 1 0 01-1-1v-2.557a3.3 3.3 0 013.3-3.3z"></path>
+    </g>
+</svg>

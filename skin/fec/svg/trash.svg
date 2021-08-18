@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.9 17.5" id="trash">
+    <g transform="translate(-3.75 -2.25)">
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1px" d="M4.5,9H18.9" transform="translate(0 -2.8)"></path>
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1px" d="M18.7,6.2V17.4A1.6,1.6,0,0,1,17.1,19h-8a1.6,1.6,0,0,1-1.6-1.6V6.2m2.4,0V4.6A1.6,1.6,0,0,1,11.5,3h3.2a1.6,1.6,0,0,1,1.6,1.6V6.2" transform="translate(-1.4)"></path>
+    </g>
+</svg>

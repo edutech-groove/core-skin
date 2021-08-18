@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 14.329 13.503" id="warning">
+    <defs>
+        <style>.svg-warning {
+          fill: #f04545;
+        }
+
+        .svg-warning-2 {
+          clip-path: url(#svg-warning);
+        }</style>
+        <clipPath id="svg-warning">
+            <rect class="svg-warning" width="14.329" height="13.503" transform="translate(0 0)"></rect>
+        </clipPath>
+    </defs>
+    <g transform="translate(0 0)">
+        <g class="svg-warning-2" transform="translate(0 0)">
+            <path class="svg-warning" d="M14.031,10.332l-5.062-9.3a2.1,2.1,0,0,0-3.61,0L.3,10.332A2.1,2.1,0,0,0,2.1,13.5H12.226a2.1,2.1,0,0,0,1.805-3.171M7.164,11.824A.839.839,0,1,1,8,10.984a.841.841,0,0,1-.839.839M8,8.466a.84.84,0,0,1-1.679,0v-4.2A.84.84,0,0,1,8,4.267Z" transform="translate(0 0)"></path>
+        </g>
+    </g>
+</svg>

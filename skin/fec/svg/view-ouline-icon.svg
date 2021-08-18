@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13.5" id="view-ouline-icon">
+    <g transform="translate(-0.75 -5.25)">
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px" d="M1.5,12s3-6,8.25-6S18,12,18,12s-3,6-8.25,6S1.5,12,1.5,12Z" transform="translate(0 0)"></path>
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px" d="M18,15.75a2.25,2.25,0,1,1-2.25-2.25A2.25,2.25,0,0,1,18,15.75Z" transform="translate(-6 -3.75)"></path>
+    </g>
+</svg>

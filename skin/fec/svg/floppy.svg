@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.5 15.5" id="floppy">
+    <g transform="translate(-3.75 -3.75)">
+        <path d="M16.944,18.5H6.056A1.556,1.556,0,0,1,4.5,16.944V6.056A1.556,1.556,0,0,1,6.056,4.5h8.556L18.5,8.389v8.556A1.556,1.556,0,0,1,16.944,18.5Z"></path>
+        <path d="M18.278,25.722V19.5H10.5v6.222" transform="translate(-2.889 -7.222)"></path>
+        <path d="M10.5,4.5V8.389h6.222" transform="translate(-2.889)"></path>
+    </g>
+</svg>

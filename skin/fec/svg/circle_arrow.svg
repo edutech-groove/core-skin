@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="circle_arrow">
+    <g transform="translate(-259.866 -477)">
+        <path d="M275.117,478.055v3.014H272.1" transform="translate(-1.467 -0.069)"></path>
+        <path d="M261.429,492.754V489.74h3.013" transform="translate(-0.133 -1.53)"></path>
+        <path d="M274.586,485.5a7,7,0,0,1-12.456,4.385" transform="translate(-0.221 -1)"></path>
+        <path d="M260.366,484.5a7,7,0,0,1,12.52-4.307"></path>
+    </g>
+</svg>

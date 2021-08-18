@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.414 22.414" id="home-discussion-search-icon">
+    <g transform="translate(-3.5 -3.5)">
+        <path stroke="var(--primaryColor1)" fill="var(--primaryColor1Light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M22.278,13.389A8.889,8.889,0,1,1,13.389,4.5a8.889,8.889,0,0,1,8.889,8.889Z" transform="translate(0 0)"></path>
+        <path stroke="var(--primaryColor1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M29.808,29.808l-4.833-4.833" transform="translate(-5.308 -5.308)"></path>
+    </g>
+</svg>

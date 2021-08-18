@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.558 11.697" id="eye">
+    <g transform="translate(-640.719 -358.65)">
+        <g transform="translate(641.498 359.4)">
+            <g transform="translate(0)">
+                <path d="M657.4,364.187c-.143-.2-3.548-4.787-7.9-4.787s-7.754,4.591-7.9,4.787a.528.528,0,0,0,0,.623c.143.2,3.548,4.787,7.9,4.787s7.753-4.591,7.9-4.787A.527.527,0,0,0,657.4,364.187Z" transform="translate(-641.498 -359.4)"></path>
+            </g>
+        </g>
+        <g transform="translate(646.622 361.622)">
+            <g transform="translate(0 0)">
+                <path d="M673.821,372.17a2.876,2.876,0,1,0,2.876,2.876h0A2.879,2.879,0,0,0,673.821,372.17Z" transform="translate(-670.945 -372.17)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

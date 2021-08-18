@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 22" id="home-discussion-flag-icon">
+    <g transform="translate(-831 -549)">
+        <g transform="translate(826 547)">
+            <path stroke="var(--dangerColor)" fill="var(--dangerColorLight)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M6,16s1-1,4-1,5,2,8,2,4-1,4-1V4s-1,1-4,1-5-2-8-2S6,4,6,4Z"></path>
+            <path stroke="var(--dangerColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M6,29.5v-7" transform="translate(0 -6.5)"></path>
+        </g>
+    </g>
+</svg>
