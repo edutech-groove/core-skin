@@ -629,6 +629,10 @@
         text-transform: uppercase;
         background-color: $color26;
 
+        * {
+          text-transform: uppercase;
+        }
+
         button {
           @include captainStyle;
           padding: 0;
@@ -639,10 +643,6 @@
           text-decoration: none;
           box-shadow: none;
           letter-spacing: 0;
-
-          * {
-            text-transform: uppercase;
-          }
 
           .fa,
           svg {
@@ -1016,5 +1016,13 @@
         }
       }
     }
+  }
+}
+
+@mixin usePlaceholder {
+  &::-webkit-input-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    @content;
   }
 }
