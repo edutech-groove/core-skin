@@ -825,6 +825,10 @@
       width: 12px;
       height: auto;
       fill: $color01;
+
+      * {
+        fill: $color01;
+      }
     }
   }
 
