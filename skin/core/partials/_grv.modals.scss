@@ -26,7 +26,8 @@
 
     .modal-title {
       text-align: center;
-      @include heading3;
+      @include heading3Style;
+      margin: 0 0 30px;
     }
 
     button {
