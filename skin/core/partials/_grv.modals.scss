@@ -162,7 +162,8 @@
         .modal-window-title {
           margin: 0;
           text-align: center;
-          @include heading3(true);
+          @include heading3Style;
+          margin: 0 0 30px;
         }
       }
 
@@ -337,8 +338,8 @@
       border: 0 !important;
 
       &.modal-header {
-        @include heading3;
-        margin-bottom: 30px;
+        @include heading3Style;
+        margin: 0 0 30px;
         justify-content: center;
         color: $textColor01 !important;
       }
