@@ -395,6 +395,46 @@
     }
 }
 
+@mixin useSuccessButtonStyle($svgColorType:'fill') {
+    background-color: $successColor !important;
+    color: $color01;
+    @include coreButton($svgColorType);
+
+    @if ($svgColorType=='fill') {
+        svg {
+            fill: $color01;
+            stroke: none;
+
+            * {
+                fill: $color01;
+                stroke: none;
+            }
+        }
+    }
+
+    @else if ($svgColorType=='stroke') {
+        svg {
+            stroke: $color01;
+            fill: none;
+
+            * {
+                stroke: $color01;
+                fill: none;
+            }
+        }
+    }
+
+    &:not([disabled]):not(.disabled):not(.is-disabled) {
+
+        &:hover,
+        &.is-hovered,
+        &:active,
+        &:focus {
+            background-color: darken($successColor, 10%) !important;
+        }
+    }
+}
+
 @mixin useButtonSmall() {
     font-size: 13px !important;
     box-shadow: none;
@@ -531,6 +571,26 @@
 @mixin useGrvDangerTransparentButtonStyle($cms: false, $svgColorType: 'fill') {
     @include useDangerTransparentButtonStyle($svgColorType);
     padding: 0 !important;
+    font-size: $btnFontSize;
+}
+
+/// success
+
+@mixin useGrvSuccessButtonStyle($cms: false, $svgColorType: 'fill') {
+    @include useSuccessButtonStyle($svgColorType);
+    padding: 8px 20px !important;
+    font-size: $btnFontSize;
+}
+
+@mixin useGrvSuccessButtonStyleLarge($cms: false, $svgColorType: 'fill') {
+    @include useSuccessButtonStyle($svgColorType);
+    padding: 10px 27px !important;
+    font-size: $btnFontSize;
+}
+
+@mixin useGrvSuccessButtonStyleSmall($cms: false, $svgColorType: 'fill') {
+    @include useSuccessButtonStyle($svgColorType);
+    padding: 5px 7px !important;
     font-size: $btnFontSize;
 }
 
