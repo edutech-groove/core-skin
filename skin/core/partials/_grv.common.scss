@@ -31,8 +31,7 @@
 	border-radius: 1px $globalRadius $globalRadius 1px;
 	border: 0;
 	border-left: 2px solid transparent;
-    display: flex;
-    align-items: center;
+    @include flexbox;
     @include paragraph2;
     margin-bottom: 0;
 
