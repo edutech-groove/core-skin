@@ -17,7 +17,8 @@
     max-width: 930px;
   }
   
-  &.modal-sm {
+  &.modal-sm,
+  &.confirm {
     max-width: 450px;
   }
 
@@ -227,7 +228,7 @@
 
     .prompt {
       @include usePrimaryModalStyle;
-      max-width: 420px;
+      max-width: 450px;
 
       >* {
         padding: 0;
