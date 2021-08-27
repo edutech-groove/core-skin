@@ -12,14 +12,14 @@
   margin: 0;
   box-shadow: none !important;
   transform: none !important;
-
-  &.modal-lg {
-    max-width: 930px;
-  }
   
   &.modal-sm,
   &.confirm {
     max-width: 450px;
+  }
+
+  &.modal-lg {
+    max-width: 930px;
   }
 
   .modal-header {
