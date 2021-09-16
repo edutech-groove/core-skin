@@ -13,9 +13,9 @@ $secondaryColor1: $color25;
 $secondaryColor2: $color22;
 $tertiaryColor1: $grvColor06;
 $tertiaryColor2: $color24;
-$textColorBgWhite1: $color02;
-$textColorBgWhite2: $textColor01;
-$textColorBgWhite3: $textColor02;
+$textColorBgWhite1: $textColor01;
+$textColorBgWhite2: $textColor02;
+$textColorBgWhite3: $textColor03;
 $textColorBgDark1: $textColor04;
 $textColorBgDark2: $color01;
 
@@ -55,21 +55,18 @@ $secondaryLightBtnColor: $tertiaryColor2;
 $secondaryLightBtnBackgroundHover: $color24d;
 
 $disabledBtnBackground: #CBCBCB;
-$disabledBtnColor: $textColor02;
+$disabledBtnColor: $textColorBgWhite2;
 
 $btnFontSize: 15px;
 
-$buttonRadiiTL: $globalRadius1;
-$buttonRadiiTR: $globalRadius1;
-$buttonRadiiBR: $globalRadius1;
-$buttonRadiiBL: $globalRadius1;
+$buttonBorderRadius: $globalRadius1;
 
 $inputBorder: transparent;
 $inputBackground: $grey08;
 $inputColor: $textColorBgWhite2;
 $disabledInputBorder: transparent;
 $disabledInputBackground: $grey09;
-$disabledInputColor: $textColor03;
+$disabledInputColor: $textColorBgWhite3;
 $errorInputBorder: $dangerColor;
 $errorInputBackground: #FFEEEE;
 $focusedInputBorder: $primaryColor1;
@@ -77,17 +74,17 @@ $focusedInputBackground: $color01;
 $focusedInputColor: $textColorBgWhite2;
 $focusedInputShadow: 0 0px 0 0.2rem rgba($color03, 0.25);
 
-$inputRadiiTL: $globalRadius;
-$inputRadiiTR: $globalRadius;
-$inputRadiiBR: $globalRadius;
-$inputRadiiBL: $globalRadius;
+$genericInputBorderRadius: $globalRadius;
+$searchInputBorderRadius: $globalRadius $globalRadius2 $globalRadius2 $globalRadius;
+$searchButtonBorderRadius: 0 $globalRadius2 $globalRadius2 $globalRadius2;
 
 $checkboxBorder: #BEBEBE;
+$checkboxBorderRadius: $globalRadius;
 $checkboxBackground: $color01;
 $checkboxColor: $color01;
 $disabledCheckboxBorder: #D4D4D4;
 $disabledCheckboxBackground: #D4D4D4;
-$disabledCheckboxColor: $textColor03;
+$disabledCheckboxColor: $textColorBgWhite3;
 $checkedCheckboxBorder: $primaryColor1;
 $checkedCheckboxBackground: $primaryColor1;
 $checkedCheckboxColor: $color01;
@@ -126,28 +123,28 @@ $paragraph1Font: $font1;
 $paragraph1Size: 15px;
 $paragraph1Weight: 700;
 $paragraph1LineHeight: 1.4;
-$paragraph1Color: $textColor01;
+$paragraph1Color: $textColorBgWhite1;
 $paragraph1MarginBottom: 10px;
 
 $paragraph2Font: $font1;
 $paragraph2Size: 15px;
 $paragraph2Weight: 400;
 $paragraph2LineHeight: 1.4;
-$paragraph2Color: $textColor01;
+$paragraph2Color: $textColorBgWhite1;
 $paragraph2MarginBottom: 10px;
 
 $captainFont: $font1;
 $captainSize: 13px;
 $captainWeight: 400;
 $captainLineHeight: 1.4;
-$captainColor: $textColor02;
+$captainColor: $textColorBgWhite2;
 $captainMarginBottom: 7px;
 
 $textLabelFont: $font1;
 $textLabelSize: 15px;
 $textLabelWeight: 400;
 $textLabelLineHeight: 1.4;
-$textLabelColor: $textColor02;
+$textLabelColor: $textColorBgWhite2;
 $textLabelMarginBottom: 7px;
 
 $subTabItemActiveColor: $color24;
@@ -156,3 +153,45 @@ $popoverBgColor: $color26;
 $popoverShadow: none;
 
 $placeholderAvatarsBorderRadius: 50%;
+
+
+$successAlertBorderColor: $successColor;
+$successAlertBgColor: rgba($successColor, .1);
+$successAlertColor: $textColorBgWhite1;
+$successAlertIconColor: $successColor;
+
+$infoAlertBorderColor: $infoColor;
+$infoAlertBgColor: rgba($infoColor, .1);
+$infoAlertColor: $textColorBgWhite1;
+$infoAlertIconColor: $infoColor;
+
+$warningAlertBorderColor: $warningColor;
+$warningAlertBgColor: rgba($warningColor, .1);
+$warningAlertColor: $textColorBgWhite1;
+$warningAlertIconColor: $warningColor;
+
+$dangerAlertBorderColor: $dangerColor;
+$dangerAlertBgColor: rgba($dangerColor, .1);
+$dangerAlertColor: $textColorBgWhite1;
+$dangerAlertIconColor: $dangerColor;
+
+
+$successMessageBorderColor: $successColor;
+$successMessageBgColor: rgba($successColor, .1);
+$successMessageColor: $textColorBgWhite1;
+$successMessageIconColor: $successColor;
+
+$infoMessageBorderColor: $infoColor;
+$infoMessageBgColor: rgba($infoColor, .1);
+$infoMessageColor: $textColorBgWhite1;
+$infoMessageIconColor: $infoColor;
+
+$warningMessageBorderColor: $warningColor;
+$warningMessageBgColor: rgba($warningColor, .1);
+$warningMessageColor: $textColorBgWhite1;
+$warningMessageIconColor: $warningColor;
+
+$dangerMessageBorderColor: $dangerColor;
+$dangerMessageBgColor: rgba($dangerColor, .1);
+$dangerMessageColor: $textColorBgWhite1;
+$dangerMessageIconColor: $dangerColor;

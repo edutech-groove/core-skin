@@ -326,7 +326,7 @@
     @include paragraph2();
     @include flexbox;
     @include align-items(center);
-    color: $textColor02;
+    color: $textColorBgWhite2;
     padding: 12px 18px;
     border: 0;
     margin: 0;
@@ -335,7 +335,7 @@
     text-decoration: none;
 
     svg {
-      fill: $textColor02;
+      fill: $textColorBgWhite2;
       margin: 0 22px 0 0;
       min-width: 15px;
       max-width: 15px;
@@ -370,7 +370,7 @@
   @include justify-content(center);
   width: 64px;
   height: 64px;
-  border-radius: $globalRadius1;
+  border-radius: $placeholderAvatarsBorderRadius;
 
   svg {
     fill: $color12;
@@ -381,7 +381,6 @@
   &.lg {
     width: 128px;
     height: 128px;
-    border-radius: $globalRadius2;
 
     svg {
       width: 45px;
@@ -391,7 +390,6 @@
   &.sm {
     width: 32px;
     height: 32px;
-    border-radius: $globalRadius*2;
 
     svg {
       width: 11px;
@@ -419,9 +417,9 @@
   }
 
   &.sm {
-    width: 48px;
-    height: 48px;
-    font-size: 15px !important;
+    width: 32px;
+    height: 32px;
+    font-size: 10px !important;
   }
 }
 
@@ -482,7 +480,7 @@
   padding: 5px 5px 5px 10px;
   font-size: 15px !important;
   background: $grey04;
-  color: $textColor02;
+  color: $textColorBgWhite2;
   display: inline-block;
   line-height: 1;
   border: 0;
@@ -501,7 +499,7 @@
       svg {
         width: 12px;
         height: 12px;
-        fill: $textColor02;
+        fill: $textColorBgWhite2;
         display: block;
       }
     }
@@ -654,7 +652,7 @@
           svg {
             width: auto;
             height: 13px;
-            fill: $textColor02;
+            fill: $textColorBgWhite2;
           }
         }
 
@@ -687,7 +685,7 @@
 
 @mixin badge {
   @include captain;
-  background-color: $textColor01;
+  background-color: $textColorBgWhite1;
   border-radius: $globalRadius1;
   color: $color01;
   text-shadow: none;
@@ -716,7 +714,7 @@
       position: absolute;
       padding: 0;
       font-weight: 100;
-      color: $textColor01;
+      color: $textColorBgWhite1;
       text-shadow: none;
       opacity: 1;
       font-size: 30px;
@@ -834,71 +832,75 @@
 
   &.alert-success,
   &.announcement {
-    border-color: $successColor;
-    background-color: rgba($successColor, .1);
+    border-color: $successAlertBorderColor;
+    background-color: $successAlertBgColor;
+    color: $successAlertColor;
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $successColor;
+      background-color: $successAlertIconColor;
     }
 
     .btn.close,
     .action-close,
     .dismiss-button {
-      color: $successColor;
+      color: $successAlertIconColor;
     }
   }
 
   &.alert-info {
-    border-color: $infoColor;
-    background-color: rgba($infoColor, .1);
+    border-color: $infoAlertBorderColor;
+    background-color: $infoAlertBgColor;
+    color: $infoAlertColor;
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $infoColor;
+      background-color: $infoAlertIconColor;
     }
 
     .btn.close,
     .action-close,
     .dismiss-button {
-      color: $infoColor;
+      color: $infoAlertIconColor;
     }
   }
 
   &.alert-warning {
-    border-color: $warningColor;
-    background-color: rgba($warningColor, .1);
+    border-color: $warningAlertBorderColor;
+    background-color: $warningAlertBgColor;
+    color: $warningAlertColor;
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $warningColor;
+      background-color: $warningAlertIconColor;
     }
 
     .btn.close,
     .action-close,
     .dismiss-button {
-      color: $warningColor;
+      color: $warningAlertIconColor;
     }
   }
 
   &.alert-danger,
   &.alert-error {
-    border-color: $dangerColor;
-    background-color: rgba($dangerColor, .1);
+    border-color: $dangerAlertBorderColor;
+    background-color: $dangerAlertBgColor;
+    color: $dangerAlertColor;
 
     .icon-alert,
     .alert-icon,
     .feedback-symbol {
-      background-color: $dangerColor;
+      background-color: $dangerAlertIconColor;
     }
 
     .btn.close,
     .action-close,
     .dismiss-button {
-      color: $dangerColor;
+      color: $dangerAlertIconColor;
     }
   }
 }
@@ -955,7 +957,7 @@
 
       .dropdown-item {
         padding: 8px 13px;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         border-radius: 0;
         letter-spacing: 0;
         display: block;
@@ -969,7 +971,7 @@
         &:active,
         &:focus,
         &.active {
-          color: $textColor01;
+          color: $textColorBgWhite1;
           border-color: $secondaryColor2;
           background-color: $color23;
           box-shadow: none;

@@ -1,7 +1,7 @@
 @mixin setInputGenericCore($theme) {
   @include useFont1;
   font-size: 15px !important;
-  border-radius: $inputRadiiTL $inputRadiiTR $inputRadiiBR $inputRadiiBL;
+  border-radius: $genericInputBorderRadius;
   border: 1px solid transparent;
   box-shadow: none;
   font-style: normal;
@@ -113,10 +113,8 @@
 @mixin searchInputStyle($large) {
   background-color: $color01 !important;
   border: 1px solid $grvBorderColor1;
-  border-radius: $globalRadius !important;
-  border-bottom-right-radius: $globalRadius2 !important;
-  border-top-right-radius: $globalRadius2 !important;
-  color: $textColor01;
+  border-radius: $searchInputBorderRadius !important;
+  color: $textColorBgWhite1;
   font-size: 15px !important;
   height: unset;
   line-height: 1.2;
@@ -138,7 +136,7 @@
 }
 
 @mixin searchButtonRadiusStyle {
-  border-radius: 0 $globalRadius2 $globalRadius2 $globalRadius2 !important;
+  border-radius: $searchButtonBorderRadius !important;
 }
 
 /* Mixin for Tab and Active tab state */
@@ -155,22 +153,14 @@
   display: inline-block;
   transition: all 0.25s ease-in-out;
 
-  >a {
+  >a,
+  &.tab {
     display: block;
     @include paragraph2Style;
-    color: $textColor01 !important;
     padding: 12px 15px !important;
     margin: 0 !important;
     border: 0 !important;
     text-decoration: none;
-  }
-
-  >a,
-  &.tab {
-    display: block;
-    color: $textColor01 !important;
-    padding: 12px 15px !important;
-    margin: 0 !important;
   }
 
   &:after {
@@ -264,12 +254,12 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        color: $textColor02;
+        color: $textColorBgWhite2;
         margin: 0;
       }
 
       >svg.icon {
-        fill: $textColor02;
+        fill: $textColorBgWhite2;
       }
     }
   }
@@ -343,7 +333,7 @@
   >* {
     margin: 4px;
     display: block;
-    color: $textColor01;
+    color: $textColorBgWhite1;
   }
 
   svg {

@@ -52,52 +52,60 @@
 
 @mixin infoMessage {
 	@include coreMessage();
-	border-color: $infoColor;
-	background-color: rgba($infoColor, .1);
+	border-color: $infoMessageBorderColor;
+	background-color: $infoMessageBgColor;
+    color: $infoMessageColor;
 
     .icon {
-        color: $infoColor;
+        color: $infoMessageIconColor;
+
+        svg {
+            fill: $infoMessageIconColor;
+        }
     }
 }
 
 @mixin successMessage {
 	@include coreMessage();
-	border-color: $successColor;
-	background-color: rgba($successColor, .1);
+	border-color: $successMessageBorderColor;
+	background-color: $successMessageBgColor;
+    color: $successMessageColor;
 
     .icon {
-        color: $successColor;
+        color: $successMessageIconColor;
 
         svg {
-            fill: $successColor;
+            fill: $successMessageIconColor;
         }
     }
 }
 
 @mixin errorMessage {
 	@include coreMessage();
-	border-color: $dangerColor;
-	background-color: rgba($dangerColor, .1);
+	border-color: $dangerMessageBorderColor;
+	background-color: $dangerMessageBgColor;
+    color: $dangerMessageColor;
 
     .icon {
-        color: $dangerColor;
+        color: $dangerMessageIconColor;
 
         svg {
-            fill: $dangerColor;
+            fill: $dangerMessageIconColor;
         }
     }
 }
 
 @mixin wariningMessage {
 	@include coreMessage();
-	border-color: $warningColor;
-	background-color: rgba($warningColor, .1);
+	border-color: $warningMessageBorderColor;
+	background-color: $warningMessageBgColor;
+    color: $warningMessageColor;
 
     .icon {
-        color: $warningColor;
+        color: $warningMessageIconColor;
 
         svg {
-            fill: $warningColor;
+            fill: $warningMessageIconColor;
         }
     }
 }
