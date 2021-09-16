@@ -4,7 +4,7 @@
     background-image: none;
     border: 0;
     box-shadow: none !important;
-    border-radius: $buttonRadiiTL $buttonRadiiTR $buttonRadiiBR $buttonRadiiBL !important;
+    border-radius: $buttonBorderRadius !important;
     line-height: 1.4;
     text-shadow: none;
     font-weight: 400;
@@ -625,7 +625,7 @@
     background-color: $color01;
     border-color: $grey07;
     border-radius: $globalRadius2;
-    color: $textColor01;
+    color: $textColorBgWhite1;
     font-weight: 600;
     height: auto;
     letter-spacing: 0;
@@ -641,7 +641,7 @@
 
     .icon {
         bottom: auto;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         position: relative;
         top: 0;
         width: 24px;
@@ -650,7 +650,7 @@
     @include whenHover {
         background-color: $color01;
         border-color: $primaryColor1;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         box-shadow: none;
 
         .icon {
@@ -728,7 +728,7 @@
 }
 
 @mixin useSecondaryLink {
-    color: $textColor02 !important;
+    color: $textColorBgWhite2 !important;
     text-decoration: none;
     box-shadow: none;
     border: 0;
@@ -868,7 +868,7 @@
         line-height: 1.2;
         @include useFont1;
         font-weight: 400;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         cursor: pointer;
         display: flex !important;
         font-size: 15px !important;
@@ -896,7 +896,7 @@
             min-width: 16px;
             background-color: $checkboxBackground;
             border: 1px solid $checkboxBorder;
-            border-radius: $globalRadius;
+            border-radius: $checkboxBorderRadius;
         }
 
         &::after {
@@ -954,7 +954,7 @@
         line-height: 1.2;
         @include useFont1;
         font-weight: 400;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         cursor: pointer;
         display: flex !important;
         font-size: 15px !important;
@@ -1039,7 +1039,7 @@
         line-height: 1.2;
         @include useFont1;
         font-weight: 400;
-        color: $textColor01;
+        color: $textColorBgWhite1;
         cursor: pointer;
         display: flex !important;
         font-size: 15px !important;
