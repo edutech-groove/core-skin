@@ -15,24 +15,40 @@
   @if ($theme=='ondark') {
     background-color: rgba($color01, .1);
     color: $color01;
+
+    @include usePlaceholder {
+      color: rgba($color01, .7);
+    }
   }
 
   @else if ($theme=='white') {
     color: $inputColor;
     background-color: $color01;
     border-color: $grvBorderColor1;
+
+    @include usePlaceholder {
+      color: rgba($inputColor, .7);
+    }
   }
 
   @else if ($theme=='gray') {
     color: $inputColor;
     border-color: $inputBorder;
     background-color: $inputBackground;
+
+    @include usePlaceholder {
+      color: rgba($inputColor, .7);
+    }
   }
 
   &[disabled] {
     background-color: $disabledInputBackground !important;
     color: $disabledInputColor !important;
     border-color: $disabledInputBorder;
+
+    @include usePlaceholder {
+      color: rgba($disabledInputColor, .7);
+    }
   }
 
   @include whenFocusOnly {
