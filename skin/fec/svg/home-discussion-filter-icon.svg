@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.866 22.021" id="home-discussion-filter-icon">
     <g transform="translate(-563.077 -564.993)">
-        <path stroke="var(--tertiaryColor1)" fill="var(--tertiaryColor1Light)" stroke-width="2px" class="a" d="M571.628,575.444a1.233,1.233,0,0,1,.325.836v9.095a.618.618,0,0,0,1.052.44l2.537-2.907c.339-.408.527-.609.527-1.012v-5.613a1.241,1.241,0,0,1,.325-.835l7.28-7.9a.927.927,0,0,0-.682-1.554H565.03a.926.926,0,0,0-.682,1.554Z" transform="translate(0 0)"></path>
+        <path stroke="var(--tertiaryColor1)" fill="var(--tertiaryColor1Light)" stroke-width="2px" d="M571.628,575.444a1.233,1.233,0,0,1,.325.836v9.095a.618.618,0,0,0,1.052.44l2.537-2.907c.339-.408.527-.609.527-1.012v-5.613a1.241,1.241,0,0,1,.325-.835l7.28-7.9a.927.927,0,0,0-.682-1.554H565.03a.926.926,0,0,0-.682,1.554Z" transform="translate(0 0)"></path>
     </g>
 </svg>

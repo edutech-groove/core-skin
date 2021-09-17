@@ -72,6 +72,7 @@
         box-shadow: none !important;
         color: $color01;
         outline: none;
+        text-decoration: none;
 
         @if ($svgColorType=='fill') {
             svg {

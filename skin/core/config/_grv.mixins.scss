@@ -754,6 +754,11 @@
     width: unset;
   }
 
+  a {
+    @include paragraph2Style;
+    @include useBlueLink;
+  }
+
   .copy {
     margin: 0;
 

@@ -1,17 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="component-html-icon">
-    <style>tspan { white-space:pre }
-      .shp0 { fill: #cccccc } 
-      .shp1 { fill: none;stroke: #000000 }</style>
     <g>
         <g>
-            <path class="shp0" d="M42.11 18.4L55.52 28.71L42.11 43.7L38.33 39.3L47.61 29.74L38.33 23.17L42.11 18.4Z"></path>
-            <path class="shp0" d="M15.8 13.21L2.38 23.52L15.8 38.51L19.57 34.11L10.3 24.55L19.57 17.98L15.8 13.21Z"></path>
-            <path class="shp0" d="M30.81 13.48L36.8 13.48L26.52 43.7L21.1 43.7L30.81 13.48Z"></path>
+            <path fill="#cccccc" d="M42.11 18.4L55.52 28.71L42.11 43.7L38.33 39.3L47.61 29.74L38.33 23.17L42.11 18.4Z"></path>
+            <path fill="#cccccc" d="M15.8 13.21L2.38 23.52L15.8 38.51L19.57 34.11L10.3 24.55L19.57 17.98L15.8 13.21Z"></path>
+            <path fill="#cccccc" d="M30.81 13.48L36.8 13.48L26.52 43.7L21.1 43.7L30.81 13.48Z"></path>
         </g>
         <g>
-            <path class="shp1" d="M40.46 16.89L53.88 27.2L40.46 42.18L36.68 37.79L45.96 28.22L36.68 21.66L40.46 16.89Z"></path>
-            <path class="shp1" d="M14.15 11.7L0.73 22.01L14.15 36.99L17.93 32.6L8.65 23.03L17.93 16.47L14.15 11.7Z"></path>
-            <path class="shp1" d="M29.16 11.96L35.15 11.96L24.88 42.18L19.46 42.18L29.16 11.96Z"></path>
+            <path fill="none" stroke="#000000" d="M40.46 16.89L53.88 27.2L40.46 42.18L36.68 37.79L45.96 28.22L36.68 21.66L40.46 16.89Z"></path>
+            <path fill="none" stroke="#000000" d="M14.15 11.7L0.73 22.01L14.15 36.99L17.93 32.6L8.65 23.03L17.93 16.47L14.15 11.7Z"></path>
+            <path fill="none" stroke="#000000" d="M29.16 11.96L35.15 11.96L24.88 42.18L19.46 42.18L29.16 11.96Z"></path>
         </g>
     </g>
 </svg>
