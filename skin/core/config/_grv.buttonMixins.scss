@@ -865,13 +865,10 @@
         position: relative;
         min-height: 16px;
         margin-bottom: 0;
-        line-height: 1.2;
-        @include useFont1;
-        font-weight: 400;
-        color: $textColorBgWhite1;
         cursor: pointer;
         display: flex !important;
-        font-size: 15px !important;
+        @include paragraph2Style;
+        font-size: $paragraph2Size !important;
 
         &:not(:empty) {
             &::before {
