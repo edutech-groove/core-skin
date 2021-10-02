@@ -944,6 +944,7 @@
         height: 20px;
         text-shadow: none;
         @include paragraph2Style;
+        color: inherit;
       }
     }
 
