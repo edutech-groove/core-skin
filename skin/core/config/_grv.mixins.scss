@@ -234,11 +234,6 @@
 }
 
 @mixin usePrimarySelect($size, $theme, $cms) {
-  display: inline-block;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 8px;
   border-radius: $globalRadius;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -249,7 +244,6 @@
 
   @if ($theme=='ondark') {
     @include setInputGeneric('ondark');
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23ffffff' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
 
     >option {
       color: $color02;
@@ -258,27 +252,24 @@
 
   @else if ($theme=='white') {
     @include setInputGeneric('white');
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23343a40' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   @else if ($theme=='gray') {
     @include setInputGeneric;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e");
   }
 
   &:focus {
     opacity: 1 !important;
     outline: none;
     @include setInputGenericFocused;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 292.362 292.362'%3e%3cpath fill='%23666666' d='M286.935,69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952,0-9.233,1.807-12.85,5.424 C1.807,72.998,0,77.279,0,82.228c0,4.948,1.807,9.229,5.424,12.847l127.907,127.907c3.621,3.617,7.902,5.428,12.85,5.428 s9.233-1.811,12.847-5.428L286.935,95.074c3.613-3.617,5.427-7.898,5.427-12.847C292.362,77.279,290.548,72.998,286.935,69.377z'/%3e%3c/svg%3e") !important;
   }
 
   @if ($size=='md') {
-    padding: 10px 40px 10px 15px;
+    padding: 10px 15px;
   }
 
   @else {
-    padding: 6px 40px 6px 15px;
+    padding: 6px 15px;
   }
 }
 
@@ -769,6 +760,7 @@
 
   .copy,
   .alert-message {
+
     .title,
     .alert-title {
       @include heading3Style;
@@ -937,6 +929,8 @@
       width: 100%;
       letter-spacing: 0;
       @include usePrimarySelect($size, $theme, $cms);
+      @include flexbox;
+      @include align-items(center);
 
       .multiselect-selected-text {
         white-space: nowrap;
@@ -945,6 +939,19 @@
         text-shadow: none;
         @include paragraph2Style;
         color: inherit;
+        @include flex(1);
+        width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &::after {
+        display: block;
+        margin-left: 10px;
+        content: "";
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
       }
     }
 
