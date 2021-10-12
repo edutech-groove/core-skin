@@ -1,7 +1,5 @@
-@import "./skin";
-
 // Please DO NOT delete this file. 
-// It is used for theme styling in LMS/CMS
+// It is used for theme styling in LMS/CMS while build docker image
 
 // Override font variables by getting from FEC
 $font1RegularPath: '/static/fec/groove/fonts/Nunito-Regular.woff';
