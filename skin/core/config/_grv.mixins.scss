@@ -939,8 +939,7 @@
         text-shadow: none;
         @include paragraph2Style;
         color: inherit;
-        @include flex(1);
-        width: 0;
+        @include flex(1, 1, 0%);
         overflow: hidden;
         text-overflow: ellipsis;
       }
