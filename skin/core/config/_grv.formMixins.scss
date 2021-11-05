@@ -195,6 +195,7 @@
 
   &.active,
   &.ui-tabs-active,
+  &.is--active,
   &:hover {
     border-bottom-color: $primaryColor1 !important;
     color: $primaryColor1 !important;
