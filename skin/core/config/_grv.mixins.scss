@@ -745,7 +745,7 @@
     width: unset;
   }
 
-  a {
+  a:not(.btn.close):not(.action-close):not(.dismiss-button) {
     @include paragraph2Style;
     @include useBlueLink;
   }
