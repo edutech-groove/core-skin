@@ -776,7 +776,7 @@
 
   .message-content {
     button {
-      @include useGrvPrimaryLightButtonStyle();
+      @include useBlueLink;
     }
   }
 
