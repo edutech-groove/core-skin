@@ -346,10 +346,10 @@
   @include flex-wrap(wrap);
   @include captain;
   font-weight: 400;
-  margin-bottom: 0;
+  margin: -4px;
 
   >* {
-    margin: 4px;
+    margin: 4px !important;
     display: block;
     color: $textColorBgWhite1;
   }
@@ -361,6 +361,7 @@
 
   a {
     @include useBlueLink;
+    display: block;
   }
 }
 
