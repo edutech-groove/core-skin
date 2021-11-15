@@ -775,8 +775,18 @@
   }
 
   .message-content {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-wrap(wrap);
+
     button {
+      @include useGrvPrimaryLightButtonStyle;
+    }
+
+    a {
+      @include paragraph2Style;
       @include useBlueLink;
+      display: inline-block;
     }
   }
 
