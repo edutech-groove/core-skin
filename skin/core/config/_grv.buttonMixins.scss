@@ -866,6 +866,7 @@
     margin-bottom: 0;
     cursor: pointer;
     display: flex !important;
+    @include align-items(center);
     @include paragraph2Style;
     font-size: $paragraph2Size !important;
 
@@ -897,15 +898,15 @@
 
     &::after {
         position: absolute;
-        top: 0;
+        top: calc(50% - 2px);
         left: 0;
         width: 16px;
         height: 10px;
         min-width: 16px;
-        top: 2px;
         border-left: 3px solid $checkboxColor;
         border-bottom: 3px solid $checkboxColor;
         opacity: 0;
+        @include transform(translateY(-50%));
     }
 }
 
@@ -916,7 +917,7 @@
     }
 
     &::after {
-        transform: rotate(-45deg) scale(0.6);
+        @include transform(translateY(-50%) rotate(-45deg) scale(0.6));
         opacity: 1;
         border-left-color: $checkedCheckboxColor;
         border-bottom-color: $checkedCheckboxColor;
@@ -965,6 +966,7 @@
     color: $textColorBgWhite1;
     cursor: pointer;
     display: flex !important;
+    @include align-items(center);
     font-size: 15px !important;
 
     &:not(:empty) {
@@ -995,11 +997,12 @@
 
     &::after {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 0;
         background-color: $checkboxColor;
         border: 1px solid $checkboxColor;
         opacity: 0;
+        @include transform(translateY(-50%));
     }
 }
 
@@ -1010,7 +1013,7 @@
     }
 
     &::after {
-        transform: scale(0.4);
+        @include transform(translateY(-50%) scale(0.4));
         opacity: 1;
     }
 
@@ -1036,7 +1039,7 @@
     display: none;
 
     &+* {
-        @include checkedPrimaryRadioStyle;
+        @include primaryRadioStyle;
     }
 
     &:checked {
