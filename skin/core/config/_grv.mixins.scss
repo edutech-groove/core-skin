@@ -664,7 +664,7 @@
       td,
       th {
         padding: 15px;
-        border-top: 0;
+        border: 0;
         border-bottom: 1px dashed $grey03;
         @include paragraph2;
         margin-bottom: 0;
@@ -731,7 +731,24 @@
   }
 }
 
-@mixin useAlert {
+@mixin alertIcon {
+  .icon-alert,
+  .alert-icon,
+  .feedback-symbol {
+    @content;
+  }
+}
+
+@mixin alertDismissBtn {
+  .btn.close,
+  .action-close,
+  .dismiss-button,
+  .close-feedback-popup-button {
+    @content;
+  }
+}
+
+@mixin coreAlert {
   border: 1px solid transparent;
   border-radius: $globalRadius;
   padding: 10px;
@@ -790,21 +807,19 @@
     }
   }
 
-  .btn.close,
-  .action-close,
-  .dismiss-button {
+  @include alertDismissBtn {
     position: static;
     order: 2;
-    margin-left: auto;
-    margin-right: 0;
+    margin: 0 0 0 auto;
     text-shadow: none;
     box-shadow: none;
     background-color: transparent;
     opacity: .75;
-    padding: 0;
+    padding: 0 0 0 20px;
     font-size: 22px;
     border: 0;
     line-height: 1;
+    outline: none;
 
     &:hover {
       opacity: 1;
@@ -812,9 +827,7 @@
     }
   }
 
-  .icon-alert,
-  .alert-icon,
-  .feedback-symbol {
+  @include alertIcon {
     width: 30px;
     min-width: 30px;
     height: 30px;
@@ -836,79 +849,86 @@
       }
     }
   }
+}
+
+@mixin successAlert {
+  @include coreAlert;
+  border-color: $successAlertBorderColor;
+  background-color: $successAlertBgColor;
+  color: $successAlertColor;
+
+  @include alertIcon {
+    background-color: $successAlertIconColor;
+  }
+
+  @include alertDismissBtn {
+    color: $successAlertIconColor;
+  }
+}
+
+@mixin infoAlert {
+  @include coreAlert;
+  border-color: $infoAlertBorderColor;
+  background-color: $infoAlertBgColor;
+  color: $infoAlertColor;
+
+  @include alertIcon {
+    background-color: $infoAlertIconColor;
+  }
+
+  @include alertDismissBtn {
+    color: $infoAlertIconColor;
+  }
+}
+
+@mixin warningAlert {
+  @include coreAlert;
+  border-color: $warningAlertBorderColor;
+  background-color: $warningAlertBgColor;
+  color: $warningAlertColor;
+
+  @include alertIcon {
+    background-color: $warningAlertIconColor;
+  }
+
+  @include alertDismissBtn {
+    color: $warningAlertIconColor;
+  }
+}
+
+@mixin dangerAlert {
+  @include coreAlert;
+  border-color: $dangerAlertBorderColor;
+  background-color: $dangerAlertBgColor;
+  color: $dangerAlertColor;
+
+  @include alertIcon {
+    background-color: $dangerAlertIconColor;
+  }
+
+  @include alertDismissBtn {
+    color: $dangerAlertIconColor;
+  }
+}
+
+@mixin useAlert {
 
   &.alert-success,
   &.announcement {
-    border-color: $successAlertBorderColor;
-    background-color: $successAlertBgColor;
-    color: $successAlertColor;
-
-    .icon-alert,
-    .alert-icon,
-    .feedback-symbol {
-      background-color: $successAlertIconColor;
-    }
-
-    .btn.close,
-    .action-close,
-    .dismiss-button {
-      color: $successAlertIconColor;
-    }
+    @include successAlert;
   }
 
   &.alert-info {
-    border-color: $infoAlertBorderColor;
-    background-color: $infoAlertBgColor;
-    color: $infoAlertColor;
-
-    .icon-alert,
-    .alert-icon,
-    .feedback-symbol {
-      background-color: $infoAlertIconColor;
-    }
-
-    .btn.close,
-    .action-close,
-    .dismiss-button {
-      color: $infoAlertIconColor;
-    }
+    @include infoAlert;
   }
 
   &.alert-warning {
-    border-color: $warningAlertBorderColor;
-    background-color: $warningAlertBgColor;
-    color: $warningAlertColor;
-
-    .icon-alert,
-    .alert-icon,
-    .feedback-symbol {
-      background-color: $warningAlertIconColor;
-    }
-
-    .btn.close,
-    .action-close,
-    .dismiss-button {
-      color: $warningAlertIconColor;
-    }
+    @include warningAlert;
   }
 
   &.alert-danger,
   &.alert-error {
-    border-color: $dangerAlertBorderColor;
-    background-color: $dangerAlertBgColor;
-    color: $dangerAlertColor;
-
-    .icon-alert,
-    .alert-icon,
-    .feedback-symbol {
-      background-color: $dangerAlertIconColor;
-    }
-
-    .btn.close,
-    .action-close,
-    .dismiss-button {
-      color: $dangerAlertIconColor;
-    }
+    @include dangerAlert;
   }
 }
 

@@ -159,6 +159,7 @@
   line-height: $heading0LineHeight;
   color: $heading0Color;
   text-transform: $heading0Transform;
+  letter-spacing: 0;
 }
 
 @mixin heading1Style {
@@ -168,6 +169,7 @@
   line-height: $heading1LineHeight;
   color: $heading1Color;
   text-transform: $heading1Transform;
+  letter-spacing: 0;
 }
 
 @mixin heading2Style {
@@ -176,6 +178,8 @@
   font-weight: $heading2Weight;
   line-height: $heading2LineHeight;
   color: $heading2Color;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin heading3Style {
@@ -184,6 +188,8 @@
   font-weight: $heading3Weight;
   line-height: $heading3LineHeight;
   color: $heading3Color;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin paragraph1Style {
@@ -192,6 +198,8 @@
   font-weight: $paragraph1Weight;
   line-height: $paragraph1LineHeight;
   color: $paragraph1Color;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin paragraph2Style {
@@ -200,6 +208,8 @@
   font-weight: $paragraph2Weight;
   line-height: $paragraph2LineHeight;
   color: $paragraph2Color;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin captainStyle {
@@ -208,6 +218,8 @@
   font-weight: $captainWeight;
   line-height: $captainLineHeight;
   color: $captainColor;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin textLabelStyle {
@@ -216,6 +228,8 @@
   font-weight: $textLabelWeight;
   line-height: $textLabelLineHeight;
   color: $textLabelColor;
+  text-transform: unset;
+  letter-spacing: 0;
 }
 
 @mixin heading0 {
