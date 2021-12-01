@@ -1092,3 +1092,136 @@
     @content;
   }
 }
+
+@mixin usePagination {
+  padding: 0;
+  list-style: none;
+  margin: -5px;
+  width: 100%;
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+
+  >li {
+    padding: 5px;
+
+    >* {
+      padding: 5px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: $globalRadius*2 !important;
+      border: 0;
+      box-shadow: none;
+      text-decoration: none;
+      background: $grvBgColor3;
+      box-sizing: border-box;
+      outline: none;
+      @include paragraph2Style;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+
+      &.previous,
+      &.prev,
+      &.next {
+
+        .fa {
+          display: none;
+        }
+
+        svg {
+          fill: $textColorBgWhite1;
+
+          >* {
+            fill: $textColorBgWhite1;
+          }
+        }
+      }
+    }
+
+    &.active,
+    &.selected {
+      >* {
+        background: $primaryColor1Light;
+        color: $primaryColor1;
+        font-weight: 700;
+      }
+    }
+
+    &:not(.disabled) {
+      @include whenHover {
+        >* {
+          &:not(.previous):not(.prev):not(.next) {
+            background: $primaryColor1Light;
+            color: $primaryColor1;
+          }
+
+          &.previous,
+          &.prev,
+          &.next {
+            svg {
+              color: $primaryColor1;
+              fill: $primaryColor1;
+
+              >* {
+                fill: $primaryColor1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin useTinymce {
+  @include paragraph2;
+
+  * {
+    padding: 0;
+    margin: 0;
+    @include paragraph2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  b,
+  strong {
+    @include paragraph1Style;
+  }
+
+  a {
+    @include useBlueLink;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  h1 {
+    @include heading1;
+  }
+
+  h2 {
+    @include heading2;
+  }
+
+  h3 {
+    @include heading3;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @include paragraph1;
+  }
+
+  blockquote {
+    padding: 10px 0 10px 15px;
+    border-radius: 0 $globalRadius $globalRadius 0;
+    background-color: $grvBgColor3;
+    border-left: 2px solid $grvBorderColor2;
+  }
+}
