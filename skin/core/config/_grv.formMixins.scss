@@ -1,6 +1,6 @@
 @mixin setInputGenericCore($theme) {
   @include useFont1;
-  font-size: 15px !important;
+  font-size: $paragraph2Size !important;
   border-radius: $genericInputBorderRadius;
   border: 1px solid transparent;
   box-shadow: none;
