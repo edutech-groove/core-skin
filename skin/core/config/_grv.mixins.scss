@@ -1125,7 +1125,7 @@
       &.prev,
       &.next {
 
-        span {
+        .fa {
           display: none;
         }
 
@@ -1171,5 +1171,57 @@
         }
       }
     }
+  }
+}
+
+@mixin useTinymce {
+  @include paragraph2;
+
+  * {
+    padding: 0;
+    margin: 0;
+    @include paragraph2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  b,
+  strong {
+    @include paragraph1Style;
+  }
+
+  a {
+    @include useBlueLink;
+  }
+
+  code {
+    font-family: monospace;
+  }
+
+  h1 {
+    @include heading1;
+  }
+
+  h2 {
+    @include heading2;
+  }
+
+  h3 {
+    @include heading3;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @include paragraph1;
+  }
+
+  blockquote {
+    padding: 10px 0 10px 15px;
+    border-radius: 0 $globalRadius $globalRadius 0;
+    background-color: $grvBgColor3;
+    border-left: 2px solid $grvBorderColor2;
   }
 }
