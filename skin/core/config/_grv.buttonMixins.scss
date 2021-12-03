@@ -164,6 +164,7 @@
     }
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
+
         &:hover,
         &:active,
         &:focus {
@@ -244,6 +245,7 @@
     }
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
+
         &:hover,
         &:active,
         &:focus {
@@ -814,6 +816,7 @@
 
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
+
         &:hover,
         &.is-hovered {
             color: $linkColor;
@@ -1179,6 +1182,167 @@
 
         .multiselect {
             width: 100%;
+        }
+    }
+}
+
+@mixin useCircleGrvSecondaryButtonStyle {
+    @include useGrvPrimaryLightButtonStyle(true);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    border-radius: 50%;
+}
+
+@mixin useCircleGrvSecondaryButtonStyleClear($svgColorType:'fill') {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: transparent !important;
+    box-shadow: none;
+
+    svg {
+        height: 14px;
+        width: auto;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        pointer-events: none;
+    }
+
+    @if ($svgColorType=='fill') {
+        svg {
+            fill: $textColorBgWhite1;
+            stroke: none;
+
+            >* {
+                fill: $textColorBgWhite1;
+                stroke: none;
+            }
+        }
+    }
+
+    @else if ($svgColorType=='stroke') {
+        svg {
+            stroke: $textColorBgWhite1;
+            fill: none;
+
+            >* {
+                stroke: $textColorBgWhite1;
+                fill: none;
+            }
+        }
+    }
+
+    @include whenHover {
+        background-color: $primaryColor1Light !important;
+
+        @if ($svgColorType=='fill') {
+            svg {
+                fill: $primaryColor1;
+                stroke: none;
+
+                >* {
+                    fill: $primaryColor1;
+                    stroke: none;
+                }
+            }
+        }
+
+        @else if ($svgColorType=='stroke') {
+            svg {
+                stroke: $primaryColor1;
+                fill: none;
+
+                >* {
+                    stroke: $primaryColor1;
+                    fill: none;
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        @if ($svgColorType=='fill') {
+            svg {
+                fill: $disabledBtnColor;
+
+                >* {
+                    fill: $disabledBtnColor;
+                }
+            }
+        }
+
+        @else if ($svgColorType=='stroke') {
+            svg {
+                stroke: $disabledBtnColor;
+
+                >* {
+                    stroke: $disabledBtnColor;
+                }
+            }
+        }
+    }
+}
+
+@mixin useCMSRectangleButtonStyle($border:false, $size:'md', $color: $tertiaryColor1) {
+    display: inline-block;
+    background-color: rgba($color, .15);
+    border-radius: $globalRadius;
+    box-shadow: none;
+
+    @if($border) {
+        border: 1px solid rgba($color, .5);
+    }
+
+    @else {
+        border: 0;
+    }
+
+    @if($size=='md') {
+        padding: 5px 15px;
+    }
+
+    @else if($size=='sm') {
+        padding: 3px 10px;
+    }
+
+    .btn-content {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        color: $color;
+        line-height: 1.5;
+
+        @if($size=='md') {
+            font-size: 15px;
+        }
+
+        @else if($size=='sm') {
+            font-size: 13px;
+        }
+
+        svg {
+            fill: $color;
+            margin-right: 5px;
+            width: auto;
+
+            @if($size=='md') {
+                height: 14px;
+            }
+
+            @else if($size=='sm') {
+                height: 12px;
+            }
         }
     }
 }
