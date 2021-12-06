@@ -1106,7 +1106,7 @@
     padding: 5px;
 
     >* {
-      padding: 5px;
+      padding: 5px 10px;
       height: 32px;
       min-width: 32px;
       border-radius: $globalRadius*2 !important;
@@ -1139,6 +1139,12 @@
       }
     }
 
+    &.break {
+      >* {
+        background: none;
+      }
+    }
+
     &.active,
     &.selected {
       >* {
@@ -1151,7 +1157,7 @@
     &:not(.disabled) {
       @include whenHover {
         >* {
-          &:not(.previous):not(.prev):not(.next) {
+          &:not(.previous):not(.prev):not(.next):not(.break) {
             background: $primaryColor1Light;
             color: $primaryColor1;
           }
@@ -1177,9 +1183,11 @@
 @mixin useTinymce {
   @include paragraph2;
 
-  * {
-    padding: 0;
+  >* {
     margin: 0;
+  }
+
+  p, li {
     @include paragraph2;
 
     &:last-child {
