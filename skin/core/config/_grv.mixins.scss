@@ -1137,6 +1137,13 @@
           }
         }
       }
+
+      &.active,
+      &.selected  {
+        background: $primaryColor1Light;
+        color: $primaryColor1;
+        font-weight: 700;
+      }
     }
 
     &.break {
