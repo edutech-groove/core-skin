@@ -2,16 +2,20 @@
 // It is used for theme styling in LMS/CMS while build docker image
 
 // Override font variables by getting from FEC
+$font1Name: 'Nunito';
 $font1RegularPath: '/static/fec/groove/fonts/Nunito-Regular.woff';
 $font1SemiBoldPath: '/static/fec/groove/fonts/Nunito-SemiBold.woff';
 $font1BoldPath: '/static/fec/groove/fonts/Nunito-Bold.woff';
 $font1ExtraBoldPath: '/static/fec/groove/fonts/Nunito-ExtraBold.woff';
+$font2Name: 'Plumpfull';
 $font2RegularPath: '/static/fec/groove/fonts/Plumpfull.woff';
 
+$font3Name: 'HelveticaNeue';
 $font3MediumPath: '/static/fec/groove/fonts/HelveticaNeue-Medium.woff';
 $font3BoldPath: '/static/fec/groove/fonts/HelveticaNeue-Bold.woff';
 $font3ThinPath: '/static/fec/groove/fonts/HelveticaNeue-Thin.woff';
 $font3LightPath: '/static/fec/groove/fonts/HelveticaNeue-Light.woff';
+$font4Name: 'TimesNewRoman';
 $font4Path: '/static/fec/groove/fonts/TimesNewRoman.woff';
 $font4BoldPath: '/static/fec/groove/fonts/TimesNewRoman-Bold.woff';
 $font4BoldItalicPath: '/static/fec/groove/fonts/TimesNewRoman-BoldItalic.woff';
