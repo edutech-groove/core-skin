@@ -1188,7 +1188,7 @@
 }
 
 @mixin useTinymce {
-  @include paragraph2;
+  @include paragraph2Style;
 
   >* {
     margin: 0;
@@ -1204,7 +1204,7 @@
 
   b,
   strong {
-    @include paragraph1Style;
+    font-weight: $paragraph1Weight;
   }
 
   a {
