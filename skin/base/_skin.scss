@@ -1,34 +1,34 @@
-$font1: 'Nunito';
-$font2: 'Plumpfull';
+$font1: 'Roboto';
+$font2: 'Roboto';
 $font3: 'HelveticaNeue';
 $font4: 'TimesNewRoman';
 
 @import "./variables";
-@import "./font";
+@import './font';
 
-// Skin variables
+// Skin EV Cargo variables
 
 $globalRadius: 4px;
-$globalRadius1: 20px;
-$globalRadius2: 40px;
+$globalRadius1: 4px;
+$globalRadius2: 4px;
 
-$primaryColor1: $color03;
-$primaryColor1Light: $color22;
-$primaryColor2: $color02;
-$secondaryColor1: $color25;
-$secondaryColor2: $color22;
-$tertiaryColor1: $grvColor06;
-$tertiaryColor2: $color24;
-$textColorBgWhite1: $textColor01;
-$textColorBgWhite2: $textColor02;
-$textColorBgWhite3: $textColor03;
-$textColorBgDark1: $textColor04;
-$textColorBgDark2: $color01;
+$primaryColor1: #4D7EFB;
+$primaryColor1Light: #EDF2FF;
+$primaryColor2: #3863D0;
+$secondaryColor1: #281E4D;
+$secondaryColor2: #FFFFFF;
+$tertiaryColor1: #0094E3;
+$tertiaryColor2: #FF9D00;
+$textColorBgWhite1: #24305D;
+$textColorBgWhite2: #4C5884;
+$textColorBgWhite3: #ACB1CA;
+$textColorBgDark1: #B0B8E6;
+$textColorBgDark2: #FFFFFF;
 
-$dangerColor: $color21;
-$warningColor: $grvColor03;
-$successColor: $grvColor05;
-$infoColor: $grvColor04;
+$dangerColor: #E34242;
+$warningColor: #FFA850;
+$successColor: #38C976;
+$infoColor: #33A5EE;
 $linkColor: $grvColor06;
 
 $grvBorderColor1: $color16;
@@ -43,46 +43,46 @@ $grvBoxShadowColor2: rgba($color02, .15);
 $primaryDarkBtnBackground: $primaryColor1;
 $primaryDarkBtnBorder: transparent;
 $primaryDarkBtnColor: $color01;
-$primaryDarkBtnBackgroundHover: $color03d;
+$primaryDarkBtnBackgroundHover: $primaryColor2;
 
-$primaryLightBtnBackground: $secondaryColor2;
+$primaryLightBtnBackground: $primaryColor1Light;
 $primaryLightBtnBorder: transparent;
 $primaryLightBtnColor: $primaryColor1;
-$primaryLightBtnBackgroundHover: $color03d;
+$primaryLightBtnBackgroundHover: $primaryColor2;
 
-$secondaryDarkBtnBackground: $tertiaryColor2;
+$secondaryDarkBtnBackground: $primaryColor1;
 $secondaryDarkBtnBorder: transparent;
 $secondaryDarkBtnColor: $color01;
-$secondaryDarkBtnBackgroundHover: $color24d;
+$secondaryDarkBtnBackgroundHover: $primaryColor2;
 
-$secondaryLightBtnBackground: $secondaryColor1;
+$secondaryLightBtnBackground: $primaryColor1Light;
 $secondaryLightBtnBorder: transparent;
-$secondaryLightBtnColor: $tertiaryColor2;
-$secondaryLightBtnBackgroundHover: $color24d;
+$secondaryLightBtnColor: $primaryColor1;
+$secondaryLightBtnBackgroundHover: $primaryColor2;
 
-$disabledBtnBackground: #CBCBCB;
-$disabledBtnColor: $textColorBgWhite2;
+$disabledBtnBackground: #D4D4D4;
+$disabledBtnColor: $color01;
 
 $btnFontSize: 15px;
 
 $buttonBorderRadius: $globalRadius1;
 
-$inputBorder: transparent;
-$inputBackground: $grey08;
+$inputBorder: #D3D8ED;
+$inputBackground: $color01;
 $inputColor: $textColorBgWhite2;
-$disabledInputBorder: transparent;
-$disabledInputBackground: $grey09;
-$disabledInputColor: $textColorBgWhite3;
+$disabledInputBorder: #EDEFF5;
+$disabledInputBackground: #EDEFF5;
+$disabledInputColor: #ACB1CA;
 $errorInputBorder: $dangerColor;
-$errorInputBackground: #FFEEEE;
+$errorInputBackground: $color01;
 $focusedInputBorder: $primaryColor1;
 $focusedInputBackground: $color01;
 $focusedInputColor: $textColorBgWhite2;
-$focusedInputShadow: 0 0px 0 0.2rem rgba($color03, 0.25);
+$focusedInputShadow: 0px 0px 6px #5081F7;
 
 $genericInputBorderRadius: $globalRadius;
-$searchInputBorderRadius: $globalRadius $globalRadius2 $globalRadius2 $globalRadius;
-$searchButtonBorderRadius: 0 $globalRadius2 $globalRadius2 $globalRadius2;
+$searchInputBorderRadius: $globalRadius;
+$searchButtonBorderRadius: 0 $globalRadius $globalRadius 0;
 
 $checkboxBorder: #BEBEBE;
 $checkboxBorderRadius: $globalRadius;
@@ -90,24 +90,24 @@ $checkboxBackground: $color01;
 $checkboxColor: $color01;
 $disabledCheckboxBorder: #D4D4D4;
 $disabledCheckboxBackground: #D4D4D4;
-$disabledCheckboxColor: $textColorBgWhite3;
+$disabledCheckboxColor: $textColor03;
 $checkedCheckboxBorder: $primaryColor1;
 $checkedCheckboxBackground: $primaryColor1;
 $checkedCheckboxColor: $color01;
 
 $heading0Font: $font2;
 $heading0Size: 32px;
-$heading0Weight: 100;
+$heading0Weight: 700;
 $heading0LineHeight: 1.2;
-$heading0Color: $color02;
+$heading0Color: $textColorBgWhite1;
 $heading0MarginBottom: 15px;
 $heading0Transform: uppercase;
 
 $heading1Font: $font2;
 $heading1Size: 28px;
-$heading1Weight: 100;
+$heading1Weight: 700;
 $heading1LineHeight: 1.2;
-$heading1Color: $color02;
+$heading1Color: $textColorBgWhite1;
 $heading1MarginBottom: 15px;
 $heading1Transform: uppercase;
 
@@ -115,14 +115,14 @@ $heading2Font: $font1;
 $heading2Size: 24px;
 $heading2Weight: 700;
 $heading2LineHeight: 1.4;
-$heading2Color: $color02;
+$heading2Color: $textColorBgWhite1;
 $heading2MarginBottom: 10px;
 
 $heading3Font: $font1;
 $heading3Size: 17px;
 $heading3Weight: 700;
 $heading3LineHeight: 1.4;
-$heading3Color: $color02;
+$heading3Color: $textColorBgWhite1;
 $heading3MarginBottom: 10px;
 
 $paragraph1Font: $font1;
@@ -136,7 +136,7 @@ $paragraph2Font: $font1;
 $paragraph2Size: 15px;
 $paragraph2Weight: 400;
 $paragraph2LineHeight: 1.4;
-$paragraph2Color: $textColorBgWhite1;
+$paragraph2Color: $textColorBgWhite2;
 $paragraph2MarginBottom: 10px;
 
 $captainFont: $font1;
@@ -153,32 +153,32 @@ $textLabelLineHeight: 1.4;
 $textLabelColor: $textColorBgWhite2;
 $textLabelMarginBottom: 7px;
 
-$subTabItemActiveColor: $color24;
+$subTabItemActiveColor: $primaryColor1;
 
-$popoverBgColor: $color26;
-$popoverShadow: none;
+$popoverBgColor: $color01;
+$popoverShadow: 2px 2px 4px $grvBoxShadowColor1;
 
-$placeholderAvatarsBorderRadius: 50%;
+$placeholderAvatarsBorderRadius: 35%;
 
 
-$successAlertBorderColor: $successColor;
+$successAlertBorderColor: transparent;
 $successAlertBgColor: rgba($successColor, .1);
-$successAlertColor: $textColorBgWhite1;
+$successAlertColor: $successColor;
 $successAlertIconColor: $successColor;
 
-$infoAlertBorderColor: $infoColor;
+$infoAlertBorderColor: transparent;
 $infoAlertBgColor: rgba($infoColor, .1);
-$infoAlertColor: $textColorBgWhite1;
+$infoAlertColor: $infoColor;
 $infoAlertIconColor: $infoColor;
 
-$warningAlertBorderColor: $warningColor;
+$warningAlertBorderColor: transparent;
 $warningAlertBgColor: rgba($warningColor, .1);
-$warningAlertColor: $textColorBgWhite1;
+$warningAlertColor: $warningColor;
 $warningAlertIconColor: $warningColor;
 
-$dangerAlertBorderColor: $dangerColor;
+$dangerAlertBorderColor: transparent;
 $dangerAlertBgColor: rgba($dangerColor, .1);
-$dangerAlertColor: $textColorBgWhite1;
+$dangerAlertColor: $dangerColor;
 $dangerAlertIconColor: $dangerColor;
 
 

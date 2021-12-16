@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="component-html-icon">
-    <g>
-        <g>
-            <path fill="#cccccc" d="M42.11 18.4L55.52 28.71L42.11 43.7L38.33 39.3L47.61 29.74L38.33 23.17L42.11 18.4Z"></path>
-            <path fill="#cccccc" d="M15.8 13.21L2.38 23.52L15.8 38.51L19.57 34.11L10.3 24.55L19.57 17.98L15.8 13.21Z"></path>
-            <path fill="#cccccc" d="M30.81 13.48L36.8 13.48L26.52 43.7L21.1 43.7L30.81 13.48Z"></path>
-        </g>
-        <g>
-            <path fill="none" stroke="#000000" d="M40.46 16.89L53.88 27.2L40.46 42.18L36.68 37.79L45.96 28.22L36.68 21.66L40.46 16.89Z"></path>
-            <path fill="none" stroke="#000000" d="M14.15 11.7L0.73 22.01L14.15 36.99L17.93 32.6L8.65 23.03L17.93 16.47L14.15 11.7Z"></path>
-            <path fill="none" stroke="#000000" d="M29.16 11.96L35.15 11.96L24.88 42.18L19.46 42.18L29.16 11.96Z"></path>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.523 32.697" id="component-html-icon">
+  <g transform="translate(-624.268 -1776.303)">
+    <g transform="translate(33.354 1.32)">
+      <g transform="translate(593.291 1777.194)">
+        <path fill="#4d7efb" d="M-14150.49-3722.32l13.418,10.309-13.418,14.987-3.777-4.393,9.277-9.569-9.277-6.562Z" transform="translate(14190.219 3727.51)"/>
+        <path fill="#4d7efb" d="M-14140.85-3722.32l-13.418,10.309,13.418,14.987,3.777-4.393-9.277-9.569,9.277-6.562Z" transform="translate(14154.268 3722.32)"/>
+        <path fill="#24d6f4" d="M-14172.563-3731.923h5.991l-10.278,30.222h-5.419Z" transform="translate(14200.994 3732.187)"/>
+      </g>
+      <g transform="translate(591.646 1775.68)">
+        <path fill="none" stroke="#000" d="M-14150.49-3722.32l13.418,10.309-13.418,14.987-3.777-4.393,9.277-9.569-9.277-6.562Z" transform="translate(14190.219 3727.51)"/>
+        <path fill="none" stroke="#000" d="M-14140.85-3722.32l-13.418,10.309,13.418,14.987,3.777-4.393-9.277-9.569,9.277-6.562Z" transform="translate(14154.268 3722.32)"/>
+        <path fill="none" stroke="#000" d="M-14172.563-3731.923h5.991l-10.278,30.222h-5.419Z" transform="translate(14200.994 3732.187)"/>
+      </g>
     </g>
+  </g>
 </svg>
