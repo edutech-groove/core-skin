@@ -1,7 +1,7 @@
 @font-face {
   font-family: $font2;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   font-display: swap;
   src: url("#{$font2RegularPath}") format("woff");
 }
@@ -57,7 +57,7 @@
 @font-face {
   font-family: $font3;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-display: swap;
   src: url("#{$font3LightPath}") format('woff');
 }
