@@ -33,7 +33,7 @@
 
     svg {
         height: 14px;
-        width: unset;
+        width: 14px;
     }
 
     &:not([disabled]):not(.disabled):not(.is-disabled) {
@@ -752,7 +752,7 @@
     padding: 0;
     outline: none;
     background-color: transparent;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     text-align: left;
     display: contents;
 
@@ -799,14 +799,14 @@
             color: $linkColor;
             text-decoration: underline !important;
             box-shadow: none !important;
-            font-weight: 300 !important;
+            font-weight: 400 !important;
         }
 
         @include whenHover {
             color: $linkColor;
             text-decoration: underline !important;
             box-shadow: none !important;
-            font-weight: 300;
+            font-weight: 400;
         }
     }
 
